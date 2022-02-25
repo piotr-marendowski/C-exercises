@@ -1,7 +1,7 @@
-// Name: pun.c
-// Purpose: Prints a bad pun.
-// Author: NiceMan1337
-// Date: 24.02.2022
+/*  Name: pun.c
+    Purpose: Prints a bad pun.
+    Author: NiceMan1337
+    Date: 24.02.2022  */
 
 #include <stdio.h>
 
