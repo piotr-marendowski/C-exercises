@@ -9,5 +9,7 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
 (first for c89 standard, second for c99 standard)
 
-And run by:
+#And run:
+```
 ./filename.o
+```
