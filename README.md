@@ -14,3 +14,6 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
 ./filename.o
 ```
+# More solutions:
+[Solutions from williamgherman](https://github.com/williamgherman/c-solutions)
+[Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
