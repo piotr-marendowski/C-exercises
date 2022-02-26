@@ -6,6 +6,9 @@ Feel free to use them and compare to yours!
 ## Compile:
 ```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c89
+```
+or
+```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
 (first for c89 standard, second for c99 standard)
