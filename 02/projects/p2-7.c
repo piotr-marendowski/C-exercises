@@ -37,6 +37,6 @@ int main (void)
 }
 
 /*Description:
-You could print everything out in one
-printf statement or with only one
-variable - amount*/
+Values in second and third month are
+different than in example and
+I don't know why :c*/
