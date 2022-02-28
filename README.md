@@ -1,7 +1,7 @@
 # C-exercises
 My C exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition"
 
-Feel free to use them and compare to yours!
+I highly encourage you to try making same repository all by yourself, it will help you in understand topics described in book. Feel free to use them and compare to yours!
 
 ## Compile:
 ```
@@ -11,7 +11,6 @@ or
 ```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
-(first for c89 standard, second for c99 standard)
 
 ## And run:
 ```
@@ -19,5 +18,7 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
 ## More solutions:
 [Solutions from williamgherman](https://github.com/williamgherman/c-solutions)
+
+[Solutions from Fahien](https://github.com/Fahien/exc)
 
 [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
