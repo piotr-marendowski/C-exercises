@@ -1,4 +1,4 @@
-/*  Name: addfrac2.c
+/*  Name: 3-6.c
     Purpose: Adds two fractions.
     Author: NiceMan1337
     Date: 02.03.2022  */
