@@ -1,7 +1,7 @@
 # C-exercises
 #### My C exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition"
 
-#### I highly encourage you to try making same repository all by yourself, it will help you in understand topics described in book. Feel free to use them and compare to yours!
+#### I highly encourage you to try making the same repository all by yourself, it will help you to understand topics described in the book. Feel free to use them and compare to yours! This repository is made by me, while learning how these things work. There are some mistakes, it's not highly efficient and beautiful written code, but its sole purpose is to learn by doing. Have fun while learning!
 
 ## Compile
 ```
