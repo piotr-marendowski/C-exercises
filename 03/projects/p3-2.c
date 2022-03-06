@@ -22,7 +22,7 @@ int main (void)
     /*print out the result*/
     printf("Item\t\tUnit\t\tPurchase\n");
     printf("\t\tPrice\t\tDate\n");
-    printf("%d\t\t$%10.2f\t%.2d/%.2d/%d\n", number, price, month, day, year);
+    printf("%d\t\t$%8.2f\t%.2d/%.2d/%d\n", number, price, month, day, year);
     
     return 0;
 }
