@@ -24,4 +24,4 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 #### [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
 
 ## Licence
-#### See LICENCE file for more information about use, sharing and editing repository.
+#### See LICENCE file for more information about use, sharing and editing repository and code written here.
