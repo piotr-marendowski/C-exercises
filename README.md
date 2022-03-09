@@ -4,9 +4,9 @@ My C programs, exercises and projects, from K.N. King's "C Programming: A Modern
 ## Table of contents
 * [Notice](#notice)
 * [Chapters](#chapters)
-* [Compile and run](compile-and-run)
-* [More solutions](more-solutions)
-* [Licence nad copyright](licence-nad-copyright)
+* [Compile and run](#compile-and-run)
+* [More solutions](#more-solutions)
+* [Licence nad copyright](#licence-nad-copyright)
 
 ## Notice
 Programs are 1:1 from book, but exercises and projects have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about some parts worth describing.
