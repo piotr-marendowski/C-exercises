@@ -20,7 +20,7 @@ I highly encourage you to try making the same repository all by yourself, it wil
 
 04 - Expressions
 
-## Compile nad run
+## Compile and run
 ### Compile
 ```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c89
