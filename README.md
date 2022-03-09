@@ -4,7 +4,7 @@ My C programs, exercises and projects, from K.N. King's "C Programming: A Modern
 ## Table of contents
 * [Notice](#notice)
 * [Chapters](#chapters)
-* [Compile nad run](compile-and-run)
+* [Compile and run](compile-and-run)
 * [More solutions](more-solutions)
 * [Licence nad copyright](licence-nad-copyright)
 
