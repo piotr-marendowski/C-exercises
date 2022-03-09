@@ -8,7 +8,9 @@ I highly encourage you to try making the same repository all by yourself, it wil
 
 ## Chapters
 02 - C Fundamentals
+
 03 - Formatted Input/Output
+
 04 - Expressions
 
 ## Compile
