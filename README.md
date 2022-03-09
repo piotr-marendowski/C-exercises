@@ -1,6 +1,13 @@
 # C-exercises
 My C programs, exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition"
 
+## Table of contents
+* [Notice](#notice)
+* [Chapters](#chapters)
+* [Compile nad run](compile-and-run)
+* [More solutions](more-solutions)
+* [Licence nad copyright](licence-nad-copyright)
+
 ## Notice
 Programs are 1:1 from book, but exercises and projects have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about some parts worth describing.
 
@@ -13,7 +20,8 @@ I highly encourage you to try making the same repository all by yourself, it wil
 
 04 - Expressions
 
-## Compile
+## Compile nad run
+### Compile
 ```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c89
 ```
@@ -21,8 +29,7 @@ or
 ```
 gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
-
-## And run
+### Run
 ```
 ./filename.o
 ```
