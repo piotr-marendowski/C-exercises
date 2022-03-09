@@ -1,5 +1,5 @@
 # C-exercises
-My C programs, exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition"
+My C programs, exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition".
 
 ## Table of contents
 * [Notice](#notice)
