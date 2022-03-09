@@ -2,7 +2,13 @@
 My C programs, exercises and projects, from K.N. King's "C Programming: A Modern Approach 2nd Edition"
 
 ## Notice
-I highly encourage you to try making the same repository all by yourself, it will help you to understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, it's not highly efficient and beautiful written code, but its sole purpose is to learn by doing. Have fun!
+Programs are 1:1 from book, but exercises and projects have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about some parts worth describing.
+I highly encourage you to try making the same repository all by yourself, it will help you to understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or beautiful written code, but its sole purpose is to learn by doing. Have fun!
+
+## Chapters
+02 - C Fundamentals
+03 - Formatted Input/Output
+04 - Expressions
 
 ## Compile
 ```
