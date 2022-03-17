@@ -1,6 +1,6 @@
 /*  Name: addfrac.c
     Purpose: Adds two fractions.
-    Author: NiceMan1337
+    Author: K.N. King
     Date: 01.03.2022  */
 
 #include <stdio.h>

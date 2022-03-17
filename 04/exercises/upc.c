@@ -1,6 +1,6 @@
 /*  Name: upc.c
     Purpose: Computes a Universal Product Code check digit.
-    Author: NiceMan1337
+    Author: K.N. King
     Date: 09.03.2022  */
 
 #include <stdio.h>

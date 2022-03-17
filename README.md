@@ -20,6 +20,8 @@ I highly encourage you to try making the same repository all by yourself, it wil
 
 04 - Expressions
 
+05 - Selection Statements
+
 ## Compile and run
 
 ### Compile

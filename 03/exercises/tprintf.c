@@ -1,6 +1,6 @@
 /*  Name: tprintf.c
     Purpose: Prints int and float values in various formats.
-    Author: NiceMan1337
+    Author: K.N. King
     Date: 28.02.2022  */
 
 #include <stdio.h>
