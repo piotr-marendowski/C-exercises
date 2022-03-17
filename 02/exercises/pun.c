@@ -1,6 +1,6 @@
 /*  Name: pun.c
     Purpose: Prints a bad pun.
-    Author: NiceMan1337
+    Author: K.N. King
     Date: 24.02.2022  */
 
 #include <stdio.h>
