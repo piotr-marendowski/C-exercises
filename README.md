@@ -44,5 +44,5 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 
 [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
 
-## Licence nad copyright
+## Licence and copyright
 #### See LICENCE file for more information about use, sharing and editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
