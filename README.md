@@ -22,6 +22,8 @@ I highly encourage you to try making the same repository all by yourself, it wil
 
 05 - Selection Statements
 
+06 - Loops
+
 ## Compile and run
 
 ### Compile
