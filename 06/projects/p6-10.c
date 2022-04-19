@@ -1,5 +1,5 @@
 /*  Name: p6-10.c
-    Purpose: Modyfied programming project 9 from chapter 5.
+    Purpose: Modified programming project 9 from chapter 5.
     Author: NiceMan1337
     Date: 19.04.2022  */
 

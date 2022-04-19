@@ -1,5 +1,5 @@
 /*  Name: p6-07.c
-    Purpose: Modyfies square3.c program.
+    Purpose: Modifies square3.c program.
     Author: NiceMan1337
     Date: 15.04.2022  */
 #include <stdio.h>
