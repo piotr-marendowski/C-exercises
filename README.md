@@ -9,9 +9,9 @@ My C programs, exercises and projects, from K.N. King's "C Programming: A Modern
 * [Licence nad copyright](#licence-nad-copyright)
 
 ## Notice
-Exercises and projects have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about some parts worth describing.
+Projects have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about parts worth describing.
 
-I highly encourage you to try making the same repository all by yourself, it will help you to understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or beautiful written code, but its sole purpose is to learn by doing. Have fun!
+I highly encourage you to making the same repository all by yourself, it will help you understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or beautiful written code, but its sole purpose is to learn by doing. Have fun!
 
 ## Chapters
 02 - C Fundamentals
@@ -23,6 +23,8 @@ I highly encourage you to try making the same repository all by yourself, it wil
 05 - Selection Statements
 
 06 - Loops
+
+07 - Basic Types
 
 ## Compile and run
 
@@ -40,11 +42,11 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 ```
 ## More solutions
 
-[Solutions from williamgherman](https://github.com/williamgherman/c-solutions)
+[Solutions by williamgherman](https://github.com/williamgherman/c-solutions)
 
-[Solutions from Fahien](https://github.com/Fahien/exc)
+[Solutions by Fahien](https://github.com/Fahien/exc)
 
 [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
 
 ## Licence and copyright
-#### See LICENCE file for more information about use, sharing and editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
+#### See LICENCE file for more information about use, sharing or editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
