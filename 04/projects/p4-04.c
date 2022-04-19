@@ -1,5 +1,5 @@
 /*  Name: p4-4.c
-    Purpose: Project 4-4.
+    Purpose: Calculates entered number in decimal to octal.
     Author: NiceMan1337
     Date: 16.03.2022  */
 

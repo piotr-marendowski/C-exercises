@@ -1,5 +1,5 @@
 /*  Name: p4-6.c
-    Purpose: Project 4-6.
+    Purpose: Calculates an EAN check digit.
     Author: NiceMan1337
     Date: 16.03.2022  */
 

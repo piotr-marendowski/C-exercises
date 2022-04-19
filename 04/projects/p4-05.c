@@ -1,5 +1,5 @@
 /*  Name: p4-5.c
-    Purpose: Project 4-5.
+    Purpose: Different approach in upc.c program.
     Author: NiceMan1337
     Date: 16.03.2022  */
 

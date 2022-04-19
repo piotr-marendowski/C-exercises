@@ -1,5 +1,5 @@
 /*  Name: p4-2.c
-    Purpose: Project 4-2.
+    Purpose: Displays a three-digit number reveresed.
     Author: NiceMan1337
     Date: 14.03.2022  */
 
