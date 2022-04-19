@@ -1,4 +1,4 @@
-/*  Name: p3-2.c
+/*  Name: p3-02.c
     Purpose: Align information entered by user.
     Author: NiceMan1337
     Date: 06.03.2022  */

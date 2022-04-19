@@ -1,4 +1,4 @@
-/*  Name: p2-8.c
+/*  Name: p2-08.c
     Purpose: Calculate monthly balance from user input.
     Author: NiceMan1337
     Date: 27.02.2022  */

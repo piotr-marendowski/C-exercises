@@ -1,5 +1,5 @@
-/*  Name: p6-4.c
-    Purpose: Project 6-4.
+/*  Name: p6-04.c
+    Purpose: Modyfies the broker.c program.
     Author: NiceMan1337.
     Date: 12.04.2022  */
 

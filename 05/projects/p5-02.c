@@ -1,5 +1,5 @@
-/*  Name: p5-2.c
-    Purpose: Project 5-2.
+/*  Name: p5-02.c
+    Purpose: Calculates a 24-hour time to 12-hour.
     Author: NiceMan1337.
     Date: 26.03.2022  */
 

@@ -1,5 +1,5 @@
-/*  Name: p6-6.c
-    Purpose: Project 6-6.
+/*  Name: p6-06.c
+    Purpose: Prints all even squares between number entered and 0.
     Author: NiceMan1337
     Date: 15.04.2022  */
 

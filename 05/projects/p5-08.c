@@ -1,5 +1,5 @@
-/*  Name: p5-8.c
-    Purpose: Project p5-8.
+/*  Name: p5-08.c
+    Purpose: Displays the closest flights to the time entered.
     Author: NiceMan1337
     Date: 29.03.2022  */
 

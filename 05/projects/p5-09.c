@@ -1,5 +1,5 @@
-/*  Name: p5-9.c
-    Purpose: Project p5-9.
+/*  Name: p5-09.c
+    Purpose: Calculates which of two dates comes earlier in calendar.
     Author: NiceMan1337
     Date: 29.03.2022  */
 

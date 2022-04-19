@@ -1,5 +1,5 @@
-/*  Name: p5-3.c
-    Purpose: Project 5-3.
+/*  Name: p5-03.c
+    Purpose: Modyfies a broker.c program.
     Author: NiceMan1337.
     Date: 26.03.2022  */
 

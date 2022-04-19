@@ -1,5 +1,5 @@
-/*  Name: p6-9.c
-    Purpose: Calculate monthly balance from user input.
+/*  Name: p6-09.c
+    Purpose: Calculates monthly balance from user input.
     Author: NiceMan1337
     Date: 18.04.2022  */
 

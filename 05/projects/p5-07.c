@@ -1,5 +1,5 @@
-/*  Name: p5-6.c
-    Purpose: Project p5-6.
+/*  Name: p5-07.c
+    Purpose: Finds the largest and the smallest numbers from user input.
     Author: williamgherman
     Date: 28.03.2022  */
 

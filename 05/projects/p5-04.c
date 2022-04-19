@@ -1,5 +1,5 @@
-/*  Name: p5-4.c
-    Purpose: Project 5-4.
+/*  Name: p5-04.c
+    Purpose: Displays the corresponding description to a wind speed.
     Author: NiceMan1337.
     Date: 27.03.2022  */
 

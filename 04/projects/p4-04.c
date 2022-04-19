@@ -1,4 +1,4 @@
-/*  Name: p4-4.c
+/*  Name: p4-04.c
     Purpose: Calculates entered number in decimal to octal.
     Author: NiceMan1337
     Date: 16.03.2022  */

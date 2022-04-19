@@ -1,4 +1,4 @@
-/*  Name: p2-4.c
+/*  Name: p2-04.c
     Purpose: Calculate 5% tax from amount provided by user.
     Author: NiceMan1337
     Date: 26.02.2022  */

@@ -1,4 +1,4 @@
-/*  Name: p3-1.c
+/*  Name: p3-01.c
     Purpose: Process date from user input.
     Author: NiceMan1337
     Date: 06.03.2022  */

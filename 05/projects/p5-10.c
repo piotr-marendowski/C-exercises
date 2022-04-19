@@ -1,5 +1,5 @@
 /*  Name: p5-10.c
-    Purpose: Project p5-10.
+    Purpose: Converts a numerical grade into a letter grade.
     Author: NiceMan1337
     Date: 29.03.2022  */
 

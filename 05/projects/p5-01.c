@@ -1,5 +1,5 @@
-/*  Name: p5-1.c
-    Purpose: Project 5-1.
+/*  Name: p5-01.c
+    Purpose: Calculates how many digits a number contains.
     Author: NiceMan1337.
     Date: 26.03.2022  */
 

@@ -1,4 +1,4 @@
-/*  Name: p4-2.c
+/*  Name: p4-02.c
     Purpose: Displays a three-digit number reveresed.
     Author: NiceMan1337
     Date: 14.03.2022  */

@@ -1,5 +1,5 @@
-/*  Name: p5-6.c
-    Purpose: Project p5-6.
+/*  Name: p5-06.c
+    Purpose: Checks whetever an UPC code is valid or not.
     Author: NiceMan1337
     Date: 28.03.2022  */
 

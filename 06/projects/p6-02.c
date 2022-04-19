@@ -1,5 +1,5 @@
-/*  Name: p6-2.c
-    Purpose: Project 6-2.
+/*  Name: p6-02.c
+    Purpose: Calculates a GCD from two digits.
     Author: NiceMan1337
     Date: 11.04.2022  */
 

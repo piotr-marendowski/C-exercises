@@ -1,5 +1,5 @@
-/*  Name: p6-1.c
-    Purpose: Project 6-1.
+/*  Name: p6-01.c
+    Purpose: Finds a largest number from user input.
     Author: NiceMan1337
     Date: 11.04.2022  */
 

@@ -1,4 +1,4 @@
-/*  Name: p2-5.c
+/*  Name: p2-05.c
     Purpose: Calculate formula 3x^5+2x^4-5x^3-x^2+7x-6.
     Author: NiceMan1337
     Date: 26.02.2022  */

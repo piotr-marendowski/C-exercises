@@ -1,4 +1,4 @@
-/*  Name: p2-3.c
+/*  Name: p2-03.c
     Purpose: Calculate the volume of a sphere with a radius provided by user.
     Author: NiceMan1337
     Date: 26.02.2022  */

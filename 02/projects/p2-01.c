@@ -1,4 +1,4 @@
-/*  Name: p2-1.c
+/*  Name: p2-01.c
     Purpose: Displays the following picture in terminal.
     Author: NiceMan1337
     Date: 26.02.2022  */

@@ -1,5 +1,5 @@
 /*  Name: p5-11.c
-    Purpose: Project p5-11.
+    Purpose: Prints an English word for a number.
     Author: NiceMan1337
     Date: 30.03.2022  */
 

@@ -1,5 +1,5 @@
-/*  Name: p5-5.c
-    Purpose: Project 5-5.
+/*  Name: p5-05.c
+    Purpose: Calculates the tax due.
     Author: NiceMan1337.
     Date: 27.03.2022  */
 

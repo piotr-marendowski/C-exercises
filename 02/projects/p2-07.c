@@ -1,4 +1,4 @@
-/*  Name: p2-7.c
+/*  Name: p2-07.c
     Purpose: Divide amount of dollars to bills from user input.
     Author: NiceMan1337
     Date: 27.02.2022  */

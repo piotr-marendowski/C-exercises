@@ -1,4 +1,4 @@
-/*  Name: p3-5.c
+/*  Name: p3-05.c
     Purpose: Align numbers entered by the user into square.
     Author: NiceMan1337
     Date: 07.03.2022  */

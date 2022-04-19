@@ -1,5 +1,5 @@
-/*  Name: p6-3.c
-    Purpose: Project 6-3.
+/*  Name: p6-03.c
+    Purpose: Reduces a fraction to lowest terms.
     Author: NiceMan1337
     Date: 12.04.2022  */
 

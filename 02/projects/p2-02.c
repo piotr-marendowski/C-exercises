@@ -1,4 +1,4 @@
-/*  Name: p2-2.c
+/*  Name: p2-02.c
     Purpose: Calculate the volume of a sphere with a 10-meter radius.
     Author: NiceMan1337
     Date: 26.02.2022  */

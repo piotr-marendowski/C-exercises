@@ -1,5 +1,5 @@
-/*  Name: p6-8.c
-    Purpose: Project 6-8.
+/*  Name: p6-08.c
+    Purpose: Prints one-month calendar.
     Author: NiceMan1337
     Date: 15.04.2022  */
 #include <stdio.h>
