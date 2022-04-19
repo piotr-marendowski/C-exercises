@@ -1,5 +1,5 @@
 /*  Name: p2-1.c
-    Purpose: Programming project 1.
+    Purpose: Displays the following picture in terminal.
     Author: NiceMan1337
     Date: 26.02.2022  */
 
