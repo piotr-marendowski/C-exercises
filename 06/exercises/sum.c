@@ -1,4 +1,4 @@
-/*  Name: square.c
+/*  Name: sum.c
     Purpose: Sums a series of numbers.
     Author: K.N. King
     Date: 31.03.2022  */
