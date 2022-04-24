@@ -1,5 +1,5 @@
-/*  Name: 7-7.c
-    Purpose: Exercise 7-7.
+/*  Name: 7-07.c
+    Purpose: Exercise 7-07.
     Author: NiceMan1337
     Date: 24.04.2022  */
 
