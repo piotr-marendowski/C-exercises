@@ -5,8 +5,6 @@
 
 #include <stdio.h>
 
-#define length (int) (sizeof(lastname) / sizeof(lastname[0]))
-
 int main(void) {
 
     /*declare variables*/
