@@ -1,41 +1,40 @@
+/*  Name: p9-02.c
+    Purpose: Modified project 5 from chapter 5.
+    Author: NiceMan1337
+    Date: 17.06.2022  */
+
 #include <stdio.h>
 
-#define MAX_LEN 100
+float tax(int income);
 
-void selection_sort(int a[], int n);
-
-int main(void) {
-
-    int i, c, n, a[MAX_LEN];
-    printf("Enter list of integers to be sorted: ");
-    for (i = 0, n = 0; i < MAX_LEN; i++) {
-        scanf(" %d", &a[i]);
-        n++;
-    }
-
-    selection_sort(a, n);
+int main(void)
+{ 
+    /*declare variables*/
+    float income;
     
-    printf("Sorted list:");
-    for (i = 0; i < n; i++) {
-        printf(" %d", a[i]);
-    }
-    printf("\n");
+    /*ask user for income*/
+    printf("Enter income: ");
+    scanf("%f", &income);
 
+    /*print the tax*/
+    printf("Your tax is: %.2f\n", tax(income));
+    
     return 0;
 }
 
-void selection_sort(int a[], int n) {
-
-    int i, temp, largest = 0;
-
-    for (i = 0; i < n; i++) {
-        if (a[i] > a[largest])
-            largest = i;
-    }
-
-    temp = a[largest];
-    a[largest] = a[n-1];
-    a[n-1] = temp;
-
-    selection_sort(a, n-1);
+float tax(int income)
+{
+    /*calculate and print out the description*/
+    if (income <= 750.00f)
+        return income * 0.01f;
+    else if (income <= 2250.00f)
+        return 7.50f + (income - 750.00f) * 0.02f;
+    else if (income <= 3750.00f)
+        return 37.50f + (income - 2250.00f) * 0.03f;
+    else if (income <= 5250.00f)
+        return 82.50f + (income - 3750.00f) * 0.04f;
+    else if (income <= 7000.00f)
+        return 142.50f + (income - 5250.00f) * 0.05f;
+    else
+        return 230.00f + (income - 7000.00f) * 0.06f;
 }
