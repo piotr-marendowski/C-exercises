@@ -32,6 +32,8 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 10 - Program Organization
 
+11- Pointers
+
 ## Compile and run
 
 ### Compile
