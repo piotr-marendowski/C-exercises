@@ -15,7 +15,7 @@ int main(void)
     
     find_largest(a, n);
 
-    printf("Largest element in the array: %d\n", largest);
+    printf("Largest element in the array: %\n", largest);
 
     return 0;
 }
