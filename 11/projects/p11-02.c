@@ -26,8 +26,13 @@ int main(void)
     /*call find_closest_flight*/
     find_closest_flight(time, &departure_time, &arrival_time);
 
-    /*store hours in hour
-    in case of a.m */
+    /*
+    1. store hours in hour and divide by 60 for hours (e.g. 468 / 60 = 7)
+    2. in case of a.m don't subtract 12 (e.g. 1 p.m. = 13 - 12)
+    3. modulo by 60 to get remainder (minutes)
+    4. print (if less then flight 3, then a.m otherwise p.m)
+    5. same for the arrival time
+    */
 
     hour = (departure_time / 60);
     if (hour > 12)
@@ -60,14 +65,15 @@ void find_closest_flight(int desired_time, int *departure_time, int *arrival_tim
     int f1 = 480, f2 = 583, f3 = 679, f4 = 767, f5 = 840,
      f6 = 945, f7 = 1140, f8 = 1305;
 
-    /*calculate difference between first flight and second flight
-    then find middle point by dividing them by 2
-    and add this to first flight
-    and you will get first half for first flight
+    /*
+    1. calculate difference between first flight and second flight
+    2. then find middle point by dividing them by 2
+    3. add this to first flight
+    4. and you will get first half for first flight
     and second half for second flight
-    then do it again for others
+    5. then do it again for others
     
-    then assign corresponding values of flights into
+    6. then assign corresponding values of flights into
     departure_time and arrival_time*/
 
     if (desired_time <= f1 + (f2 - f1) / 2) {
