@@ -34,6 +34,8 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 11- Pointers
 
+12 - Pointers and arrays
+
 ## Compile and run
 
 ### Compile
