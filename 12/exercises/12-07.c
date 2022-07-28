@@ -13,10 +13,8 @@ int main(void)
     int a[] = {5, 15, 34, 54, 14, 2, 52, 72};
     int n = 8, key = 14;
 
-    search(a, n, key);
-
     printf("The key: %d was", key);
-    if (search)
+    if (search(a, n, key))
         printf(" ");
     else
         printf("n't ");
