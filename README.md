@@ -36,6 +36,8 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 12 - Pointers and arrays
 
+13 - Strings
+
 ## Compile and run
 
 ### Compile
