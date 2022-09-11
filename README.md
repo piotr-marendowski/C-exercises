@@ -65,4 +65,4 @@ gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
 [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
 
 ## Licence and copyright
-#### See LICENCE file for more information about use, sharing or editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
+#### Programs made by NiceMan1337 are free to use, but programs made by K.N. King are property of W. W. Norton & Company, Inc. see LICENCE file for more information about use, sharing or editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
