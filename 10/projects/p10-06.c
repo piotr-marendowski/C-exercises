@@ -1,5 +1,5 @@
 /*  Name: p10-06.c
-    Purpose: Modified poker.c program from chapter 10.
+    Purpose: RPN expression based calculator.
     Author: NiceMan1337
     Date: 29.06.2022  */
 

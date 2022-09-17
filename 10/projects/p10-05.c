@@ -1,4 +1,4 @@
-/*  Name: p10-04.c
+/*  Name: p10-05.c
     Purpose: Modified poker.c program from chapter 10.
     Author: williamgherman
     Date: 28.06.2022  */
