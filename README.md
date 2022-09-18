@@ -42,6 +42,8 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 15 - Writing large programs
 
+16 - Structures, Unions, and Enumerations
+
 ## Compile and run
 
 ### Compile
