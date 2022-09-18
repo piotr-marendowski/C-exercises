@@ -5,9 +5,9 @@ My C programs, exercises and projects, from K.N. King's "C Programming: A Modern
 * [Notice](#notice)
 * [Chapters](#chapters)
 * [Compile and run](#compile-and-run)
+* [Makefile for more than one source file](#Makefile-for-more-than-one-source-file)
 * [More solutions](#more-solutions)
 * [Licence nad copyright](#licence-nad-copyright)
-* [Makefile for more than one source file](#Makefile-for-more-than-one-source-file)
 
 ## Notice
 Projects mostly have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about parts worth describing or about some problems ocurred along the way.
@@ -49,7 +49,9 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 ### Compile
 
--std=89 - C standard
+C standards:
+* -std=c89
+* -std=c99
 
 ```
 gcc filename.c -o filename -std=c89
