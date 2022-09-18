@@ -7,6 +7,7 @@ My C programs, exercises and projects, from K.N. King's "C Programming: A Modern
 * [Compile and run](#compile-and-run)
 * [More solutions](#more-solutions)
 * [Licence nad copyright](#licence-nad-copyright)
+* [Makefile for more than one source file](#Makefile-for-more-than-one-source-file)
 
 ## Notice
 Projects mostly have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about parts worth describing or about some problems ocurred along the way.
@@ -47,17 +48,36 @@ I highly encourage you to making the same repository all by yourself, it will he
 ## Compile and run
 
 ### Compile
+
+-std=89 - C standard
+
 ```
-gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c89
+gcc filename.c -o filename -std=c89
 ```
-or
+### Run (Linux)
 ```
-gcc filename.c -o filename.o -Wall -Wextra -Wpedantic -std=c99
+./filename
 ```
-### Run
+### Run (Windows)
 ```
-./filename.o
+.\filename.exe
 ```
+
+## Makefile for more than one source file
+
+p15-05 is an executable, calc.c and stack.c are dependend on stack.h.
+
+```
+p15-05: calc.o stack.o
+	gcc calc.o stack.o -o p15-05
+
+calc.o: calc.c stack.h
+	gcc -c calc.c
+
+stack.o: stack.c stack.h
+	gcc -c stack.c
+```
+
 ## More solutions
 
 [Solutions by williamgherman](https://github.com/williamgherman/c-solutions)
