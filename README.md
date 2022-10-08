@@ -10,9 +10,9 @@ My C programs, exercises and projects from K.N. King's "C Programming: A Modern 
 * [Licence nad copyright](#licence-nad-copyright)
 
 ## Notice
-Projects mostly have comments describing what is every part of it doing. Some have also description at the bottom, where I put some information about parts worth describing or about some problems ocurred along the way.
+Some programs are not written by me, and authors are stated there.
 
-I highly encourage you to making the same repository all by yourself, it will help you understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or beautiful written code, but its sole purpose is to learn by doing. Have fun!
+I highly encourage you into making the same repository all by yourself, it will help you understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or clean code, but its sole purpose is to learn by doing.
 
 ## Chapters
 02 - C Fundamentals
@@ -33,17 +33,19 @@ I highly encourage you to making the same repository all by yourself, it will he
 
 10 - Program Organization
 
-11- Pointers
+11 - Pointers
 
-12 - Pointers and arrays
+12 - Pointers and Arrays
 
 13 - Strings
 
 14 - The preprocessor
 
-15 - Writing large programs
+15 - Writing Large Programs
 
 16 - Structures, Unions, and Enumerations
+
+17 - Advanced Uses of Pointers
 
 ## Compile and run
 
@@ -67,11 +69,11 @@ gcc filename.c -o filename -std=c89
 
 ## Makefile for more than one source file
 
-p15-05 is an executable, calc.c and stack.c are dependend on stack.h.
+stack_project is an executable, calc.c and stack.c are dependend on stack.h.
 
 ```
-p15-05: calc.o stack.o
-	gcc calc.o stack.o -o p15-05
+stack_project: calc.o stack.o
+	gcc calc.o stack.o -o stack_project
 
 calc.o: calc.c stack.h
 	gcc -c calc.c
