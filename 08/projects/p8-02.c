@@ -1,6 +1,6 @@
 /*  Name: p8-03.c
     Purpose: Modified version of repdigit.c program.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.05.2022  */
 
 #include <stdbool.h> /* C99 only */

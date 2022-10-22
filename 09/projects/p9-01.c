@@ -1,6 +1,6 @@
 /*  Name: p9-01.c
     Purpose: Array sorting program using recursive function.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.06.2022  */
 
 #include <stdio.h>

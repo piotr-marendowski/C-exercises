@@ -1,6 +1,6 @@
 /*  Name: p8-05.c
     Purpose: Prints a table of compound interest.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.05.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p13-03.c
     Purpose: Prints random hand of cards
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.08.2022  */
 
 #include <stdbool.h>

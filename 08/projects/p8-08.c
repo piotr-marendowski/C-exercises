@@ -1,6 +1,6 @@
 /*  Name: p8-08.c
     Purpose: Modified project 7.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 21.05.2022  */
 
 #include <stdio.h>

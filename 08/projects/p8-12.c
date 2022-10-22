@@ -1,6 +1,6 @@
 /*  Name: p8-12.c
     Purpose: Modified project 5 from chaper 7.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 25.05.2022  */
 #include <stdio.h>
 #include <ctype.h>

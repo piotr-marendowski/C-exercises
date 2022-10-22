@@ -1,6 +1,6 @@
 /*  Name: p13-02a.c
     Purpose: Prints a one-month reminder list
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.08.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p10-07.c
     Purpose: Modified poker.c program from chapter 10.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 29.06.2022  */
 
 #include <stdio.h>

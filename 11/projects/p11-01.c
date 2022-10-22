@@ -1,7 +1,7 @@
 /*  Name: p11-01.c
     Purpose: Divide amount of dollars to bills from user input
     modified for use of pointers.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.07.2022  */
 
 #include <stdio.h>

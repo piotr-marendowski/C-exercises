@@ -1,6 +1,6 @@
 /*  Name: poker.c
     Purpose: Modified poker.c from chapter 10.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 28.06.2022  */
 
 #include <stdbool.h>    /* C99 only */

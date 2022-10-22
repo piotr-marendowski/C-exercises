@@ -1,7 +1,7 @@
 /*  Name: p12-05.c
     Purpose: Reverses words in sentences using arrays.
     Modified for use of pointers.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 02.08.2022  */
 
 #include <stdio.h>

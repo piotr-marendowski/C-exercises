@@ -1,6 +1,6 @@
 /*  Name: p10-06.c
     Purpose: RPN expression calculator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.08.2022  */
 
 #include <stdio.h>

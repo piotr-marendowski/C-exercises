@@ -1,6 +1,6 @@
 /*  Name: p13-11.c
     Purpose: Counts average word length in a sentence.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 25.08.2022  */
 
 #include <stdio.h>

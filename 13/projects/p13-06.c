@@ -1,6 +1,6 @@
 /*  Name: p13-06.c
     Purpose: Improved planet.c from section 13.7
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 23.08.2022  */
 
 #include <stdio.h>

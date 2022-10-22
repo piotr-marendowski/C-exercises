@@ -1,6 +1,6 @@
 /*  Name: p13-18.c
     Purpose: Reads date (mm/dd/yyyy) and displays it (month, dd, yyyy).
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.08.2022  */
 
 #include <stdio.h>

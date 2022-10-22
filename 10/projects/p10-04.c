@@ -1,6 +1,6 @@
 /*  Name: p10-04.c
     Purpose: Modified poker.c program from chapter 10.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 28.06.2022  */
 
 #include <stdbool.h>    /* C99 only */

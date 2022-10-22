@@ -1,6 +1,6 @@
 /*  Name: p7-11.c
     Purpose: Modified project 11 from chapter 7.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.05.2022  */
 
 #include <stdio.h>

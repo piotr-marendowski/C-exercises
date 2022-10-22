@@ -1,6 +1,6 @@
 /*  Name: p8-09.c
     Purpose: "Random walk" program.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 21.05.2022  */
 
 #include <stdio.h>

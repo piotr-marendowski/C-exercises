@@ -1,7 +1,7 @@
 /*  Name: p11-03.c
     Purpose: Reduces a fraction to lowest terms
     modified for use of pointers.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.07.2022  */
 
 #include <stdio.h>

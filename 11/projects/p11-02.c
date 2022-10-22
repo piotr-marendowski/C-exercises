@@ -1,7 +1,7 @@
 /*  Name: p11-02.c
     Purpose: Displays the closest flights to the time entered
     modified for use of pointes.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.07.2022  */
 
 #include <stdio.h>

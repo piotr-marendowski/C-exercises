@@ -1,6 +1,6 @@
 /*  Name: p8-07.c
     Purpose: Calculates sums of row and columns.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 20.05.2022  */
 
 #include <stdio.h>

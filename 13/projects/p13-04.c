@@ -1,7 +1,7 @@
 /*  Name: p13-04.c
     Purpose: Reverses order of command line argumments
     supplied by the user
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 23.08.2022  */
 
 #include <stdio.h>

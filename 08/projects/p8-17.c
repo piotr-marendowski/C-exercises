@@ -1,6 +1,6 @@
 /*  Name: p8-17.c
     Purpose: Prints magic circle.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 01.06.2022  */
 
 #include <stdio.h>

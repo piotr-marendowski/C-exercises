@@ -2,7 +2,7 @@
     Purpose: Reads characters and determines whatever
     the sentence is a palindrome
     (b) - pointer approach
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.08.2022  */
 
 #include <stdio.h>

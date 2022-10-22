@@ -1,6 +1,6 @@
 /*  Name: p13-12.c
     Purpose: Reverses words in sentences using arrays.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 25.08.2022  */
 
 #include <stdio.h>

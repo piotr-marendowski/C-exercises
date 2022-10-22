@@ -1,6 +1,6 @@
 /*  Name: p13-13.c
     Purpose: Caesar cipher translator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 25.08.2022  */
 
 #include <stdio.h>

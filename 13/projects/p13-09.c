@@ -1,6 +1,6 @@
 /*  Name: p13-09.c
     Purpose: Vowels counter.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 24.08.2022  */
 
 #include <stdio.h>

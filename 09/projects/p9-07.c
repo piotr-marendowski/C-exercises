@@ -1,6 +1,6 @@
 /*  Name: p9-07.c
     Purpose: Modified power function from section 9.6.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 20.06.2022  */
 
 #include <stdio.h>

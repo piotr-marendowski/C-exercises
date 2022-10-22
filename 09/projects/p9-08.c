@@ -1,6 +1,6 @@
 /*  Name: p9-08.c
     Purpose: Game of craps.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 20.06.2022  */
 
 #include <stdio.h>

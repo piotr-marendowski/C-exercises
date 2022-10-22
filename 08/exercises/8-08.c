@@ -1,6 +1,6 @@
 /*  Name: 8-08.c
     Purpose: Exercise 8-8.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 15.05.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p13-05.c
     Purpose: Sums command line argumments supplied by the user
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 23.08.2022  */
 
 #include <stdio.h>

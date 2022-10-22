@@ -1,6 +1,6 @@
 /*  Name: p8-06.c
     Purpose: B1FF translator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 19.05.2022  */
 
 #include <stdio.h>

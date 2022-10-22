@@ -1,7 +1,7 @@
 /*  Name: p12-01b.c
     Purpose: Reads characters and prints it in reverse order
     (b) - pointer approach
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 01.08.2022  */
 
 #include <stdio.h>

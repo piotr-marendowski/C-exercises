@@ -1,7 +1,7 @@
 /*  Name: p12-07.c
     Purpose: Finds the largest and smallest elements in an array.
     Modified for use of pointers
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 03.08.2022  */
 
 #include <stdio.h>

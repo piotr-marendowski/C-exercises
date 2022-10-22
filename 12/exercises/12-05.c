@@ -1,6 +1,6 @@
 /*  Name: 12-05.c
     Purpose: Exercise 12-05
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.07.2022  */
 
 #include <stdio.h>

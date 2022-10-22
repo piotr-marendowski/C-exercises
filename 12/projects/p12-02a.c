@@ -2,7 +2,7 @@
     Purpose: Reads characters and determines whatever
     the sentence is a palindrom
     (a) - integer approach
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 01.08.2022  */
 
 #include <stdio.h>

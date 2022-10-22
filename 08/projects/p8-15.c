@@ -1,6 +1,6 @@
 /*  Name: p8-15.c
     Purpose: Caesar cipher translator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 29.05.2022  */
 
 #include <stdio.h>

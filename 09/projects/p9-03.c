@@ -1,6 +1,6 @@
 /*  Name: p9-03.c
     Purpose: Modified project 9 from chapter 8.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 18.06.2022  */
 
 #include <stdio.h>

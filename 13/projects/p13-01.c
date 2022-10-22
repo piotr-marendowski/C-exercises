@@ -1,7 +1,7 @@
 /*  Name: p13-01.c
     Purpose: Ask user for words, then prints the largest
     and the smallest alphabetically
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 22.08.2022  */
 
 #include <stdio.h>

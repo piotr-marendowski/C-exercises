@@ -1,6 +1,6 @@
 /*  Name: p8-16.c
     Purpose: Check if two words are anagrams.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 31.05.2022  */
 
 #include <stdio.h>

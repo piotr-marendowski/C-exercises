@@ -1,6 +1,6 @@
 /*  Name: p13-14.c
     Purpose: Check if two words are anagrams.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 25.08.2022  */
 
 #include <stdio.h>
