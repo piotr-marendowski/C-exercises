@@ -8,7 +8,7 @@
 int main(void)
 {
     struct { int x, y;} x;
-    struct { int x, y;} y;
+    struct { int x, y;} y; 
 
     return 0;
 }
