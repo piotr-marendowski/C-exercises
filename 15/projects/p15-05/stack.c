@@ -1,6 +1,6 @@
 /*  Name: stack.c
     Purpose: All stack functions in one place.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 #include <stdio.h>

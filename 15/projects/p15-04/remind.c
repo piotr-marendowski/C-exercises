@@ -1,6 +1,6 @@
 /*  Name: remind.c
     Purpose: Modified remind.c program
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 #include <stdio.h>

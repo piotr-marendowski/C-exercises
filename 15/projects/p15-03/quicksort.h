@@ -1,6 +1,6 @@
 /*  Name: quicksort.h
     Purpose: Header file for quicksort.c and qsort.c files.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 void quicksort(int a[], int low, int high);

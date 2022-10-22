@@ -1,6 +1,6 @@
 /*  Name: stack.h
     Purpose: Header file for calc.c and stack.c files.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 void make_empty(void);

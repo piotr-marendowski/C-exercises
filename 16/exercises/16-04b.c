@@ -1,6 +1,6 @@
 /*  Name: 16-04b.c
     Purpose: Exercise 16-04b
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 21.09.2022  */
 
 #include <stdio.h>

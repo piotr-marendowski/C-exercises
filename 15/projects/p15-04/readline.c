@@ -1,6 +1,6 @@
 /*  Name: readline.c
     Purpose: Read_line function in seperate program.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 #include <stdio.h>

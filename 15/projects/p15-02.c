@@ -1,6 +1,6 @@
 /*  Name: p15-02.c
     Purpose: Modified justify.c 
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 /***** WORD.C *****/

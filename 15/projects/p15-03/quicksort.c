@@ -1,6 +1,6 @@
 /*  Name: quicksort.c
     Purpose: Quicksort and split functions.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 17.09.2022  */
 
 #include "quicksort.h"
