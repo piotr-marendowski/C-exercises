@@ -1,6 +1,6 @@
 /*  Name: p2-02.c
     Purpose: Calculate the volume of a sphere with a 10-meter radius.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.02.2022  */
 
 #include <stdio.h>

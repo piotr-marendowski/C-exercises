@@ -1,6 +1,6 @@
 /*  Name: p6-06.c
     Purpose: Prints all even squares between number entered and 0.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 15.04.2022  */
 
 #include <stdio.h>

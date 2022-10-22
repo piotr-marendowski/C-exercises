@@ -1,6 +1,6 @@
 /*  Name: p6-07.c
     Purpose: Modifies square3.c program.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 15.04.2022  */
 #include <stdio.h>
 

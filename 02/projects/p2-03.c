@@ -1,6 +1,6 @@
 /*  Name: p2-03.c
     Purpose: Calculate the volume of a sphere with a radius provided by user.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.02.2022  */
 
 #include <stdio.h>

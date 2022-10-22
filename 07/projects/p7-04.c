@@ -1,6 +1,6 @@
 /*  Name: p7-04.c
     Purpose: Translates an alphabetic phone number into numeric form.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 02.05.2022  */
 
 #include <stdio.h>

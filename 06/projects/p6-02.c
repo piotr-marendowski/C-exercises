@@ -1,6 +1,6 @@
 /*  Name: p6-02.c
     Purpose: Calculates a GCD from two digits.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 11.04.2022  */
 
 #include <stdio.h>

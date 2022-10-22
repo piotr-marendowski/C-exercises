@@ -1,6 +1,6 @@
 /*  Name: p4-05.c
     Purpose: Different approach in upc.c program.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 16.03.2022  */
 
 #include <stdio.h>

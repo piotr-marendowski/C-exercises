@@ -1,6 +1,6 @@
 /*  Name: p5-06.c
     Purpose: Checks whetever an UPC code is valid or not.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 28.03.2022  */
 
 #include <stdio.h>

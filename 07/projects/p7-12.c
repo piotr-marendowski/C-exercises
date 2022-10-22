@@ -1,6 +1,6 @@
 /*  Name: p7-12.c
     Purpose: Float type calculator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 13.05.2022  */
 
 #include <stdio.h>

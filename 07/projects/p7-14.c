@@ -1,7 +1,7 @@
 /*  Name: p7-14.c
     Purpose: Computes Newton's method to compute the
     square root of a positive floating-point number.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 14.05.2022  */
 
 #include <stdio.h>

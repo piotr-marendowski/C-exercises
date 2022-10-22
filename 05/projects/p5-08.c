@@ -1,6 +1,6 @@
 /*  Name: p5-08.c
     Purpose: Displays the closest flights to the time entered.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 29.03.2022  */
 
 #include <stdio.h>

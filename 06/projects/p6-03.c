@@ -1,6 +1,6 @@
 /*  Name: p6-03.c
     Purpose: Reduces a fraction to lowest terms.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 12.04.2022  */
 
 #include <stdio.h>

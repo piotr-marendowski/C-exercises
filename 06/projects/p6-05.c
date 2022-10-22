@@ -1,6 +1,6 @@
 /*  Name: p6-05.c
     Purpose: Displays a reversed number.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 12.04.2022  */
 
 #include <stdio.h>

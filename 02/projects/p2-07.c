@@ -1,6 +1,6 @@
 /*  Name: p2-07.c
     Purpose: Divide amount of dollars to bills from user input.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 27.02.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p5-09.c
     Purpose: Calculates which of two dates comes earlier in calendar.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 29.03.2022  */
 
 #include <stdio.h>

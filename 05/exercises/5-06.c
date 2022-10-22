@@ -1,6 +1,6 @@
 /*  Name: 5-6.c
     Purpose: Exercise 5-6.
-    Author: K.N. King.
+    Author: Piotr Marendowski
     Date: 23.03.2022  */
 
 #include <stdio.h>

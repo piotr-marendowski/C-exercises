@@ -1,6 +1,6 @@
 /*  Name: p7-02.c
     Purpose: Prints a table of squares using a for statement.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 30.04.2022  */
 
 #include <stdio.h>

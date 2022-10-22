@@ -1,6 +1,6 @@
 /*  Name: p3-03.c
     Purpose: Separate ISBN number into groups.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 06.03.2022  */
 
 #include <stdio.h>

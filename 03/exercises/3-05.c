@@ -1,6 +1,6 @@
 /*  Name: 3-5.c
     Purpose: Exercise 3-5.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 02.03.2022  */
 
 #include <stdio.h>

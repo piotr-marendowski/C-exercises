@@ -1,6 +1,6 @@
 /*  Name: p7-10.c
     Purpose: Vowels counter.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 11.05.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: 4-1.c
     Purpose: Exercise 4-1.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 11.03.2022  */
 
 #include <stdio.h>

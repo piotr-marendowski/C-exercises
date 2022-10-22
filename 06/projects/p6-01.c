@@ -1,6 +1,6 @@
 /*  Name: p6-01.c
     Purpose: Finds a largest number from user input.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 11.04.2022  */
 
 #include <stdio.h>

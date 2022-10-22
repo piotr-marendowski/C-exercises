@@ -1,6 +1,6 @@
 /*  Name: p7-03.c
     Purpose: Sums a series of numbers.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 30.04.2022  */
 
 #include <stdio.h>

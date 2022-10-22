@@ -1,6 +1,6 @@
 /*  Name: p3-04.c
     Purpose: Process number from user input.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 07.03.2022  */
 
 #include <stdio.h>

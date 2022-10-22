@@ -1,6 +1,6 @@
 /*  Name: p5-11.c
     Purpose: Prints an English word for a number.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 30.03.2022  */
 
 #include <stdio.h>

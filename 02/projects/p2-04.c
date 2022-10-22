@@ -1,6 +1,6 @@
 /*  Name: p2-04.c
     Purpose: Calculate 5% tax from amount provided by user.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.02.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p3-01.c
     Purpose: Process date from user input.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 06.03.2022  */
 
 #include <stdio.h>

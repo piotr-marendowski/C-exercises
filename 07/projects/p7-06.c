@@ -1,6 +1,6 @@
 /*  Name: p7-01.c
     Purpose: Prints the values of sizeof types.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 07.05.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p3-06.c
     Purpose: Adds two fractions.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 07.03.2022  */
 
 #include <stdio.h>

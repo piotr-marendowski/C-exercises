@@ -1,6 +1,6 @@
 /*  Name: p5-03.c
     Purpose: Modifies a broker.c program.
-    Author: NiceMan1337.
+    Author: Piotr Marendowski
     Date: 26.03.2022  */
 
 #include <stdio.h>

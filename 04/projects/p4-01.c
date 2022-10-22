@@ -1,6 +1,6 @@
 /*  Name: p4-01.c
     Purpose: Displays a two-digit number reveresed.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 14.03.2022  */
 
 #include <stdio.h>

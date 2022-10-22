@@ -1,6 +1,6 @@
 /*  Name: p7-08.c
     Purpose: 12-hour time flight departure calculator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 08.05.2022  */
 
 #include <stdio.h>

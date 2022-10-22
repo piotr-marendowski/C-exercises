@@ -1,6 +1,6 @@
 /*  Name: p7-15.c
     Purpose: Computes factorial from a positive integer
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 14.05.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p7-09.c
     Purpose: Converts 12-hour time to a 24-hour time.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 11.05.2022  */
 
 #include <stdio.h>

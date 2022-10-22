@@ -1,6 +1,6 @@
 /*  Name: p6-09.c
     Purpose: Calculates monthly balance from user input.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 18.04.2022  */
 
 #include <stdio.h>

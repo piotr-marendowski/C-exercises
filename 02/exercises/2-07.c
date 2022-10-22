@@ -1,13 +1,13 @@
 /*  Name: 2-7.c
     Purpose: Exercise 7.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 26.02.2022  */
 
 #include <stdio.h>
 
 int main (void)
 {
-    int for, If, main, printf, while;
+    int /*for,*/ If, main, printf/*, while*/;
 
     return 0;
 }

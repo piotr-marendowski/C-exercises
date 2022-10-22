@@ -1,6 +1,6 @@
 /*  Name: p5-01.c
     Purpose: Calculates how many digits a number contains.
-    Author: NiceMan1337.
+    Author: Piotr Marendowski
     Date: 26.03.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p5-10.c
     Purpose: Converts a numerical grade into a letter grade.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 29.03.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p6-04.c
     Purpose: Modifies the broker.c program.
-    Author: NiceMan1337.
+    Author: Piotr Marendowski
     Date: 12.04.2022  */
 
 #include <stdio.h>

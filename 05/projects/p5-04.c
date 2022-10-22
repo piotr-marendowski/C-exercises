@@ -1,6 +1,6 @@
 /*  Name: p5-04.c
     Purpose: Displays the corresponding description to a wind speed.
-    Author: NiceMan1337.
+    Author: Piotr Marendowski
     Date: 27.03.2022  */
 
 #include <stdio.h>

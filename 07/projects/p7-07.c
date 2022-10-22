@@ -1,6 +1,6 @@
 /*  Name: p7-07.c
     Purpose: Fraction calculator.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 07.05.2022  */
 
 #include <stdio.h>

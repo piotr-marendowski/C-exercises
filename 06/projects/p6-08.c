@@ -1,6 +1,6 @@
 /*  Name: p6-08.c
     Purpose: Prints one-month calendar.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 15.04.2022  */
 #include <stdio.h>
 

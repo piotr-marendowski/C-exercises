@@ -1,6 +1,6 @@
 /*  Name: p5-05.c
     Purpose: Calculates the tax due.
-    Author: NiceMan1337.
+    Author: Piotr Marendowski
     Date: 27.03.2022  */
 
 #include <stdio.h>

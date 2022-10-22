@@ -1,6 +1,6 @@
 /*  Name: p2-06.c
     Purpose: Calculate formula ((((3x + 2)x-5)x-1)x+7)x-6.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 27.02.2022  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /*  Name: p7-05.c
     Purpose: SCRABBLE points counting.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 07.05.2022  */
 #include <stdio.h>
 #include <ctype.h>

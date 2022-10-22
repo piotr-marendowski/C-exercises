@@ -1,6 +1,6 @@
 /*  Name: 5-9.c
     Purpose: Exercise 5-9.
-    Author: K.N. King.
+    Author: Piotr Marendowski
     Date: 24.03.2022  */
 
 #include <stdio.h>

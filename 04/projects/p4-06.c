@@ -1,6 +1,6 @@
 /*  Name: p4-06.c
     Purpose: Calculates an EAN check digit.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 16.03.2022  */
 
 #include <stdio.h>

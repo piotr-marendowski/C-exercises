@@ -1,6 +1,6 @@
 /*  Name: p3-02.c
     Purpose: Align information entered by user.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 06.03.2022  */
 
 #include <stdio.h>

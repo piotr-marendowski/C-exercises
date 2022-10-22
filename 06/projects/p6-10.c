@@ -1,6 +1,6 @@
 /*  Name: p6-10.c
     Purpose: Modified programming project 9 from chapter 5.
-    Author: NiceMan1337
+    Author: Piotr Marendowski
     Date: 19.04.2022  */
 
 #include <stdio.h>
