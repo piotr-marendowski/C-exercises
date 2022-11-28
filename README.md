@@ -1,5 +1,5 @@
 # C-exercises
-My C programs, exercises and projects from K.N. King's "C Programming: A Modern Approach 2nd Edition".
+My C programs, exercises, and projects from K.N. King's "C Programming: A Modern Approach 2nd Edition".
 
 ## Table of contents
 * [Notice](#notice)
@@ -12,6 +12,7 @@ My C programs, exercises and projects from K.N. King's "C Programming: A Modern 
 ## Notice
 Some programs are not written by me, and authors are stated there.
 
+To any fellow eager young mind:
 I highly recommend that you create the same repository on your own, it will help you understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or clean code, but its sole purpose is to learn by doing.
 
 ## Chapters
