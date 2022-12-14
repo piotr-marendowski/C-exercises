@@ -48,6 +48,10 @@ I highly recommend that you create the same repository on your own, it will help
 
 17 - Advanced Uses of Pointers
 
+18 - Declarations
+
+19 - Program Design
+
 ## Compile and run
 
 ### Compile
