@@ -1,3 +1,7 @@
+/* Author: K.N. King
+Purpose: Stack testing program
+Modification date (DD/MM/YYYY): 16.12.2022 */
+
 #include <stdio.h>
 #include "stackADT-v1.h"
 

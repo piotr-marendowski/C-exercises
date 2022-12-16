@@ -1,6 +1,6 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
-Purpose: Exercise 1
+Purpose: Exercise 2
 Modification date (DD/MM/YYYY): 16.12.2022 */
 
 #include <stdio.h>

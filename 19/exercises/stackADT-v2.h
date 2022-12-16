@@ -1,3 +1,7 @@
+/* Author: K.N. King
+Purpose: Stack ADT interface
+Modification date (DD/MM/YYYY): 16.12.2022 */
+
 #ifndef STACKADT_H
 #define STACKADT_H
 
