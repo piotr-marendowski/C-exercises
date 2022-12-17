@@ -1,6 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: Exercise 2
+Dependencies: stackADT-v2.h
 Modification date (DD/MM/YYYY): 16.12.2022 */
 
 #include <stdio.h>
