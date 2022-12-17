@@ -4,8 +4,6 @@
 # Dependencies: stackADT-v1.h, stackADT-v1.c, stackclient.c
 # Modification date (DD/MM/YYYY): 17.12.2022
 
-# REMEMBER TO USE: make -f Makefile-knking
-
 stackclient: stackADT-v1.o stackclient.o
 	gcc stackADT-v1.o stackclient.o -o stackclient
 
