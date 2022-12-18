@@ -27,7 +27,7 @@ Queve create(void)
     Queve q = malloc(sizeof(struct queve_type));
 
     if (q == NULL)
-        terminate("Error in create: stack could not be created.");
+        terminate("Error in create: queve could not be created.");
 
     q->first_empty = 0;     /* because its next free space to insert something */
     q->next_to_remove = 0;
@@ -79,7 +79,7 @@ int remove_first(Queve q)
 int return_first(Queve q)
 {
     if (is_empty(q))
-        terminate("Error in return_first: stack is empty.");
+        terminate("Error in return_first: queve is empty.");
 
     return q->contents[--q->first_empty];
 }
@@ -87,7 +87,7 @@ int return_first(Queve q)
 int return_last(Queve q)
 {
     if (is_empty(q))
-        terminate("Error in return_last: stack is empty.");
+        terminate("Error in return_last: queve is empty.");
 
     return q->contents[q->next_to_remove];
 }
