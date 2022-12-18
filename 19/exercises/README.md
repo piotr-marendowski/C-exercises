@@ -1,0 +1,1 @@
+### FOR PROGRAMS MADE BY K.N. KING USE: make -f Makefile-knking
