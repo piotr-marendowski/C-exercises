@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: Exercise 3 (dynamic array version)
-Modification date (DD/MM/YYYY): 17.12.2022 */
+Modification date (DD/MM/YYYY): 18.12.2022 */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,7 +29,7 @@ Queve create(void)
     if (q == NULL)
         terminate("Error in create: stack could not be created.");
 
-    q->first_empty = 1;     /* because its next free space to insert something */
+    q->first_empty = 0;     /* because its next free space to insert something */
     q->next_to_remove = 0;
     q->items = 0;
     return q;
@@ -42,6 +42,9 @@ void destroy(Queve q)
 
 void make_empty(Queve q)
 {
+    q->first_empty = 0;
+    q->items = 0;
+    q->next_to_remove = 0;
     free(q);
 }
 
@@ -76,7 +79,7 @@ int remove_first(Queve q)
 int return_first(Queve q)
 {
     if (is_empty(q))
-        terminate("Error in pop: stack is empty.");
+        terminate("Error in return_first: stack is empty.");
 
     return q->contents[--q->first_empty];
 }
@@ -84,7 +87,7 @@ int return_first(Queve q)
 int return_last(Queve q)
 {
     if (is_empty(q))
-        terminate("Error in pop: stack is empty.");
+        terminate("Error in return_last: stack is empty.");
 
     return q->contents[q->next_to_remove];
 }
