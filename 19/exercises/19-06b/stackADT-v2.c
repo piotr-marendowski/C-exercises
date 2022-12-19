@@ -1,18 +1,17 @@
-/* Author: K.N. King
+/* Author: K.N. King and Piotr Marendowski
 Purpose: Stack ADT implementation
-Modification date (DD/MM/YYYY): 16.12.2022 */
+Modification date (DD/MM/YYYY): 19.12.2022 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "stackADT-v2.h"
 
-struct node {
-    Item data;
-    struct node *next;
-};
+#define STACK_SIZE 100
 
 struct stack_type {
-    struct node *top;
+    int *contents;
+    int top;
+    int size;
 };
 
 static void terminate(const char *message)
@@ -21,59 +20,60 @@ static void terminate(const char *message)
     exit(EXIT_FAILURE);
 }
 
-Stack create(void)
+Stack create(int size)
 {
     Stack s = malloc(sizeof(struct stack_type));
     if (s == NULL)
         terminate("Error in create: stack could not be created.");
-    s->top = NULL;
+        
+    s->contents = malloc(size * sizeof(Item));
+    if (s->contents == NULL) {
+        free(s);
+        terminate("Error in create: stack could not be created.");
+    }
+
+    s->top = 0;
+    s->size = size;
     return s;
 }
 
 void destroy(Stack s)
 {
-    make_empty(s);
+    free(s->contents);
     free(s);
 }
 
 void make_empty(Stack s)
 {
-    while (!is_empty(s))
-        pop(s);
+    s->top = 0;
 }
 
 bool is_empty(Stack s)
 {
-    return s->top == NULL;
+    return s->top == 0;
 }
 
 bool is_full(Stack s)
 {
-    return NULL;
+    return s->top == s->size;
 }
 
 void push(Stack s, Item i)
 {
-    struct node *new_node = malloc(sizeof(struct node));
-    if (new_node == NULL)
+    if (is_full(s))
         terminate("Error in push: stack is full.");
-
-    new_node->data = i;
-    new_node->next = s->top;
-    s->top = new_node;
+    s->contents[s->top++] = i;
 }
 
 Item pop(Stack s)
 {
-    struct node *old_top;
-    Item i;
-
     if (is_empty(s))
         terminate("Error in pop: stack is empty.");
+    return s->contents[--s->top];
+}
 
-    old_top = s->top;
-    i = old_top->data;
-    s->top = old_top->next;
-    free(old_top);
-    return i;
+Item peek(Stack s)
+{
+    if (!is_empty(s))
+        return s->contents[s->top];
 }

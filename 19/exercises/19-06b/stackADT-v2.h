@@ -1,6 +1,6 @@
-/* Author: K.N. King
+/* Author: K.N. King and Piotr Marendowski
 Purpose: Stack ADT interface
-Modification date (DD/MM/YYYY): 16.12.2022 */
+Modification date (DD/MM/YYYY): 19.12.2022 */
 
 #ifndef STACKADT_H
 #define STACKADT_H
@@ -12,12 +12,12 @@ typedef struct stack_type *Stack;
 typedef int Item;
 
 Stack create(int size);
-/* Stack create(void) for third */
 void destroy(Stack s);
 void make_empty(Stack s);
 bool is_empty(Stack s);
 bool is_full(Stack s);
 void push(Stack s, Item i);
 Item pop(Stack s);
+Item peek(Stack s);
 
 #endif
