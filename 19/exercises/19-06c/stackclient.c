@@ -1,6 +1,6 @@
 /* Author: K.N. King and Piotr Marendowski
 Purpose: Stack testing program
-Modification date (DD/MM/YYYY): 19.12.2022 */
+Modification date (DD/MM/YYYY): 20.12.2022 */
 
 #include <stdio.h>
 #include "stackADT-v2.h"
@@ -10,8 +10,8 @@ int main(void)
     Stack s1, s2;
     int n;
 
-    s1 = create(100);
-    s2 = create(200);
+    s1 = create();
+    s2 = create();
 
     push(s1, 1);
     push(s1, 2);

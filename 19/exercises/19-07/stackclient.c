@@ -1,4 +1,4 @@
-/* Author: K.N. King and Piotr Marendowski
+/* Author: K.N. King
 Purpose: Stack testing program
 Modification date (DD/MM/YYYY): 19.12.2022 */
 
@@ -19,9 +19,6 @@ int main(void)
     n = pop(s1);
     printf("Popped %d form s1\n", n);
     push(s2, n);
-
-    printf("Peek in s1: %d\n", peek(s1));
-
     n = pop(s1);
     printf("Popped %d from s1\n", n);
     push(s2, n);
