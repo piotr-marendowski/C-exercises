@@ -95,13 +95,21 @@ stack.o: stack.c stack.h
 
 ## More solutions
 
+[Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
+
 [Solutions by williamgherman](https://github.com/williamgherman/c-solutions)
 
 [Solutions by Fahien](https://github.com/Fahien/exc)
 
+[Solutions by twcamper](https://github.com/twcamper/c-programming)
+
 [Solutions by fordea](https://github.com/fordea/c-programming-a-modern-approach)
 
-[Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
+[Solutions by auwsmit](https://github.com/auwsmit/cpama2)
+
+[Solutions by ashksmith](https://github.com/ashksmith/c-programming-a-modern-approach-solutions)
+
+[Solutions by cedarbird](https://github.com/cedarbird/C_Programming_A_Modern_Approach_Second_Edition)
 
 ## Licence and copyright
 #### Programs made by Piotr Marendowski are free to use, but programs made by K.N. King are property of W. W. Norton & Company, Inc. see LICENCE file for more information about use, sharing or editing repository and code written here. Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. All rights reserved.
