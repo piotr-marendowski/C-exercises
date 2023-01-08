@@ -54,6 +54,10 @@ I highly recommend that you create the same repository on your own, it will help
 
 20 - Low-Level Programming
 
+21 - The Standard Library
+
+22 - Input/Output
+
 ## Compile and run
 
 ### Compile
@@ -94,6 +98,8 @@ stack.o: stack.c stack.h
 [Solutions by williamgherman](https://github.com/williamgherman/c-solutions)
 
 [Solutions by Fahien](https://github.com/Fahien/exc)
+
+[Solutions by fordea](https://github.com/fordea/c-programming-a-modern-approach)
 
 [Official 1/3 solutions provided by K.N. King](http://knking.com/books/c2/answers/index.html)
 
