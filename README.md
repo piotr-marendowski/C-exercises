@@ -84,13 +84,13 @@ stack_project is an executable, calc.c and stack.c are dependend on stack.h.
 
 ```
 stack_project: calc.o stack.o
-	gcc calc.o stack.o -o stack_project
+    gcc calc.o stack.o -o stack_project
 
 calc.o: calc.c stack.h
-	gcc -c calc.c
+    gcc -c calc.c
 
 stack.o: stack.c stack.h
-	gcc -c stack.c
+    gcc -c stack.c
 ```
 
 ## More solutions
