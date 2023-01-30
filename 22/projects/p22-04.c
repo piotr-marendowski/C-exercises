@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     }
 
     /* Its basically can't use one stream for all functions,
-    because its */
+    because it reads word by word, untill EOF, then this "pointer" stays there. */
     chars = count_chars(fp);
 
     words = count_words(fp);
