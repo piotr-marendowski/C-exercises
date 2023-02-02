@@ -2,7 +2,7 @@
 Author: Piotr Marendowski
 Purpose: Compresses and uncompresses files
 Modification date (DD/MM/YYYY): 01.02.2023
-Files: test.txt test.txt.rle test.txt
+Files: test2.txt test2.txt.rle
 Don't ask about these restricts, please.
 So proud about this one, but oh boy how long it took :/ */
 
