@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: Modified xor.c program, for command-line arguments 
-Modification date (DD/MM/YYYY): 30.01.2022
+Modification date (DD/MM/YYYY): 30.01.2023
 Files: test.txt - original file, test_encrypted.bin, test_decrypted.txt */
 
 #include <stdio.h>

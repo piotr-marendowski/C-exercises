@@ -1,6 +1,6 @@
 /* Author: K.N. King
 Purpose: Copies a file
-Modification date (DD/MM/YYYY): 23.01.2022 */
+Modification date (DD/MM/YYYY): 23.01.2023 */
 
 #include <stdio.h>
 #include <stdlib.h>

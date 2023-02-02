@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: William Gherman
 Purpose: Exercise 1
-Modification date (DD/MM/YYYY): 14.01.2022 */
+Modification date (DD/MM/YYYY): 14.01.2023 */
 
 #include <stdio.h>
 

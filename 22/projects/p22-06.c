@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: Basically, my low-effort HexEditor, but only for files, and without edit abilities
-Modification date (DD/MM/YYYY): 30.01.2022
+Modification date (DD/MM/YYYY): 30.01.2023
 Files: pun.c */
 
 #include <stdio.h>

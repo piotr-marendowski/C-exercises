@@ -1,6 +1,6 @@
 /* Author: K.N. King
 Purpose: Allows the user to view regions of computer memory
-Modification date (DD/MM/YYYY): 07.01.2022 */
+Modification date (DD/MM/YYYY): 07.01.2023 */
 
 #include <ctype.h>
 #include <stdio.h>

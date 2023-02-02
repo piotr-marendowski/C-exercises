@@ -1,7 +1,7 @@
 /* Author: K.N. King
 Purpose: Modifies a file of part records by setting the quantity
 on hand to zero for all recors
-Modification date (DD/MM/YYYY): 18.01.2022 */
+Modification date (DD/MM/YYYY): 18.01.2023 */
 
 #include <stdio.h>
 #include <stdlib.h>

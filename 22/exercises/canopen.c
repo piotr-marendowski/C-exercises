@@ -1,6 +1,6 @@
 /* Author: K.N. King
 Purpose: Checks whether a file can be opened for reading
-Modification date (DD/MM/YYYY): 18.01.2022 */
+Modification date (DD/MM/YYYY): 18.01.2023 */
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: Converts all letters in a file to uppercase, output to stdout
-Modification date (DD/MM/YYYY): 24.01.2022 */
+Modification date (DD/MM/YYYY): 24.01.2023 */
 
 #include <stdio.h>
 #include <stdlib.h>

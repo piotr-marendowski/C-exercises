@@ -1,7 +1,7 @@
 /* License: GNU General Public License v3.0
 Author: William Gherman
 Purpose: Exercise 7
-Modification date (DD/MM/YYYY): 22.01.2022 */
+Modification date (DD/MM/YYYY): 22.01.2023 */
 
 #include <stdio.h>
 

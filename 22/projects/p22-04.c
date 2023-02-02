@@ -1,7 +1,7 @@
 /* License: BSD-3-Clause license
 Author: Piotr Marendowski
 Purpose: counts number of: (a) characters, (b) words, (c) lines in file
-Modification date (DD/MM/YYYY): 24.01.2022 */
+Modification date (DD/MM/YYYY): 24.01.2023 */
 
 #include <stdio.h>
 #include <stdlib.h>
