@@ -10,10 +10,9 @@ My C programs, exercises, and projects from K.N. King's "C Programming: A Modern
 * [Licence nad copyright](#licence-nad-copyright)
 
 ## Notice
-Some programs are not written by me, and authors are stated there.
+Some programs are not written by me, and the authors are listed there.
 
-To any fellow eager young mind:
-I highly recommend that you create the same repository on your own, it will help you understand topics described in the book. Feel free to use them and compare to yours. This repository is made by me, while learning how these things work. There are some mistakes, and it's not highly efficient or clean code, but its sole purpose is to learn by doing.
+To any other eager young minds: I strongly recommend that you do your own version of the same repository, it will help you in your understanding of the topics described in the book. You are welcome to use it for comparison with yours. I built the repository while learning how these things work. There are a few bugs in it, and it's not a highly efficient or clean piece of code, but its sole purpose is to help you learn by doing.
 
 ## Chapters
 02 - C Fundamentals
