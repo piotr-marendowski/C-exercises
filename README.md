@@ -17,47 +17,47 @@ To any other eager young minds: I strongly recommend that you do your own versio
 ## Chapters
 [02](/02) - C Fundamentals
 
-03 - Formatted Input/Output
+[03](/03) - Formatted Input/Output
 
-04 - Expressions
+[04](/04) - Expressions
 
-05 - Selection Statements
+[05](/05) - Selection Statements
 
-06 - Loops
+[06](/06) - Loops
 
-07 - Basic Types
+[07](/07) - Basic Types
 
-08 - Arrays
+[08](/08) - Arrays
 
-09 - Functions
+[09](/09) - Functions
 
-10 - Program Organization
+[10](/10) - Program Organization
 
-11 - Pointers
+[11](/11) - Pointers
 
-12 - Pointers and Arrays
+[12](/12) - Pointers and Arrays
 
-13 - Strings
+[13](/13) - Strings
 
-14 - The preprocessor
+[14](/14) - The preprocessor
 
-15 - Writing Large Programs
+[15](/15) - Writing Large Programs
 
-16 - Structures, Unions, and Enumerations
+[16](/16) - Structures, Unions, and Enumerations
 
-17 - Advanced Uses of Pointers
+[17](/17) - Advanced Uses of Pointers
 
-18 - Declarations
+[18](/18) - Declarations
 
-19 - Program Design
+[19](/19) - Program Design
 
-20 - Low-Level Programming
+[20](/20) - Low-Level Programming
 
-21 - The Standard Library
+[21](/21) - The Standard Library
 
-22 - Input/Output
+[22](/22) - Input/Output
 
-23 - Library Support for Numbers and Character Data 
+[23](/23) - Library Support for Numbers and Character Data 
 
 ## Compile and run
 
