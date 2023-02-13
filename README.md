@@ -15,7 +15,7 @@ Some programs are not written by me, and the authors are listed there.
 To any other eager young minds: I strongly recommend that you do your own version of the same repository, it will help you in your understanding of the topics described in the book. You are welcome to use it for comparison with yours. I built the repository while learning how these things work. There are a few bugs in it, and it's not a highly efficient or clean piece of code, but its sole purpose is to help you learn by doing.
 
 ## Chapters
-02 - C Fundamentals
+[02](/02) - C Fundamentals
 
 03 - Formatted Input/Output
 
