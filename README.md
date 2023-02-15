@@ -59,6 +59,8 @@ To any other eager young minds: I strongly recommend that you do your own versio
 
 [23](/23) - Library Support for Numbers and Character Data 
 
+[24](/24) - Error Handling
+
 ## Compile and run
 
 ### Compile
