@@ -63,9 +63,13 @@ To any other eager young minds: I strongly recommend that you do your own versio
 
 [25](/25) - International Features
 
+[26](/26) - Miscellaneous Library Functions
+
 ## Compile and run
 
 ### Compile
+
+### If you are using IDE, you can change standards in there, refer to IDE's manual.
 
 C standards:
 * -std=c89
