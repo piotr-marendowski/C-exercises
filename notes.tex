@@ -1,0 +1,57 @@
+\documentclass[12pt, openany]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\title{My notes from K.N. King's "C Programming A Modern Approach" 2nd version}
+\author{Piotr Marendowski}
+\date{March 2023}
+
+\begin{document}
+    % PAGE 1
+    \maketitle
+
+    % PAGE 2
+    \chapter{Note}
+    In this material I will go over everything from book,
+    trying to summarize every note-worthy subject. I will do
+    it, while learning Latex, so good luck to me.
+
+    % PAGE 3
+    \tableofcontents
+
+    % PAGE 3
+    \chapter{C Fundamentals}
+    
+    \section{Steps of Executing a C Program}
+    Automated proccess:
+    \begin{enumerate}
+        \item\textbf{Preprocessing} - Preprocessor is executing directives
+        (they begin with \#).
+        \item\textbf{Compiling} - Compiler translates program into machine
+        instructions (object code).
+        \item\textbf{Linking} - Linker combines object code and code needed
+        for execution of the program.
+    \end{enumerate}
+
+    \section{The Genereral From of a Simple Program}
+    Simple C programs have this form: \smallskip
+
+    \textit{directives} 
+
+    \texttt{int main(void)}
+
+    \texttt{\{}
+
+    \tab\textit{statements}
+
+    \texttt{\}}
+
+    \textbf{Directives} - Begin with '\#' symbol, they state what headers
+    include to program.
+
+    \textbf{Functions} - They are segments of code that take arguments, and
+    returns (or not) a value. Only \texttt{main} function is required.
+
+       
+\end{document}
