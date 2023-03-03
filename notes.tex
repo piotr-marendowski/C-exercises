@@ -2,6 +2,16 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{listings}                       % code 
+\usepackage{lstautogobble}                  % segments
+
+% set code segment's parameters
+\lstset{language=C,
+    basicstyle=\small\ttfamily,
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    autogobble=true
+}
 
 \newcommand\tab[1][20px]{\hspace*{#1}}      % tabs 20px
 \setlength{\parindent}{0pt}                 % tabs at start of the paragraphs
@@ -38,19 +48,16 @@
     \end{enumerate}
 
     \section{The Genereral Form of a Simple Program}
-    Simple C programs have this form: \smallskip
+    Simple C programs have this form:
 
+    \bigskip
+    \textit{directives}
     \smallskip
-    \textit{directives} 
-    \smallskip
 
-    \texttt{int main(void)}
-
-    \texttt{\{}
-
-    \tab\textit{statements}
-
-    \texttt{\}}
+    \small\texttt{int main(void)} \\
+    \small\texttt{\{} \\
+    \tab\textit{statements} \\
+    \small\texttt{\}}
     \bigskip
 
     \textbf{Directives} - Begin with '\#' symbol, they state what headers
@@ -76,16 +83,34 @@
     \section{Variables and Assigments}
 
     \textbf{Variable} - Place to store calculation's output, for using in future.
-    \smallskip
-
-    \textbf{Types} - For now, there are two types of variables:
+    Variable's characteristics:
     \begin{itemize}
-        \item \texttt{int} - Integer types, can store quite big whole number, but
-        that depends on your computer's architecture.
-        \item \texttt{float} - Can store bigger numbers, as well as digits after
-        decimal point.
+        \item 
+        \textbf{Types} - For now, there are two types of variables:
+        \begin{itemize}
+            \item \texttt{int} - Integer types, can store quite big whole number, but
+            that depends on your computer's architecture.
+            \item \texttt{float} - Can store bigger numbers, as well as digits after
+            decimal point.
+        \end{itemize}
+
+        \item 
+        \textbf{Declarations} - To use a variable, we first need to declare it. It
+        means that we need to specify variable's type, and name. We can chain declarations
+        with the same type e.g. \texttt{int i, sum, x;}. In C99 they can now be declared
+        after statements, not like in C89.
+        
+        \item
+        \textbf{Assignment} - We assign value to a variable. Variable is on the left
+        side, while value, expression, formula etc. is on the right side. To assign
+        something to a variable, we first need to declare it. Examples:
+        \begin{lstlisting}
+        int i;
+        float f;
+        i = 1;
+        f = 1.5;
+        \end{lstlisting}
     \end{itemize}
-    
 
        
 \end{document}
