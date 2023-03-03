@@ -1,7 +1,10 @@
 \documentclass[12pt, openany]{book}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\newcommand\tab[1][20px]{\hspace*{#1}}      % tabs 20px
+\setlength{\parindent}{0pt}                 % tabs at start of the paragraphs
 
 \title{My notes from K.N. King's "C Programming A Modern Approach" 2nd version}
 \author{Piotr Marendowski}
@@ -20,7 +23,7 @@
     % PAGE 3
     \tableofcontents
 
-    % PAGE 3
+    % PAGE 4
     \chapter{C Fundamentals}
     
     \section{Steps of Executing a C Program}
@@ -34,10 +37,12 @@
         for execution of the program.
     \end{enumerate}
 
-    \section{The Genereral From of a Simple Program}
+    \section{The Genereral Form of a Simple Program}
     Simple C programs have this form: \smallskip
 
+    \smallskip
     \textit{directives} 
+    \smallskip
 
     \texttt{int main(void)}
 
@@ -46,12 +51,40 @@
     \tab\textit{statements}
 
     \texttt{\}}
+    \bigskip
 
     \textbf{Directives} - Begin with '\#' symbol, they state what headers
     include to program.
 
+    % PAGE 5
     \textbf{Functions} - They are segments of code that take arguments, and
     returns (or not) a value. Only \texttt{main} function is required.
+
+    \textbf{Statements} - Commands to execute, mostly end with semicolon.
+
+    \bigskip
+    \textbf{String literal} - Series of characters enclosed in double quotation marks,
+    e.g. \texttt{"Hello world!"}.
+
+    \textbf{New-line character} - \texttt{\textbackslash n} is an escape sequence, which
+    advances to the next line of output.
+
+    \textbf{Comments} - Are ommited in program execution, can be used to comment single line
+    e.g. \texttt{/* Comment */}, or block of lines. From C99 we can use one line comments
+    e.g. \texttt{// Comment}.
+
+    \section{Variables and Assigments}
+
+    \textbf{Variable} - Place to store calculation's output, for using in future.
+    \smallskip
+
+    \textbf{Types} - For now, there are two types of variables:
+    \begin{itemize}
+        \item \texttt{int} - Integer types, can store quite big whole number, but
+        that depends on your computer's architecture.
+        \item \texttt{float} - Can store bigger numbers, as well as digits after
+        decimal point.
+    \end{itemize}
 
        
 \end{document}
