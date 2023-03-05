@@ -67,6 +67,8 @@ I highly recommend making your own repository if you are learning with this book
 
 [26](/26) - Miscellaneous Library Functions
 
+[27](/27) - Additional C99 Support for Mathematics
+
 ## Compile and run
 
 ### Compile
