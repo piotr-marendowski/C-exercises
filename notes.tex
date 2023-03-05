@@ -112,5 +112,39 @@
         \end{lstlisting}
     \end{itemize}
 
-       
+    \subsection*{Initialization}
+    At the default most variables are uninitialized, which means that they have some
+    random - garbage value assigned to them, if we didn't. In declaration we can assign
+    value to a variable, making it an \textbf{initializer}, e.g. \texttt{int i = 0;}.
+
+    % PAGE 6
+    \section{Reading Input}
+    For reading input we need to use \texttt{scanf} function, which needs a format
+    string and value to read, e.g. \texttt{scanf("\%d", \&i);}.
+
+    \section{Defining Names for Constants}
+    To define a constant, we need to use a \textbf{macro definition}, which is
+    interpreted by the preprocessor e.g. \texttt{\#define WIDTH 20}.
+
+    \section{Identifiers}
+    Names in C are called \textbf{identifiers}. They can begin with the lower-case or
+    upper-case letters or underscores e.g. \texttt{times10  my\_var  \_done}. They
+    cannot begin with a number e.g. \texttt{10times}. They cannot contain minus signs
+    e.g. \texttt{my-var}.
+
+    \subsection*{Keywords}
+    There are number of keywords, which are prohibited from using as identifiers.
+
+    \section{Layout of the C Program}
+    We can slice C statements into \textbf{tokens}:
+    \begin{lstlisting}
+    printf   (   "Height:  \%d\n"   ,   height   )   ;
+      1      2      3        4      5     6      7   8
+    \end{lstlisting}
+    Tokens 1 and 2 are identifiers, token 3 is a string literal and tokens 2, 4, 6,
+     and 7 are punctuation. \\
+    In most cases we can put many spaces between them. But we cannot put spaces within
+    tokens e.g. \texttt{fl oat f;}. 
+
+
 \end{document}
