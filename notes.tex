@@ -138,13 +138,77 @@
     \section{Layout of the C Program}
     We can slice C statements into \textbf{tokens}:
     \begin{lstlisting}
-    printf   (   "Height:  \%d\n"   ,   height   )   ;
-      1      2      3        4      5     6      7   8
+    printf   (   "Height:   %d\n"   ,   height   )   ;
+      1      2      3         4     5     6      7   8
     \end{lstlisting}
     Tokens 1 and 2 are identifiers, token 3 is a string literal and tokens 2, 4, 6,
      and 7 are punctuation. \\
     In most cases we can put many spaces between them. But we cannot put spaces within
     tokens e.g. \texttt{fl oat f;}. 
 
+    % PAGE 7
+    \chapter{Formatted Input/Output}
+
+    \section{The pritntf Function}
+    Needs a format string and arguments to insert there. There is no limit to these
+    arguments. Format string could have conversion specifications, which are supplied by
+    its arguments, to insert into format string e.g. \texttt{printf("Value: \%d", i);}
+    where \texttt{\%d} is a conversion specification and \texttt{i} is a value to be
+    supplied to the format string.
+
+    \section{Conversion specifications}
+    Outside of letter(s) specifying which type to covert to, they consist of the \textbf{Minimal
+    Field Width (m)} and \textbf{Precision (p)}. They have the form of: \texttt{\%m.pX}.
+
+    \subsection*{Minimal field width}
+    Specifies the minimum number of characters to print. If the number of characters
+    to print is less than specified, the number is right justified with spaces added. If the number of
+    characters is greater than specified it will automatically expand to display all of characters.
+
+    \subsection*{Precision}
+    Depends on the type to be displayed, reference the book for more detailed preview. 
+    \newpage
+
+    % PAGE 8
+    Conversion specifications:
+    \begin{itemize}
+        \item \texttt{d} - Displays an integer in a decimal (base 10) form. \textit{p} indicates
+        the minimum number of digits to display.
+        \item \texttt{e} - Displays a floating-point number in exponential format. \textit{p}
+        indicates the number of digits after the decimal point.
+        \item \texttt{f} - Displays a floating-point number without an exponent. \textit{p} has
+        the same meaning as previous.
+        \item \texttt{g} - Displays a floating-point number in exponential format or
+        fixed (without an exponent). \textit{p} indicates the maximum number of
+        significant digits to be displayed. It depends on the size of the number.
+    \end{itemize}
+
+    \subsection*{Escape sequences}
+    They are characters, that would introduce problems in compilation or have some action
+    to do e.g. insert new line into output. Few of them are:
+    \begin{itemize}
+        \item \texttt{\textbackslash a} - alert (bell),
+        \item \texttt{\textbackslash b} - backspace,
+        \item \texttt{\textbackslash n} - new line,
+        \item \texttt{\textbackslash t} - tab,
+        \item \texttt{\textbackslash "} - qoute character,
+        \item \texttt{\textbackslash\textbackslash} - slash character.
+    \end{itemize}
+
+    \section{The scanf Function}
+    This funcion handles input from stdin stream (keyboard),  have a format string
+    and may contain conversion specifications. The scanf call may look like that:
+    \texttt{scanf("\%d", \&i);}. Scanf when reading an input ignores the white-space
+    characters. It only matches input to the provided variables. If a reading error
+    occurres, scanf will return immediately, ignoring the rest of the format string.
+    It doesn't read the new-line character at the end of the input. If character
+    cannot be read, function puts it back for the next variable and adds it to that.
+
+    % PAGE 9
+    \subsection*{Ordinary Characters in Format Strings}
+    We can put a white-space characters into the format string, then scanf will read
+    any number of white-space characters and discard them. When it encounters a
+    non-white-space character it is trying to match it with an inputted character.
+    If it fails, it returns.
 
 \end{document}
