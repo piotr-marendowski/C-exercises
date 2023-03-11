@@ -4,6 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{listings}                       % code 
 \usepackage{lstautogobble}                  % segments
+\usepackage{array}                          % tables
+\usepackage{multirow}                       % tables multirows
+\usepackage[table]{xcolor}                  % tables colors
 
 % set code segment's parameters
 \lstset{language=C,
@@ -149,7 +152,7 @@
     % PAGE 7
     \chapter{Formatted Input/Output}
 
-    \section{The pritntf Function}
+    \section{The printf Function}
     Needs a format string and arguments to insert there. There is no limit to these
     arguments. Format string could have conversion specifications, which are supplied by
     its arguments, to insert into format string e.g. \texttt{printf("Value: \%d", i);}
@@ -210,5 +213,54 @@
     any number of white-space characters and discard them. When it encounters a
     non-white-space character it is trying to match it with an inputted character.
     If it fails, it returns.
+
+    % PAGE 10
+    \chapter{Expressions}
+
+    \section{Arithmetic operators}
+    \begin{tabular}{ |c|c|c| } 
+        \hline
+        \cellcolor{lightgray}Unary & \multicolumn{2}{|c|}{\cellcolor{lightgray}Binary} \\
+        \hline
+        & \cellcolor{lightgray}Additive & \cellcolor{lightgray}Multiplicative \\
+        \cline{2-3}
+        {}{}{\shortstack{+ unary plus \\ - unary minus}} & + addition & * multiplication \\ 
+         & - subtraction & / division \\ 
+         & & \% reminder \\
+        \hline
+    \end{tabular}
+
+    \subsection*{Operator Precendence and Associativity}
+    \textbf{Operator precendece} is in what order C calculates expressions. The arithmetic
+    operators have the following relative precendence: \\
+    \tab Highest: + - (unary) \\
+    \tab\tab\tab \ * \ / \ \% \\    % single backslashes are spaces
+    \tab Lowest: \ + - (binary)
+
+    \bigskip
+    \textbf{Associativity} decides in what order operators with the same precendece are
+    calculated. The binary operators are all left associative, whilst the unary operators
+    are all right associative.
+
+    \section{Assignment Operators}
+    Are used to store a computed value of the expression.
+
+    % PAGE 11
+    \subsection*{Simple Assignment}
+    Evaluates an expression, which then assigns into the variable, expression can be a
+    \textit{constant} (always has the same value). If they don't have the same type, the
+    value of an expression is converted to the type of the variable. Assignments can be
+    chained together e.g. \texttt{i = j = k = 0;}. The \texttt{=} operator is right
+    associative. 
+
+    \subsection*{Lvalues}
+    Assignment operator requires that on its left side can only be a variable, not an
+    expression e.g. \texttt{i + j = 0;} is wrong.
+
+    \subsection*{Compound Assignment}
+    We can shorten statements e.g. \texttt{i += 2;} is equivalent to
+    \texttt{i = i + 2;}. It works with the other operators including the following:
+    \texttt{-= *= /= \%=}, they all work in the same way and are right associative.
+
 
 \end{document}
