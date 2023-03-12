@@ -2,11 +2,13 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{listings}                       % code 
-\usepackage{lstautogobble}                  % segments
-\usepackage{array}                          % tables
-\usepackage{multirow}                       % tables multirows
+\usepackage{listings, lstautogobble}        % code segments
+\usepackage{array, multirow}                % tables multirows
 \usepackage[table]{xcolor}                  % tables colors
+
+% inverts colors of the document, I use it mostly for my eyes' sake in night
+\pagecolor[rgb]{0.2, 0.2, 0.2}
+\color[rgb]{1, 1, 1}
 
 % set code segment's parameters
 \lstset{language=C,
@@ -159,7 +161,7 @@
     where \texttt{\%d} is a conversion specification and \texttt{i} is a value to be
     supplied to the format string.
 
-    \section{Conversion specifications}
+    \section{Conversion Specifications}
     Outside of letter(s) specifying which type to covert to, they consist of the \textbf{Minimal
     Field Width (m)} and \textbf{Precision (p)}. They have the form of: \texttt{\%m.pX}.
 
@@ -217,7 +219,7 @@
     % PAGE 10
     \chapter{Expressions}
 
-    \section{Arithmetic operators}
+    \section{Arithmetic Operators}
     \begin{tabular}{ |c|c|c| } 
         \hline
         \cellcolor{lightgray}Unary & \multicolumn{2}{|c|}{\cellcolor{lightgray}Binary} \\
@@ -288,6 +290,58 @@
 
     % PAGE 12
     \chapter{Selection Statements}
-    
+    We could group most statements in this three categories:
+    \begin{itemize}
+        \item \textbf{Selection statements} - Test provided condition, and execute code
+        within their borders, e.g. \texttt{if} and \texttt{switch} statements.
+        \item \textbf{Iteration statements} - Iterate over and over again, until their
+        condition is not true, e.g. \texttt{for, while}, and \texttt{do while} statements.
+        \item \textbf{Jump statements} - They control the flow of the program, can stop
+        iterations, skip through them or jump to any place in the program, e.g. \texttt{break},
+        \texttt{continue} and \texttt{goto} statements.
+    \end{itemize} 
+
+    \section{Logical Expressions}
+    \subsection*{Relational Operators}
+    They are used to compare expressions, yelding 0 if statement are not true and 1 if
+    statement are true.
+
+    \bigskip
+    \begin{tabular}{|@{} c l|}  % will do the trick :)
+        \hline
+        \textbf{ Symbol} & \textbf{Meaning} \\
+        \hline
+        < & less than \\
+        > & greater than \\
+        <= & less than or equal to \\
+        >= & greater than or equal to \\
+        \hline
+    \end{tabular} 
+
+    % PAGE 13
+    \subsection*{Equality Operators}
+
+    \bigskip
+    \begin{tabular}{|@{} c l|}
+        \hline
+        \textbf{ Symbol} & \textbf{Meaning} \\
+        \hline
+        == & equal to \\
+        != & not equal to \\
+        \hline
+    \end{tabular}
+
+    \subsection*{Logical Operators}
+
+    \bigskip
+    \begin{tabular}{|@{} c l l|}
+        \hline
+        \textbf{ Symbol} & \textbf{Meaning} & \textbf{Operation} \\
+        \hline
+        ! & logical negation & Inverse - if false, returns 1\\
+        \&\& & logical end & If both expressions are true, returns 1 \\
+        || & logical or & If either one of them them is true, returns 1 \\ 
+        \hline
+    \end{tabular}
 
 \end{document}
