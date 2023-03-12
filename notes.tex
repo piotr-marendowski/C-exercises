@@ -262,5 +262,32 @@
     \texttt{i = i + 2;}. It works with the other operators including the following:
     \texttt{-= *= /= \%=}, they all work in the same way and are right associative.
 
+    \section{Increment and Decrement Operators}
+    Used to even more shorten a compound addition and subtraction by 1. E.g. 
+    \begin{lstlisting}
+        i = i + 1;
+        j = j - 1;
+    \end{lstlisting}
+    Are the same as:
+    \begin{lstlisting}
+        i += 1;
+        j -= 1;
+    \end{lstlisting}
+    Which are the same as:
+    \begin{lstlisting}
+        i++;
+        j--;
+    \end{lstlisting}
+
+    % it seems that \texttt need one more minus, don't know why
+    They contain side effects - after adding or subtracting 1, value of their operands
+    is modified. There are two types of these operators: \textbf{prefix} (\texttt{++i}
+    or \texttt{---i}) which increments the variable first, then assigns value to \texttt{i},
+    and \textbf{postfix} (\texttt{i++} or \texttt{i---}) which first assings value to
+    \texttt{i} and increments \texttt{i} after this statement.
+
+    % PAGE 12
+    \chapter{Selection Statements}
+    
 
 \end{document}
