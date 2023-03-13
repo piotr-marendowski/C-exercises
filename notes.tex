@@ -154,7 +154,7 @@
     % PAGE 7
     \chapter{Formatted Input/Output}
 
-    \section{The printf Function}
+    \section{The \texttt{printf} Function}
     Needs a format string and arguments to insert there. There is no limit to these
     arguments. Format string could have conversion specifications, which are supplied by
     its arguments, to insert into format string e.g. \texttt{printf("Value: \%d", i);}
@@ -200,7 +200,7 @@
         \item \texttt{\textbackslash\textbackslash} - slash character.
     \end{itemize}
 
-    \section{The scanf Function}
+    \section{The \texttt{scanf} Function}
     This funcion handles input from stdin stream (keyboard),  have a format string
     and may contain conversion specifications. The scanf call may look like that:
     \texttt{scanf("\%d", \&i);}. Scanf when reading an input ignores the white-space
@@ -343,5 +343,28 @@
         || & logical or & If either one of them them is true, returns 1 \\ 
         \hline
     \end{tabular}
+
+    \section{The \texttt{If} Statement}
+    Has the form of: \texttt{if ( expression ) statement}. If evaluated expression has a
+    non-zero value, then statement after parentheses is executed.
+
+    \subsection*{Compound Statements}
+    We can "stack" multiple statements between the parentheses.
+
+    \subsection*{The \texttt{else} clause}
+    If we want to execute statements when our expression is not true, we need to use
+    a \texttt{else} clause. It has the following form: \texttt{if ( expression )
+    statement else statement}.
+
+    \subsection*{Cascaded \texttt{if} Statements}
+    Thanks to them we can test multiple conditions. They have the following form:
+
+    \texttt{if ( expression ) statement else if} \texttt{( expression ) statement else} \\
+    \texttt{statement}.
+
+    \subsection*{Conditional Expressions}
+    Has the following form: \texttt{epr1 ? epr2 : epr3}. Tests whether the first
+    expression is true, if it is then executes the second expression, otherwise
+    executes the third expression.
 
 \end{document}
