@@ -26,19 +26,16 @@
 \date{March 2023}
 
 \begin{document}
-    % PAGE 1
     \maketitle
 
-    % PAGE 2
     \chapter{Note}
     In this material I will go over everything from book,
     trying to summarize every note-worthy subject. I will do
     it, while learning Latex, so good luck to me.
 
-    % PAGE 3
     \tableofcontents
 
-    % PAGE 4
+    % PAGE 1
     \chapter{C Fundamentals}
     
     \section{Steps of Executing a C Program}
@@ -68,7 +65,7 @@
     \textbf{Directives} - Begin with '\#' symbol, they state what headers
     include to program.
 
-    % PAGE 5
+    % PAGE 2
     \textbf{Functions} - They are segments of code that take arguments, and
     returns (or not) a value. Only \texttt{main} function is required.
 
@@ -122,7 +119,7 @@
     random - garbage value assigned to them, if we didn't. In declaration we can assign
     value to a variable, making it an \textbf{initializer}, e.g. \texttt{int i = 0;}.
 
-    % PAGE 6
+    % PAGE 3
     \section{Reading Input}
     For reading input we need to use \texttt{scanf} function, which needs a format
     string and value to read, e.g. \texttt{scanf("\%d", \&i);}.
@@ -151,7 +148,7 @@
     In most cases we can put many spaces between them. But we cannot put spaces within
     tokens e.g. \texttt{fl oat f;}. 
 
-    % PAGE 7
+    % PAGE 4
     \chapter{Formatted Input/Output}
 
     \section{The \texttt{printf} Function}
@@ -174,7 +171,7 @@
     Depends on the type to be displayed, reference the book for more detailed preview. 
     \newpage
 
-    % PAGE 8
+    % PAGE 5
     Conversion specifications:
     \begin{itemize}
         \item \texttt{d} - Displays an integer in a decimal (base 10) form. \textit{p} indicates
@@ -209,14 +206,14 @@
     It doesn't read the new-line character at the end of the input. If character
     cannot be read, function puts it back for the next variable and adds it to that.
 
-    % PAGE 9
+    % PAGE 6
     \subsection*{Ordinary Characters in Format Strings}
     We can put a white-space characters into the format string, then scanf will read
     any number of white-space characters and discard them. When it encounters a
     non-white-space character it is trying to match it with an inputted character.
     If it fails, it returns.
 
-    % PAGE 10
+    % PAGE 7
     \chapter{Expressions}
 
     \section{Arithmetic Operators}
@@ -247,7 +244,7 @@
     \section{Assignment Operators}
     Are used to store a computed value of the expression.
 
-    % PAGE 11
+    % PAGE 8
     \subsection*{Simple Assignment}
     Evaluates an expression, which then assigns into the variable, expression can be a
     \textit{constant} (always has the same value). If they don't have the same type, the
@@ -288,7 +285,7 @@
     and \textbf{postfix} (\texttt{i++} or \texttt{i---}) which first assings value to
     \texttt{i} and increments \texttt{i} after this statement.
 
-    % PAGE 12
+    % PAGE 9
     \chapter{Selection Statements}
     We could group most statements in this three categories:
     \begin{itemize}
@@ -318,7 +315,7 @@
         \hline
     \end{tabular} 
 
-    % PAGE 13
+    % PAGE 10
     \subsection*{Equality Operators}
 
     \bigskip
@@ -366,5 +363,97 @@
     Has the following form: \texttt{epr1 ? epr2 : epr3}. Tests whether the first
     expression is true, if it is then executes the second expression, otherwise
     executes the third expression.
+
+    % PAGE 11
+    \subsection{Boolean Values}
+    \subsubsection{C89}
+    There is not a boolean type in C89, but we could declare a macro definition named
+    \texttt{TRUE or FALSE}, e.g. \texttt{\#define TRUE 1}.
+
+    \subsubsection*{C99}
+    With the arrival of C99 we could declare \texttt{\_Bool} type, e.g.
+    \texttt{\_Bool flag = true;}. For using this type we must declare a
+    \texttt{\#include <stdbool.h>}.
+    
+    \section{The \texttt{switch} statement}
+    Switch statement can be a better-looking and faster alternative to the cascaded
+    \texttt{if}. It has the following form:
+    \begin{lstlisting}
+        switch ( expression ) {
+            case constant-expression : statements
+            ...
+            case constant-expression : statements
+            default : statements
+        }
+    \end{lstlisting}
+    
+    Components of the \texttt{switch} statement:
+    \begin{itemize}
+        \item \textbf{Controlling expression} - could be an \texttt{int} or a
+        \texttt{char}, but not \texttt{float} and strings.
+        \item \textbf{Case lebels} - Form: \texttt{case constant-expression :}
+        Cannot contain variables and function calls.
+        \item \textbf{Statements} - Comes after each case label.
+    \end{itemize}
+    \texttt{Switch} statement doesn't need a \texttt{default} case. We use a
+    \texttt{break} statement to stop at one choice, otherwise switch would execute
+    all remaining cases.
+
+    % PAGE 12
+    \chapter{Loops}
+    Loop is a repeatedly executing statements until the controlling expression
+    is not true.
+    
+    \section{The \texttt{while} Statement}
+    It has the following form: \texttt{while ( expression ) statement}. First
+    it tests the controlling expression, then executes the loop body, if the
+    expression is false, the loop terminates. It is possible that the loop
+    body will not be executed at all, because it could be a false from the
+    beginning.
+    
+    \section{The \texttt{do} Statement}
+    It resembles the \texttt{while} loop, but it tests the controlling
+    expression after each execution of the loop body, which makes it execute
+    always at least once. It has the following form: \texttt{do statement
+    while ( expression ) ; }.
+    
+    \section{The \texttt{for} Statement}
+    Is used in a variety of ways, is ideal for counting loops. Has the following
+    form: \texttt{for ( expr1 ; expr2 ; expr3 ) statement}. Every expression has
+    its own role, in first you initialize or assign values to iterating variables.
+    In the second you place a condition, which is checked every execution and while
+    it is true loop will execute. In the third you put an operation which is performed
+    at the end of each loop iteration. We could make more expressions (separated by
+    the comma), but would need to place them in place according to their characteristics.
+    Most of the \texttt{for} loops can be replaced by the \texttt{while} loop. We could
+    omit any expression, but we need to compensate for it before or later. From C99
+    we could declare variables in the loop body, which will not be used as the
+    variables already declared.
+    
+
+    % PAGE 13
+    \section{Exiting from a Loop}
+
+    \subsection{The \texttt{break} Statement}
+    Is used to jump out of the loop body, terminating it. Can escape only one level
+    of nesting.
+
+    \subsection{The \texttt{continue} Statement}
+    Only used in loops. Transfers control to the end of the loop, but it stayes in
+    loop for the next execution. Can be considered a
+    "skip to the end" statement.
+
+    \subsection*{The \texttt{goto} Statement}
+    Jumps (transfers control) from its declaration to the label in the other part
+    of the program. Label has the following form: \texttt{identifier : statement}.
+    The \texttt{goto} statement has this form: \texttt{goto identifier ;}. Nowadays
+    it is not commonly used, in favour of the \texttt{break, continue} and
+    \texttt{return} statements.
+
+    \section{The \texttt{null} Statement}
+    We could omit the loop body (moving the loop body into expressions) or one of
+    its expressions (which will create an infinite loop), e.g.
+    \texttt{for (i = 0; ; i++) {...} }.
+
 
 \end{document}
