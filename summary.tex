@@ -455,5 +455,25 @@
     its expressions (which will create an infinite loop), e.g.
     \texttt{for (i = 0; ; i++) {...} }.
 
+    % PAGE 14
+    \chapter{Basic Types}
+
+    \section{Integer Types}
+    They are the whole numbers. We can divide them into two categories: \texttt{signed}
+    and \texttt{unsigned}. The \texttt{signed} integers can be both positive and
+    negative, but because of this they are two times less than \texttt{unsigned} type,
+    which cannot contain negative numbers, thus making it one bit bigger. Sometimes we
+    need bigger numbers, then we would use a \texttt{long} integer which on the most
+    machines is double the \texttt{int} type. We could also store smaller integer values
+    in the \texttt{short} type. Every type can be \texttt{signed} or \texttt{unsigned},
+    e.g. \texttt{unsigned short int}. We could abbreviate names by dropping the word
+    \texttt{int}. Types aren't required to have a certain bounds or maximum values, which
+    varies from one architecture to another. For our machine's ranges we could see the
+    \texttt{<limits.h>} header.
+
+    \subsection*{Integer Types in C99}
+    From C99 we could now declare type \texttt{long long int}, which can be even two
+    times the \texttt{long int} type.
+
 
 \end{document}
