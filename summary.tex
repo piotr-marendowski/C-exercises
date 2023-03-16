@@ -475,5 +475,56 @@
     From C99 we could now declare type \texttt{long long int}, which can be even two
     times the \texttt{long int} type.
 
+    \subsection*{Integer Constants}
+    Constant numbers are numbers that cannot change. Can be of the base 10, 8 and 16:
+    \begin{itemize}
+        \item \textbf{Decimal} - Contain digits 0 through 9, cannot begin with a zero.
+        \item \textbf{Octal} - Contain digits 0 through 7, must begin with a zero.
+        \item \textbf{Hexadecimal} - Containg digits 0 through 9 and letter a to f,
+        always begin with a 0x. Letters can be either lower case or upper case.
+    \end{itemize}
+
+    % PAGE 15
+    We could mix together any of these without any repercussions. As well as we could
+    indicate that constant is for example \texttt{long int} - by adding \texttt{L or l}
+    to the number. To indicate that constant is a \texttt{unsigned int} -
+    add \texttt{U or u}. Both can be added together. In C99 we could specify the type
+    \texttt{long long int} by adding \texttt{LL or ll} to the end.
+
+    \bigskip
+    If the result of the arithmetic operation is more than what desired type can store,
+    we say that occured an \textbf{Integer Overflow}.
+
+    \subsection*{Reading and Writing Integers}
+    For reading/writing operations we need to use the conversion specification
+    for Unsigned types:
+    \begin{itemize}
+        \item \textbf{Unsigned} - \texttt{U} in decimal.
+        \item \textbf{Octal} - \texttt{O}.
+        \item \textbf{Hexadecimal} - \texttt{X}.
+    \end{itemize} 
+    We use could use them with type conversion specifications by appending this letter
+    to the front:
+    \begin{itemize}
+        \item \textbf{Short} - \texttt{H}.
+        \item \textbf{Long} - \texttt{L}.
+        \item \textbf{Long Long} (C99) - \texttt{LL}.
+    \end{itemize}
+
+    \section{Floating Types}
+    Numbers in the decimal form. There are three of them:
+    \begin{itemize}
+        \item \textbf{Float} - Single precision.
+        \item \textbf{Double} - Double precision.
+        \item \textbf{Long double} - Extended precision.
+    \end{itemize}
+    Mostly are stored according to The IEEE Floating-Point Standard.
+
+    % PAGE 16
+    \subsection*{Floating Constants}
+    A floating constant must contain a decimal point and/or an exponent. The exponent
+    (if present) must be preceded by the letter E or e. We could put the letter F or f
+    (for \texttt{float}) or LF or lf (for \texttt{double}) at the end of the number to
+    set the desired type.
 
 \end{document}
