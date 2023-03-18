@@ -116,7 +116,7 @@
 
     \subsection*{Initialization}
     At the default most variables are uninitialized, which means that they have some
-    random - garbage value assigned to them, if we didn't. In declaration we can assign
+    random - garbage value assigned to them, if we did not. In declaration we can assign
     value to a variable, making it an \textbf{initializer}, e.g. \texttt{int i = 0;}.
 
     % PAGE 3
@@ -203,7 +203,7 @@
     \texttt{scanf("\%d", \&i);}. Scanf when reading an input ignores the white-space
     characters. It only matches input to the provided variables. If a reading error
     occurres, scanf will return immediately, ignoring the rest of the format string.
-    It doesn't read the new-line character at the end of the input. If character
+    It does not read the new-line character at the end of the input. If character
     cannot be read, function puts it back for the next variable and adds it to that.
 
     % PAGE 6
@@ -247,7 +247,7 @@
     % PAGE 8
     \subsection*{Simple Assignment}
     Evaluates an expression, which then assigns into the variable, expression can be a
-    \textit{constant} (always has the same value). If they don't have the same type, the
+    \textit{constant} (always has the same value). If they do not have the same type, the
     value of an expression is converted to the type of the variable. Assignments can be
     chained together e.g. \texttt{i = j = k = 0;}. The \texttt{=} operator is right
     associative. 
@@ -395,7 +395,7 @@
         Cannot contain variables and function calls.
         \item \textbf{Statements} - Comes after each case label.
     \end{itemize}
-    \texttt{Switch} statement doesn't need a \texttt{default} case. We use a
+    \texttt{Switch} statement does not need a \texttt{default} case. We use a
     \texttt{break} statement to stop at one choice, otherwise switch would execute
     all remaining cases.
 
@@ -467,7 +467,7 @@
     machines is double the \texttt{int} type. We could also store smaller integer values
     in the \texttt{short} type. Every type can be \texttt{signed} or \texttt{unsigned},
     e.g. \texttt{unsigned short int}. We could abbreviate names by dropping the word
-    \texttt{int}. Types aren't required to have a certain bounds or maximum values, which
+    \texttt{int}. Types are not required to have a certain bounds or maximum values, which
     varies from one architecture to another. For our machine's ranges we could see the
     \texttt{<limits.h>} header.
 
@@ -526,5 +526,37 @@
     (if present) must be preceded by the letter E or e. We could put the letter F or f
     (for \texttt{float}) or LF or lf (for \texttt{double}) at the end of the number to
     set the desired type.
+
+    \subsection*{Reading and Writing Floating-Point Numbers}
+    In order to read a \texttt{double} value we use \texttt{lf, le, lg} (for
+    \texttt{printf} without the l character). For the \texttt{long double} we used
+    \texttt{Lf, Le, Lg}.
+
+    \section{Character Types}
+    For one character we use the type \texttt{char} which on the most machines corresponds
+    to the ASCII table.
+
+    \subsection*{Operations on Characters}
+    Because of the fact that \texttt{char} type is a really short int, we could take
+    characters from the ASCII table and print them according to their number e.g. number
+    97 will be the character 'A'. We could also do some calculations on characters, for
+    example by adding 1 to previous character we would get 'B'. Because of this
+    characteristic we could compare characters and check if a number is for example greater
+    than 'A' and less then 'Z'.
+
+    \subsection*{Signed and Unsigned Characters}
+    C standard does not states that the \texttt{char} type is explicitly a \texttt{signed}
+    or an \texttt{unsigned} type. Most of the times we do not care about it.
+
+    \subsection*{Escape Sequences}
+    We use them for non-printable characters. To get them all we need to use a numeric
+    escape which we could write in octal or hexadecimal:
+    \begin{itemize}
+        \item \textbf{Octal} - Does not begin with a zero, but with a backslash, after it 
+        comes a number from the ASCII character set in octal.
+        \item \textbf{Hexadecimal} - Consists of the \textbackslash x followed by the hexadecimal
+        number.
+    \end{itemize}
+    An escape sequence must be enclosed in single qoutes e.g. \texttt{'\textbackslash 33'}.
 
 \end{document}
