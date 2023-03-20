@@ -1,10 +1,11 @@
-\documentclass[12pt, openany]{book}
+\documentclass[openany]{book}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{listings, lstautogobble}        % code segments
-\usepackage{array, multirow}                % tables multirows
-\usepackage[table]{xcolor}                  % tables colors
+\usepackage{listings, lstautogobble}            % code segments
+\usepackage{array, multirow}                    % tables multirows
+\usepackage[table]{xcolor}                      % tables colors
+\usepackage[nomarginpar, margin=3cm]{geometry}  % for margins to be equal size
 
 % inverts colors of the document, I use it mostly for my eyes' sake in night
 \pagecolor[rgb]{0.2, 0.2, 0.2}
@@ -558,5 +559,51 @@
         number.
     \end{itemize}
     An escape sequence must be enclosed in single qoutes e.g. \texttt{'\textbackslash 33'}.
+
+    % PAGE 17
+    \subsection*{Operations on Character types}
+    To read or write on the character type, we need to use the \texttt{\%c} conversion
+    specification. To skip white spaces before reading a variable in the \texttt{scanf}
+    function we would need to write it like that: \texttt{" \%c"}.
+
+    \bigskip
+
+    We could also use the \texttt{putchar} function in order to write a single character.
+    As well as to \texttt{getchar} to read one character. They are generally faster than
+    \texttt{scanf} or \texttt{printf} function, because they are designed to only read
+    one variable type and thus are smaller. If first there is \texttt{scanf} it will
+    leave peaked (not assigned) variables and than calling \texttt{getchar} will read them.
+
+    \section{Type Conversion}
+    If we mix different types in an arithmetic expression, the compiler will convert
+    them to the same type and then calculate on them. These conversions are called
+    \textbf{implicit expressions}, because they are handled automatically. There are
+    also \textbf{explicit expressions} which we could work with using the cast operator.
+
+    \subsection*{Casting}
+    We could state that variable must convert to the stated type. It has the following
+    form: \texttt{( type-name ) expression}. We use this to avoid overflowing, when
+    one variable is converted to the smaller type than it can handle.
+
+    \section{Type Definitions}
+    Example: \texttt{typedef int Bool;} would make a \texttt{Bool} type which has
+    the same characteristics as the \texttt{int} type.
+
+    \section{The \texttt{sizeof} Operator}
+    \texttt{sizeof ( type-name )} represents the number of bytes required to store
+    a value belonging to type-name. Has type \texttt{size\_t} which is unsigned integer
+    type.
+
+    % PAGE 18
+    \chapter{Arrays}
+
+    \section{One-Dimensional Array}
+    Is a data structure containing number of elements of the same type. Elements
+    are arranged in a single row one after another, beginning with a zero element
+    and ending with a n-1 element because of that. \texttt{int a[10];} declares
+    one-dimensional array with 10 \texttt{int} elements. We use an array 
+    textbf{subscripting} or \textbf{indexing} in order to access a particular
+    element of the array, e.g. \texttt{a[0] = 10;}.
+
 
 \end{document}
