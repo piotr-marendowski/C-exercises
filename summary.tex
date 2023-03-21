@@ -605,5 +605,125 @@
     textbf{subscripting} or \textbf{indexing} in order to access a particular
     element of the array, e.g. \texttt{a[0] = 10;}.
 
+    \subsection*{Array Initialization}
+    \texttt{int a[3] = { 1, 2, 3 }} If we initialize less than total number of elements, the rest will be 
+    zeroed. Thanks to that we could initialize all elements to zero: \texttt{int a [3] = { 0 }}. We could
+    also omitt the length of the array if the initializer is present.
+
+    \section{Multidimensional Arrays}
+    We could create arrays with any number of dimensions:
+    \begin{lstlisting}
+    int m[2][2] = {{1, 2}
+                   {3, 4}};
+    \end{lstlisting}
+    Which will have two rows and colums. They are stored in a row-major order (one row after another
+    in a continuous block of memory). We could also declare them to be constant with a keyword
+    \texttt{const} to not permitt any modification of them.
+
+    \section{Variable-Length Arrays}
+    C99 feature, which can be used to supply not constant number to the declaration. For example we could first ask to specify a length and then declare array with that length.
+
+    % PAGE 20
+    \chapter{Functions}
+
+    \section{Defining and Calling Functions}
+    \begin{lstlisting}
+    double average(double a, double b)
+    {
+        return (a + b) / 2;
+    }
+    \end{lstlisting}
+    Where \texttt{double} is the \textbf{return type} of the function, \texttt{a} and \texttt{b}
+    are \textbf{parameters} supplied from the calling function to be used in this function. The
+    \texttt{return} statement is in loop \textbf{body} which will be executed. To call this
+    function we need to enter a function name followed by the list of \textbf{arguments}:
+    \texttt{average(x, y);}.
+
+    \subsection{Function Definitions}
+    General function definition:
+    \begin{lstlisting}
+    return-type function-name ( parameters )
+    {
+        declarations
+        statements
+    }
+    \end{lstlisting}
+    Functions cannot return arrays. If \texttt{return-type} is \texttt{void} function doesn't returns a value.
+    If there is not return value, type is \texttt{int} in C99, while in C99 it is illegal. If function has
+    zero parameters it should contain the keyword \texttt{void}. Void function's body can be empty.
+
+    \subsection*{Function Calls}
+    Consists of a function name and parameters enclosed in parentheses (if there are not any parameters, we
+    we need to write parentheses without anything inside).
+
+    \section{Function Declarations}
+    Is a first line of the function and is used for providing information about function which could be written as a whole below the \texttt{main} function. It must be consistent with the function's definition. They are known as \textbf{function prototypes}. 
+
+    \section{Arguments}
+    Parameters are in function definitions and arguments are in function calls. Arguments are passed by value which means that they won't be affected after function execution. 
+
+    \subsection*{Array Arguments}
+    When supplying an array compiler does not know its length so we need to add a length argument. In function calls we only pass the array name as an argument. In contradiction we can modify an array when passing it into the function.
+
+    \subsection*{Variable-Length Array Parameters}
+    To use VLAs as parameters we need to first specify parameter which will go into this VLA.
+
+    \subsection*{Compound Literals}
+    \begin{lstlisting}
+    total = sum_array((int []){3, 0, 3, 4, 1}, 5);
+    \end{lstlisting}
+    Makes this array "on the fly" to be supplied into \texttt{sum\_array} function.
+
+    \section{The \texttt{return} Statement}
+    \texttt{return expression ;} \\
+    If there is for example a \texttt{double} variable in the \texttt{return} statement, it will be
+    converted to the function's return type. For \texttt{void} functions \texttt{return} statement
+    is not necessary.
+
+    \section{Program Termination}
+    The \texttt{main} function should return 0 if terminated successfully.
+
+    \subsection*{The \texttt{exit} Function}
+    \texttt{exit\(0\) or exit\(EXIT_SUCCESS\)} - normal termination, \texttt{exit\(1\) or exit\(EXIT_FAILURE\)}
+    indicates abnormal termination. This function and macros are declared in \texttt{stdlib.h} header.
+
+    \section{Recursion}
+    A function is recusive if it calls itself.
+
+    \chapter{Program Organization}
+
+    \section{Local Variables}
+    Variable declared in the body of a function is said to be local to the function, which means that
+    it cannot be seen by other functions and used by them. It has an Automatic storage duration which
+    means that it will be automatically allocated and deallocated at the function's return. It also
+    has a block scope which means that it can only be referenced inside this function.
+
+    \subsection*{Static Local Variables}
+    Putting the word \texttt{static} causes it to have static storage duration which means that it
+    retains its value throughout the whole program execution. But it is still hidden from other
+    functions.
+
+    \section{External Variables}
+    Are declared outside the body of any function. Have the static storage duration and the file
+    scope. There are many dangers of using it e.g:
+    \begin{itemize}
+        \item If we would change its type we would need to check every function using it.
+        \item If it will have assigned an incorrect value there will be a problem to identify a guilty
+        function.
+        \item Functions using it are hard to reuse in other programs.
+    \end{itemize}
+    
+    \section{Blocks}
+    We could declare a variable in a e.g. an \texttt{if} statement, then this variable will have
+    the block scope and will not be able to be referenced outside this scope.
+    
+    \section{Scope}
+    In a C program, the same identifier may have several different meanings. When a declaration inside
+    a block names an identifier that's already visible, the new declaration temporarily "hides" the old
+    one, and the identifier takes on a new meaning. At the end of the block, the identifier regains its
+    old meaning. If you go deeper, the most relevant variable will be used. There are file and block
+    scopes.
+    
+    \section{Organizing a C Program}
 
 \end{document}
