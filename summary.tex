@@ -725,5 +725,32 @@
     scopes.
     
     \section{Organizing a C Program}
+    Rules to organize a program:
+    \begin{itemize}
+        \item A preprocessing directive does not take effect until the line on which it appears.
+        \item A type name cannot be used until it is been defined.
+        \item A variable cannot be used until it is declared.
+    \end{itemize}
+
+    \chapter{Pointers}
+
+    \section{Pointer Variables}
+    Every byte has a unique memory address. If a variable consists of more than one byte, then its address is the first byte occupied by it. Pointer variables "point" (store) to this address in memory.
+
+    \subsection*{Declaring Pointer Variables}
+    We declare it by adding an asterisk by the name: \texttt{int *p;} which points only to the
+    \texttt{int} variables. Pointers can point to any type or a block in memory.
+
+    \section{The Address and Indirection Operators}
+    If \texttt{x} is a variable, then its address is \texttt{\&x}. To gain access to the object
+    (value) that a pointer points to, we use the \texttt{} (indirection) operator.
+
+    \subsection*{The Address Operator}
+    We could initialize pointer in declaration to point to some value e.g. \texttt{int i, p = \&i;}.
+
+    \subsection*{The Indirection Operator}
+    We could access the value pointed to e.g. \texttt{printf("\%d\textbackslash n", p);} will
+    display the value of \texttt{i} not its address. By changing the value of \texttt{p} we will
+    change the value \texttt{i}.
 
 \end{document}
