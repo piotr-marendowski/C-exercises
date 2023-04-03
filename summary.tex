@@ -6,6 +6,7 @@
 \usepackage{array, multirow}                    % tables multirows
 \usepackage[table]{xcolor}                      % tables colors
 \usepackage[nomarginpar, margin=3cm]{geometry}  % for margins to be equal size
+\usepackage{listings, lipsum, courier}          % fonts
 
 % inverts colors of the document, I use it mostly for my eyes' sake in night
 \pagecolor[rgb]{0.2, 0.2, 0.2}
@@ -735,7 +736,8 @@
     \chapter{Pointers}
 
     \section{Pointer Variables}
-    Every byte has a unique memory address. If a variable consists of more than one byte, then its address is the first byte occupied by it. Pointer variables "point" (store) to this address in memory.
+    Every byte has a unique memory address. If a variable consists of more than one byte, then its
+    address is the first byte occupied by it. Pointer variables "point" (store) to this address in memory.
 
     \subsection*{Declaring Pointer Variables}
     We declare it by adding an asterisk by the name: \texttt{int *p;} which points only to the
@@ -752,5 +754,100 @@
     We could access the value pointed to e.g. \texttt{printf("\%d\textbackslash n", p);} will
     display the value of \texttt{i} not its address. By changing the value of \texttt{p} we will
     change the value \texttt{i}.
+
+    \section{Pointer Assignment}
+    \texttt{int p = \&i;} - copies the address of i into p. \texttt{q = p} copies the contents of p
+    (the address of i) into q, so now q points to i. We could change i by chaging q and p.
+
+    \section{Pointers as Arguments}
+    Pointers can be used as function's arguments (as aliases to variables in calling function)
+    and be used to modify values inside the function and store them outside. We could declare
+    p to be constant \texttt{constp} which means that it cannot be changed.
+
+    \section{Pointers as Return Values}
+    Pointers (as aliases to other variables or external variables or static variables) could also return from functions. 
+
+    \chapter{Pointers and Arrays}
+
+    \section{Pointer Arithmetic}
+    \begin{lstlisting}
+    int a[10], *p;
+    p = &a[10];
+    p = 5;
+    \end{lstlisting}
+    p points to first element in array and assigns to it 5.
+
+    \subsection*{Adding an Integer to a Pointer}
+    \begin{lstlisting}
+    int a[10], p, q, i;
+    p = &a[2];
+    q = p + 3;
+    p += 6;
+    \end{lstlisting}
+    p points to 2, q points to 5 (p + 3), p points to 8 (2 + 6). Is equivalent to \texttt{a[i + j]}.
+
+    \subsection*{Subtracting an Integer to a Pointer}
+    \begin{lstlisting}
+    int a[10], p, *q, i;
+    p = &a[8];
+    q = p - 3;
+    p -= 6;
+    \end{lstlisting}
+    p points to 8, q points to 5 (p - 3), p points to 2 (8 - 6). Is equivalent to \texttt{a[i - j]}.
+
+    \subsection*{Subtracting One Pointer from Another}
+    The result is distance between the pointers.
+    \begin{lstlisting}
+    p = &a[5];
+    q = &a[1];
+
+    i = p - q;    /* i is 4 */
+    i = q - p;    /* i is -4 */
+    \end{lstlisting}
+
+    \section{Using Pointers for Array Processing}
+    We could iterate through the whole array by incrementing the pointer itself.
+
+    \section{Using an Array Name as a Pointer}
+    Array subscripting can be viewed as a form of pointer arithmetic. We cannot directly change where one element
+    points to, but we could create a new pointer to this array and make this element point elsewhere.
+    \begin{lstlisting}
+    int a[10];
+    a = 7;        /* stores 7 in a[0] is equivalent to &a[0] */
+    (a+1) = 12;   /* stores 12 in a[1] is equivalent to a[1] */
+
+    /* easier way to calculate sum */
+    for (p = a; p < a + N; p++)
+        sum +=p;
+    \end{lstlisting}
+    Arrays passed to functions always are treated as pointers and are not copied in contrast to that array is
+    not protected agains change. Ordinary values are copied, but arrays are not. We could pass a slice of the
+    whole array to a function. We could also create new pointer which points to an array and perform pointer
+    arithmetic on it which will be as we operated on this array itself.
+
+    \section{Pointers and Multidimensional Arrays}
+    Arrays are stored in row-major order, which means that no matter how many dimensions they have, they all are
+    stored in one big line, which could be operated through pointer arithmetic. 
+
+    \section{Pointers and Variable-Lenght Arrays(C99)}
+    Pointers can point to VLAs (any dimensions). With multi-dimensional arrays pointer need to have the type of
+    the last dimension \texttt{int a[m][n], (*p)[n];}.
+
+    \chapter{Strings}
+
+    \section{String Literals}
+    Is a series of characters enclosed within double quotes e.g. \texttt{"Hello, World!"}.
+
+    \subsection*{How Strings Literals Are Stored}
+    C treats string literals as character arrays. C compiler sets n + 1 characters for literal
+    and adds a \textbf{null character} (\texttt{\textbackslash 0} escape sequence) at the end which is used
+    to indicate end of this literal. So compiler treats it like a \texttt{char} type.
+
+    \section{String Variables}
+    We need to declare a string one character longer to leave space for the null character at the
+    end. To initialize a string variable: \texttt{char date[8] = "June 14";} where \texttt{"June 14"}
+    is not a string literal, but an initialization of string \texttt{date}. If initializer is shorter
+    than number of elements in the array, the leftover elements will be null.
+
 
 \end{document}
