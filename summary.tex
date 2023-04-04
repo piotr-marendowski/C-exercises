@@ -849,5 +849,58 @@
     is not a string literal, but an initialization of string \texttt{date}. If initializer is shorter
     than number of elements in the array, the leftover elements will be null.
 
+    f there are no room for string, it will be cut and no null character will be assigned (meaning
+    that it will not be usable as a string). We could also omit setting the initializer, then the
+    compiler will calculate lenght of the array for us(adding the null character at the end), but
+    this length will be fixed and cannot be changed.
+
+    \section{Character Arrays versus Character Pointers}
+    \begin{lstlisting}
+    char date1[] = "June 14";
+    char date2 = "June 14";
+    \end{lstlisting}
+    \texttt{date1} is an array, while \texttt{date2} is a pointer. Array elements can be modified,
+    but string literal pointed to by \texttt{date2} cannot. \texttt{date1} is an array name, while
+    \texttt{date2} is a pointer which could point to other strings during program execution.
+
+    \section{Reading and Writing Strings}
+    \subsection*{Writing Strings Using \texttt{printf} and \texttt{puts}}
+    \begin{lstlisting}
+    printf("%s\n", str);
+    puts(str);
+    \end{lstlisting}
+    \texttt{printf} using the \texttt{\%s} conversion specification reads characters one by one until
+    it finds the null character (if not found will continue to read out of bounds memory locations).
+    \texttt{puts} after reading a string always advances to the next line (by printing a new-line
+    character).
+
+    \section{Reading Strings Using \texttt{scanf} and \texttt{gets}}
+    \begin{lstlisting}
+    scanf("%s", str);
+    gets(str);
+    \end{lstlisting}
+    \texttt{str} in \texttt{scanf} is treated like a pointer so there is no need for the address
+    operator (\texttt{\&}). When it is called it discards white-space characters and writes into
+    \texttt{str} every character until it encounters a white-space, will always store a null
+    character at the end. A new-line or space or tab character in the middle of input will cause 
+    \texttt{scanf} to stop reading. \texttt{gets} reads the whole line of input and stores a
+    null character at the end, it does not skip white-spaces and reads until it finds a null
+    character. There is a better and safer alternative of \texttt{gets} - \texttt{fgets} which
+    has a length parameter and cannot go over this lenght.
+
+    \section{Accessing the Characters in a String}
+    We could use the array subscripting or pointer arithmetic to process strings. Pointers simplify this. There is no difference
+    between string parameter being declared as an array or as a pointer.
+
+    \section{Using the C String Library}
+    Header \texttt{\#include <string.h>} will include many functions that will be helpful for processing strings.
+
+    \subsection*{Short Explanation of Some Functions}
+    \begin{itemize}
+        \item \texttt{char *strcpy(char s1, chars2);} - copies the string s2 (until first null character) into string s1 and
+        returns s1. Function \texttt{strncpy} has third argument which is size of the string, is safer but slower.
+        \item \texttt{size\_t strlen(const char *s);} - returns the length of the string (number of characters is up to,
+        but not including, the first null character).
+    \end{itemize}
 
 \end{document}
