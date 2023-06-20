@@ -31,28 +31,23 @@
     \maketitle
 
     \chapter{Note}
-    In this material I will go over everything from book,
-    trying to summarize every note-worthy subject. I will do
-    it, while learning Latex, so good luck to me.
+    In this material I will go over everything from book, trying to summarize every note-worthy subject. I will do it, while learning Latex, so good luck to me.
 
     \tableofcontents
 
-    % PAGE 1
+
+
     \chapter{C Fundamentals}
     
     \section{Steps of Executing a C Program}
     Automated proccess:
     \begin{enumerate}
-        \item\textbf{Preprocessing} - Preprocessor is executing directives
-        (they begin with \#).
-        \item\textbf{Compiling} - Compiler translates program into machine
-        instructions (object code).
-        \item\textbf{Linking} - Linker combines object code and code needed
-        for execution of the program.
+        \item\textbf{Preprocessing} - Preprocessor is executing directives (they begin with \#).
+        \item\textbf{Compiling} - Compiler translates program into machine instructions (object code).
+        \item\textbf{Linking} - Linker combines object code and code needed for execution of the program.
     \end{enumerate}
 
-    \section{The Genereral Form of a Simple Program}
-    Simple C programs have this form:
+    \section{The Genereral Form of a Simple Program} Simple C programs have this form:
 
     \bigskip
     \textit{directives}
@@ -64,50 +59,36 @@
     \small\texttt{\}}
     \bigskip
 
-    \textbf{Directives} - Begin with '\#' symbol, they state what headers
-    include to program.
+    \textbf{Directives} - Begin with '\#' symbol, they state what headers include to program.
 
-    % PAGE 2
-    \textbf{Functions} - They are segments of code that take arguments, and
-    returns (or not) a value. Only \texttt{main} function is required.
+    \textbf{Functions} - They are segments of code that take arguments, and returns (or not) a value. Only \texttt{main} function is required.
 
     \textbf{Statements} - Commands to execute, mostly end with semicolon.
 
     \bigskip
-    \textbf{String literal} - Series of characters enclosed in double quotation marks,
-    e.g. \texttt{"Hello world!"}.
+    \textbf{String literal} - Series of characters enclosed in double quotation marks, e.g. \texttt{"Hello world!"}.
 
-    \textbf{New-line character} - \texttt{\textbackslash n} is an escape sequence, which
-    advances to the next line of output.
+    \textbf{New-line character} - \texttt{\textbackslash n} is an escape sequence, which advances to the next line of the output.
 
-    \textbf{Comments} - Are ommited in program execution, can be used to comment single line
-    e.g. \texttt{/* Comment */}, or block of lines. From C99 we can use one line comments
-    e.g. \texttt{// Comment}.
+    \textbf{Comments} - Are ommited in program execution, can be used to comment single line e.g. \texttt{/* Comment */}, or block of lines. From C99 we can use one line comments e.g. \texttt{// Comment}.
 
     \section{Variables and Assigments}
 
-    \textbf{Variable} - Place to store calculation's output, for using in future.
+    \textbf{Variable} - Place to store calculation's output, for the future use.
     Variable's characteristics:
     \begin{itemize}
         \item 
         \textbf{Types} - For now, there are two types of variables:
         \begin{itemize}
-            \item \texttt{int} - Integer types, can store quite big whole number, but
-            that depends on your computer's architecture.
-            \item \texttt{float} - Can store bigger numbers, as well as digits after
-            decimal point.
+            \item \texttt{int} - Integer types, can store quite big whole numbers, but that depends on your computer's architecture.
+            \item \texttt{float} - Can store bigger numbers, as well as digits after the decimal point.
         \end{itemize}
 
         \item 
-        \textbf{Declarations} - To use a variable, we first need to declare it. It
-        means that we need to specify variable's type, and name. We can chain declarations
-        with the same type e.g. \texttt{int i, sum, x;}. In C99 they can now be declared
-        after statements, not like in C89.
+        \textbf{Declarations} - To use a variable, we first need to declare it. It means that we need to specify variable's type, and name. We can chain declarations with the same type e.g. \texttt{int i, sum, x;}. In C99 they can now be declared after statements, unlike in C89.
         
         \item
-        \textbf{Assignment} - We assign value to a variable. Variable is on the left
-        side, while value, expression, formula etc. is on the right side. To assign
-        something to a variable, we first need to declare it. Examples:
+        \textbf{Assignment} - Assigns value to a variable. Variable is on the left side, while value, expression, formula etc. is on the right side. To assign something to a variable, we first need to declare it. Examples:
         \begin{lstlisting}
         int i;
         float f;
@@ -117,24 +98,16 @@
     \end{itemize}
 
     \subsection*{Initialization}
-    At the default most variables are uninitialized, which means that they have some
-    random - garbage value assigned to them, if we did not. In declaration we can assign
-    value to a variable, making it an \textbf{initializer}, e.g. \texttt{int i = 0;}.
+    At the default most variables are uninitialized, which means that they have some random - garbage value assigned to them. In declaration we can assign value to a variable, making it an \textbf{initializer}, e.g. \texttt{int i = 0;}.
 
-    % PAGE 3
     \section{Reading Input}
-    For reading input we need to use \texttt{scanf} function, which needs a format
-    string and value to read, e.g. \texttt{scanf("\%d", \&i);}.
+    For reading input we need to use the \texttt{scanf} function, which needs a format string and value to read, e.g. \texttt{scanf("\%d", \&i);}.
 
     \section{Defining Names for Constants}
-    To define a constant, we need to use a \textbf{macro definition}, which is
-    interpreted by the preprocessor e.g. \texttt{\#define WIDTH 20}.
+    To define a constant, we need to use a \textbf{macro definition}, which is interpreted by the preprocessor e.g. \texttt{\#define WIDTH 20}.
 
     \section{Identifiers}
-    Names in C are called \textbf{identifiers}. They can begin with the lower-case or
-    upper-case letters or underscores e.g. \texttt{times10  my\_var  \_done}. They
-    cannot begin with a number e.g. \texttt{10times}. They cannot contain minus signs
-    e.g. \texttt{my-var}.
+    Names in C are called \textbf{identifiers}. They can begin with the lower-case, upper-case letters or underscores e.g. \texttt{times10  my\_var  \_done}. They cannot begin with a number e.g. \texttt{10times}. They cannot contain minus signs e.g. \texttt{my-var}.
 
     \subsection*{Keywords}
     There are number of keywords, which are prohibited from using as identifiers.
@@ -145,51 +118,36 @@
     printf   (   "Height:   %d\n"   ,   height   )   ;
       1      2      3         4     5     6      7   8
     \end{lstlisting}
-    Tokens 1 and 2 are identifiers, token 3 is a string literal and tokens 2, 4, 6,
-     and 7 are punctuation. \\
-    In most cases we can put many spaces between them. But we cannot put spaces within
-    tokens e.g. \texttt{fl oat f;}. 
+    Tokens 1 and 2 are identifiers, token 3 is a string literal and tokens 2, 4, 6, and 7 are punctuation. Most of the time, we could put many spaces between them. But we cannot put spaces within tokens e.g. \\
+    \texttt{fl oat f;}. 
 
-    % PAGE 4
+
+
     \chapter{Formatted Input/Output}
 
     \section{The \texttt{printf} Function}
-    Needs a format string and arguments to insert there. There is no limit to these
-    arguments. Format string could have conversion specifications, which are supplied by
-    its arguments, to insert into format string e.g. \texttt{printf("Value: \%d", i);}
-    where \texttt{\%d} is a conversion specification and \texttt{i} is a value to be
-    supplied to the format string.
+    Needs a format string and arguments to insert there. There is no limit how much of arguments could be there. Format string could have conversion specifications, which are supplied by its arguments to insert into format string e.g. \texttt{printf("Value: \%d", i);} where \texttt{\%d} is a conversion specification and \texttt{i} is a value to be supplied to the format string.
 
     \section{Conversion Specifications}
-    Outside of letter(s) specifying which type to covert to, they consist of the \textbf{Minimal
-    Field Width (m)} and \textbf{Precision (p)}. They have the form of: \texttt{\%m.pX}.
+    Outside of letter(s) specifying which type to covert to, they consist of the \textbf{Minimal Field Width (m)} and \textbf{Precision (p)}. They have the form of: \texttt{\%m.pX}.
 
     \subsection*{Minimal field width}
-    Specifies the minimum number of characters to print. If the number of characters
-    to print is less than specified, the number is right justified with spaces added. If the number of
-    characters is greater than specified it will automatically expand to display all of characters.
+    Specifies the minimum number of characters to print. If this number is less than specified, then the number is right justified with spaces added. If the number of characters is greater than specified, then it will automatically expand to display all of the characters.
 
     \subsection*{Precision}
     Depends on the type to be displayed, reference the book for more detailed preview. 
     \newpage
 
-    % PAGE 5
-    Conversion specifications:
+    \subsection*{Conversion specifications:}
     \begin{itemize}
-        \item \texttt{d} - Displays an integer in a decimal (base 10) form. \textit{p} indicates
-        the minimum number of digits to display.
-        \item \texttt{e} - Displays a floating-point number in exponential format. \textit{p}
-        indicates the number of digits after the decimal point.
-        \item \texttt{f} - Displays a floating-point number without an exponent. \textit{p} has
-        the same meaning as previous.
-        \item \texttt{g} - Displays a floating-point number in exponential format or
-        fixed (without an exponent). \textit{p} indicates the maximum number of
-        significant digits to be displayed. It depends on the size of the number.
+        \item \texttt{d} - Displays an integer in a decimal (base 10) form. \textit{p} indicates the minimum number of digits to display.
+        \item \texttt{e} - Displays a floating-point number in the exponential format. \textit{p} indicates the number of digits after the decimal point.
+        \item \texttt{f} - Displays a floating-point number without an exponent. \textit{p} has the same meaning as previous.
+        \item \texttt{g} - Displays a floating-point number in exponential format or fixed (without an exponent). \textit{p} indicates the maximum number of significant digits to be displayed. It depends on the size of the number.
     \end{itemize}
 
     \subsection*{Escape sequences}
-    They are characters, that would introduce problems in compilation or have some action
-    to do e.g. insert new line into output. Few of them are:
+    They are characters, that would introduce problems in compilation or have some action to do e.g. insert new line. Few of them are:
     \begin{itemize}
         \item \texttt{\textbackslash a} - alert (bell),
         \item \texttt{\textbackslash b} - backspace,
@@ -200,22 +158,13 @@
     \end{itemize}
 
     \section{The \texttt{scanf} Function}
-    This funcion handles input from stdin stream (keyboard),  have a format string
-    and may contain conversion specifications. The scanf call may look like that:
-    \texttt{scanf("\%d", \&i);}. Scanf when reading an input ignores the white-space
-    characters. It only matches input to the provided variables. If a reading error
-    occurres, scanf will return immediately, ignoring the rest of the format string.
-    It does not read the new-line character at the end of the input. If character
-    cannot be read, function puts it back for the next variable and adds it to that.
+    This funcion handles input from the standard input stream (keyboard),  have a format string and may contain conversion specifications. The scanf call may look like that: \texttt{scanf("\%d", \&i);}. Scanf when reading an input ignores the white-space characters. It only matches input to the provided variables. If a reading error occurs, scanf will return immediately, ignoring the rest of the format string. It does not read the new-line character at the end of the input. If character cannot be read, function puts it back for the next variable and adds it to that.
 
-    % PAGE 6
     \subsection*{Ordinary Characters in Format Strings}
-    We can put a white-space characters into the format string, then scanf will read
-    any number of white-space characters and discard them. When it encounters a
-    non-white-space character it is trying to match it with an inputted character.
-    If it fails, it returns.
+    We can put white-space characters into the format string, then \texttt{scanf} will read any number of white-space characters and discard them. When it encounters a non-white-space character it tries to match it with an inputted character. If it fails, it returns this variable without assigning to it anything.
 
-    % PAGE 7
+
+
     \chapter{Expressions}
 
     \section{Arithmetic Operators}
@@ -232,36 +181,25 @@
     \end{tabular}
 
     \subsection*{Operator Precendence and Associativity}
-    \textbf{Operator precendece} is in what order C calculates expressions. The arithmetic
-    operators have the following relative precendence: \\
+    \textbf{Operator precendece} is in what order C calculates expressions. The arithmetic operators have the following relative precendence: \\
     \tab Highest: + - (unary) \\
     \tab\tab\tab \ * \ / \ \% \\    % single backslashes are spaces
     \tab Lowest: \ + - (binary)
 
     \bigskip
-    \textbf{Associativity} decides in what order operators with the same precendece are
-    calculated. The binary operators are all left associative, whilst the unary operators
-    are all right associative.
+    \textbf{Associativity} decides in what order operators with the same precendece are calculated. The binary operators are all left associative, whilst the unary operators are all right associative.
 
     \section{Assignment Operators}
     Are used to store a computed value of the expression.
 
-    % PAGE 8
     \subsection*{Simple Assignment}
-    Evaluates an expression, which then assigns into the variable, expression can be a
-    \textit{constant} (always has the same value). If they do not have the same type, the
-    value of an expression is converted to the type of the variable. Assignments can be
-    chained together e.g. \texttt{i = j = k = 0;}. The \texttt{=} operator is right
-    associative. 
+    Evaluates an expression, which then assigns into the variable, expression can be a \textit{constant} (always has the same value). If they do not have the same type, the value of an expression is converted to the type of the variable. Assignments can be chained together e.g. \texttt{i = j = k = 0;}. The \texttt{=} operator is right associative. 
 
     \subsection*{Lvalues}
-    Assignment operator requires that on its left side can only be a variable, not an
-    expression e.g. \texttt{i + j = 0;} is wrong.
+    Assignment operator requires on its left side a variable, not an expression e.g. \texttt{i + j = 0;} is wrong.
 
     \subsection*{Compound Assignment}
-    We can shorten statements e.g. \texttt{i += 2;} is equivalent to
-    \texttt{i = i + 2;}. It works with the other operators including the following:
-    \texttt{-= *= /= \%=}, they all work in the same way and are right associative.
+    We can shorten statements e.g. \texttt{i += 2;} is equivalent to \texttt{i = i + 2;}. It works with the other operators including the following: \texttt{-= *= /= \%=}, they all work in the same way and are right associative.
 
     \section{Increment and Decrement Operators}
     Used to even more shorten a compound addition and subtraction by 1. E.g. 
@@ -281,29 +219,22 @@
     \end{lstlisting}
 
     % it seems that \texttt need one more minus, don't know why
-    They contain side effects - after adding or subtracting 1, value of their operands
-    is modified. There are two types of these operators: \textbf{prefix} (\texttt{++i}
-    or \texttt{---i}) which increments the variable first, then assigns value to \texttt{i},
-    and \textbf{postfix} (\texttt{i++} or \texttt{i---}) which first assings value to
-    \texttt{i} and increments \texttt{i} after this statement.
+    They contain a side effects - after adding or subtracting 1, values of their operands are modified. There are two types of these operators: \textbf{prefix} (\texttt{++i} or \texttt{---i}) which increments the variable first, then assigns value to \texttt{i}, and \textbf{postfix} (\texttt{i++} or \texttt{i---}) which first assings value to \texttt{i} and increments \texttt{i} after this statement.
 
-    % PAGE 9
+
+
     \chapter{Selection Statements}
     We could group most statements in this three categories:
     \begin{itemize}
-        \item \textbf{Selection statements} - Test provided condition, and execute code
-        within their borders, e.g. \texttt{if} and \texttt{switch} statements.
-        \item \textbf{Iteration statements} - Iterate over and over again, until their
-        condition is not true, e.g. \texttt{for, while}, and \texttt{do while} statements.
-        \item \textbf{Jump statements} - They control the flow of the program, can stop
-        iterations, skip through them or jump to any place in the program, e.g. \texttt{break},
+        \item \textbf{Selection statements} - Test provided condition, and execute code within condition's borders, e.g. \texttt{if} and \texttt{switch} statements.
+        \item \textbf{Iteration statements} - Iterate over and over again, until the condition is not true, e.g. \texttt{for, while}, and \texttt{do while} statements.
+        \item \textbf{Jump statements} - They control the flow of the program, can stop iterations, skip through them or jump to any place in the program, e.g. \texttt{break},
         \texttt{continue} and \texttt{goto} statements.
     \end{itemize} 
 
     \section{Logical Expressions}
     \subsection*{Relational Operators}
-    They are used to compare expressions, yelding 0 if statement are not true and 1 if
-    statement are true.
+    They are used to compare expressions, yelding 0 if statement is not true and 1 if it is.
 
     \bigskip
     \begin{tabular}{|@{} c l|}  % will do the trick :)
@@ -317,7 +248,6 @@
         \hline
     \end{tabular} 
 
-    % PAGE 10
     \subsection*{Equality Operators}
 
     \bigskip
@@ -344,16 +274,13 @@
     \end{tabular}
 
     \section{The \texttt{If} Statement}
-    Has the form of: \texttt{if ( expression ) statement}. If evaluated expression has a
-    non-zero value, then statement after parentheses is executed.
+    Has the form of: \texttt{if ( expression ) statement}. If evaluated expression has a non-zero value, then statement after parentheses is executed.
 
     \subsection*{Compound Statements}
     We can "stack" multiple statements between the parentheses.
 
     \subsection*{The \texttt{else} clause}
-    If we want to execute statements when our expression is not true, we need to use
-    a \texttt{else} clause. It has the following form: \texttt{if ( expression )
-    statement else statement}.
+    If we want to execute statements when our expression is not true, we need to use a \texttt{else} clause. It has the following form: \texttt{if ( expression ) statement else statement}.
 
     \subsection*{Cascaded \texttt{if} Statements}
     Thanks to them we can test multiple conditions. They have the following form:
@@ -362,20 +289,14 @@
     \texttt{statement}.
 
     \subsection*{Conditional Expressions}
-    Has the following form: \texttt{epr1 ? epr2 : epr3}. Tests whether the first
-    expression is true, if it is then executes the second expression, otherwise
-    executes the third expression.
+    Has the following form: \texttt{epr1 ? epr2 : epr3}. Tests whether the first expression is true, if it is then executes the second expression, otherwise executes the third expression.
 
-    % PAGE 11
     \subsection{Boolean Values}
     \subsubsection{C89}
-    There is not a boolean type in C89, but we could declare a macro definition named
-    \texttt{TRUE or FALSE}, e.g. \texttt{\#define TRUE 1}.
+    There is not a boolean type in C89, but we could declare a macro definition named \texttt{TRUE or FALSE}, e.g. \texttt{\#define TRUE 1}.
 
     \subsubsection*{C99}
-    With the arrival of C99 we could declare \texttt{\_Bool} type, e.g.
-    \texttt{\_Bool flag = true;}. For using this type we must declare a
-    \texttt{\#include <stdbool.h>}.
+    With the arrival of C99 we could declare \texttt{\_Bool} type, e.g. \texttt{\_Bool flag = true;}. For using this type we must declare an \texttt{\#include <stdbool.h>} directive.
     
     \section{The \texttt{switch} statement}
     Switch statement can be a better-looking and faster alternative to the cascaded
@@ -393,120 +314,72 @@
     \begin{itemize}
         \item \textbf{Controlling expression} - could be an \texttt{int} or a
         \texttt{char}, but not \texttt{float} and strings.
-        \item \textbf{Case lebels} - Form: \texttt{case constant-expression :}
-        Cannot contain variables and function calls.
-        \item \textbf{Statements} - Comes after each case label.
+        \item \textbf{Case lebels} - Form: \texttt{case constant-expression :} Cannot contain variables and function calls.
+        \item \textbf{Statements} - Come after each case label.
     \end{itemize}
-    \texttt{Switch} statement does not need a \texttt{default} case. We use a
-    \texttt{break} statement to stop at one choice, otherwise switch would execute
-    all remaining cases.
+    \texttt{Switch} statement does not need a \texttt{default} case. We use a \texttt{break} statement to stop at one choice, otherwise switch would execute all remaining cases.
 
-    % PAGE 12
+
+
     \chapter{Loops}
-    Loop is a repeatedly executing statements until the controlling expression
-    is not true.
+    Loop is a repeatedly executing statements until the controlling expression is not true.
     
     \section{The \texttt{while} Statement}
-    It has the following form: \texttt{while ( expression ) statement}. First
-    it tests the controlling expression, then executes the loop body, if the
-    expression is false, the loop terminates. It is possible that the loop
-    body will not be executed at all, because it could be a false from the
-    beginning.
+    It has the following form: \texttt{while ( expression ) statement}. First it tests the controlling expression, then executes the loop body, if the expression is false, the loop terminates. It is possible that the loop body would not be executed at all, because it could be a false from the beginning.
     
     \section{The \texttt{do} Statement}
-    It resembles the \texttt{while} loop, but it tests the controlling
-    expression after each execution of the loop body, which makes it execute
-    always at least once. It has the following form: \texttt{do statement
-    while ( expression ) ; }.
+    It resembles the \texttt{while} loop, but it tests the controlling expression after each execution of the loop body, which makes it execute always at least once. Has the following form: \\
+    \texttt{do statement while ( expression ) ;}
     
     \section{The \texttt{for} Statement}
-    Is used in a variety of ways, is ideal for counting loops. Has the following
-    form: \texttt{for ( expr1 ; expr2 ; expr3 ) statement}. Every expression has
-    its own role, in first you initialize or assign values to iterating variables.
-    In the second you place a condition, which is checked every execution and while
-    it is true loop will execute. In the third you put an operation which is performed
-    at the end of each loop iteration. We could make more expressions (separated by
-    the comma), but would need to place them in place according to their characteristics.
-    Most of the \texttt{for} loops can be replaced by the \texttt{while} loop. We could
-    omit any expression, but we need to compensate for it before or later. From C99
-    we could declare variables in the loop body, which will not be used as the
-    variables already declared.
+    Is used in a variety of ways, is ideal for counting loops. Has the following form: \texttt{for ( expr1 ; expr2 ; expr3 ) statement}. Every expression has its own role, in the first you could initialize or assign values to variables. In the second you place a condition, which is checked every execution and while it is true the loop will execute. In the third you put an operation which is performed at the end of each loop iteration. We could make more expressions (separated by the commas), but would need to place them in place according to their characteristics. Most of the \texttt{for} loops can be replaced by the \texttt{while} loop. We could omit any expression, but we need to compensate for it before or later. From C99 we could declare variables in the loop body, which will not be used as the variables already declared.
     
 
-    % PAGE 13
     \section{Exiting from a Loop}
 
     \subsection{The \texttt{break} Statement}
-    Is used to jump out of the loop body, terminating it. Can escape only one level
-    of nesting.
+    Is used to jump out of the loop body, terminating it. Can escape only one level of nesting.
 
     \subsection{The \texttt{continue} Statement}
-    Only used in loops. Transfers control to the end of the loop, but it stayes in
-    loop for the next execution. Can be considered a
-    "skip to the end" statement.
+    Only used in loops. Transfers control to the end of the loop, but it stays in the loop for the next execution. Can be considered a "skip to the end" statement.
 
     \subsection*{The \texttt{goto} Statement}
-    Jumps (transfers control) from its declaration to the label in the other part
-    of the program. Label has the following form: \texttt{identifier : statement}.
-    The \texttt{goto} statement has this form: \texttt{goto identifier ;}. Nowadays
-    it is not commonly used, in favour of the \texttt{break, continue} and
-    \texttt{return} statements.
+    Jumps (transfers control) from its declaration to the label in the other part of the program. Label has the following form: \texttt{identifier : statement}. The \texttt{goto} statement has this form: \texttt{goto identifier ;}. Nowadays it is not commonly used, in favour of the \texttt{break, continue} and \texttt{return} statements.
 
     \section{The \texttt{null} Statement}
-    We could omit the loop body (moving the loop body into expressions) or one of
-    its expressions (which will create an infinite loop), e.g.
-    \texttt{for (i = 0; ; i++) {...} }.
+    We could omit the loop body (moving the loop body into expressions) or one of its expressions (which will create an infinite loop), e.g. \texttt{for (i = 0; ; i++) {...} }.
 
-    % PAGE 14
+
+
     \chapter{Basic Types}
 
     \section{Integer Types}
-    They are the whole numbers. We can divide them into two categories: \texttt{signed}
-    and \texttt{unsigned}. The \texttt{signed} integers can be both positive and
-    negative, but because of this they are two times less than \texttt{unsigned} type,
-    which cannot contain negative numbers, thus making it one bit bigger. Sometimes we
-    need bigger numbers, then we would use a \texttt{long} integer which on the most
-    machines is double the \texttt{int} type. We could also store smaller integer values
-    in the \texttt{short} type. Every type can be \texttt{signed} or \texttt{unsigned},
-    e.g. \texttt{unsigned short int}. We could abbreviate names by dropping the word
-    \texttt{int}. Types are not required to have a certain bounds or maximum values, which
-    varies from one architecture to another. For our machine's ranges we could see the
-    \texttt{<limits.h>} header.
+    They are the whole numbers. We can divide them into two categories: \texttt{signed} and \texttt{unsigned}. The \texttt{signed} integers can be both positive and negative, but because of this they maximally can only hold two times less than the \texttt{unsigned} type, which cannot contain negative numbers, thus making it one bit bigger. Sometimes we need bigger numbers, then we would use a \texttt{long} integer which on the most machines is double the \texttt{int} type. We could also store smaller integer values in the \texttt{short int} type. Every type can be \texttt{signed} or \texttt{unsigned}, e.g. \texttt{unsigned short int}. We could abbreviate names by dropping the word \texttt{int}. Types are not required to have a certain bounds or maximum values, which varies from one architecture to another. For our machine's ranges we could see the \texttt{<limits.h>} header.
 
     \subsection*{Integer Types in C99}
-    From C99 we could now declare type \texttt{long long int}, which can be even two
-    times the \texttt{long int} type.
+    From C99 we could now declare type \texttt{long long int}, which can be even two times the \texttt{long int} type.
 
     \subsection*{Integer Constants}
-    Constant numbers are numbers that cannot change. Can be of the base 10, 8 and 16:
+    Constant numbers are numbers that cannot change. Could be of the base 10, 8 and 16:
     \begin{itemize}
         \item \textbf{Decimal} - Contain digits 0 through 9, cannot begin with a zero.
         \item \textbf{Octal} - Contain digits 0 through 7, must begin with a zero.
-        \item \textbf{Hexadecimal} - Containg digits 0 through 9 and letter a to f,
-        always begin with a 0x. Letters can be either lower case or upper case.
+        \item \textbf{Hexadecimal} - Containg digits 0 through 9 and letter A to F, always begin with a 0x. Letters can be either lower case or upper case.
     \end{itemize}
 
-    % PAGE 15
-    We could mix together any of these without any repercussions. As well as we could
-    indicate that constant is for example \texttt{long int} - by adding \texttt{L or l}
-    to the number. To indicate that constant is a \texttt{unsigned int} -
-    add \texttt{U or u}. Both can be added together. In C99 we could specify the type
-    \texttt{long long int} by adding \texttt{LL or ll} to the end.
+    We could mix together any of these without any repercussions. As well as we could indicate that constant is for example \texttt{long int} - by adding \texttt{L or l} to the number. To indicate that constant is a \texttt{unsigned int} - add \texttt{U or u}. Both can be added together. In C99 we could specify the type \texttt{long long int} by adding \texttt{LL or ll} to the end.
 
     \bigskip
-    If the result of the arithmetic operation is more than what desired type can store,
-    we say that occured an \textbf{Integer Overflow}.
+    If the result of the arithmetic operation is more than what desired type can store, we say that occured an \textbf{Integer Overflow}.
 
     \subsection*{Reading and Writing Integers}
-    For reading/writing operations we need to use the conversion specification
-    for Unsigned types:
+    For reading/writing operations we need to use the conversion specification for Unsigned types:
     \begin{itemize}
         \item \textbf{Unsigned} - \texttt{U} in decimal.
         \item \textbf{Octal} - \texttt{O}.
         \item \textbf{Hexadecimal} - \texttt{X}.
     \end{itemize} 
-    We use could use them with type conversion specifications by appending this letter
-    to the front:
+    We use could use them with type conversion specifications by appending this letter to the front:
     \begin{itemize}
         \item \textbf{Short} - \texttt{H}.
         \item \textbf{Long} - \texttt{L}.
@@ -520,96 +393,60 @@
         \item \textbf{Double} - Double precision.
         \item \textbf{Long double} - Extended precision.
     \end{itemize}
-    Mostly are stored according to The IEEE Floating-Point Standard.
+    Mostly are stored according to the IEEE Floating-Point Standard.
 
-    % PAGE 16
     \subsection*{Floating Constants}
-    A floating constant must contain a decimal point and/or an exponent. The exponent
-    (if present) must be preceded by the letter E or e. We could put the letter F or f
-    (for \texttt{float}) or LF or lf (for \texttt{double}) at the end of the number to
-    set the desired type.
+    A floating constant must contain a decimal point and/or an exponent. The exponent (if present) must be preceded by the letters E or e. We could put the letters F or f (for \texttt{float}) or LF or lf (for \texttt{double}) at the end of the number to set the desired type.
 
     \subsection*{Reading and Writing Floating-Point Numbers}
-    In order to read a \texttt{double} value we use \texttt{lf, le, lg} (for
-    \texttt{printf} without the l character). For the \texttt{long double} we used
-    \texttt{Lf, Le, Lg}.
+    In order to read a \texttt{double} value we use \texttt{lf, le, lg} (for \texttt{printf} without the l character). For the \texttt{long double} we used \texttt{Lf, Le, Lg}.
 
     \section{Character Types}
-    For one character we use the type \texttt{char} which on the most machines corresponds
-    to the ASCII table.
+    For one character we use the type \texttt{char} which on the most machines corresponds to the ASCII table.
 
     \subsection*{Operations on Characters}
-    Because of the fact that \texttt{char} type is a really short int, we could take
-    characters from the ASCII table and print them according to their number e.g. number
-    97 will be the character 'A'. We could also do some calculations on characters, for
-    example by adding 1 to previous character we would get 'B'. Because of this
-    characteristic we could compare characters and check if a number is for example greater
-    than 'A' and less then 'Z'.
+    Because of the fact that the \texttt{char} type is a really short int, we could take characters from the ASCII table and print them according to their numbers e.g. number 97 will be the character 'A'. We could also do some calculations on characters, for example by adding 1 to previous character we would get 'B'. Because of this characteristic we could compare characters and check if a number is for example greater than 'A' and less then 'Z'.
 
     \subsection*{Signed and Unsigned Characters}
-    C standard does not states that the \texttt{char} type is explicitly a \texttt{signed}
-    or an \texttt{unsigned} type. Most of the times we do not care about it.
+    The C standard does not state that the \texttt{char} type is explicitly a \texttt{signed} or an \texttt{unsigned} type. Most of the time we do not care about it.
 
     \subsection*{Escape Sequences}
-    We use them for non-printable characters. To get them all we need to use a numeric
-    escape which we could write in octal or hexadecimal:
+    We use them for non-printable characters. To get them all we need to use a numeric escapes which we could write in octal or hexadecimal:
     \begin{itemize}
-        \item \textbf{Octal} - Does not begin with a zero, but with a backslash, after it 
-        comes a number from the ASCII character set in octal.
-        \item \textbf{Hexadecimal} - Consists of the \textbackslash x followed by the hexadecimal
-        number.
+        \item \textbf{Octal} - Does not begin with a zero, but with a backslash, after it  comes a number from the ASCII character set in octal.
+        \item \textbf{Hexadecimal} - Consists of the \textbackslash x followed by the hexadecimal number.
     \end{itemize}
     An escape sequence must be enclosed in single qoutes e.g. \texttt{'\textbackslash 33'}.
 
-    % PAGE 17
     \subsection*{Operations on Character types}
-    To read or write on the character type, we need to use the \texttt{\%c} conversion
-    specification. To skip white spaces before reading a variable in the \texttt{scanf}
-    function we would need to write it like that: \texttt{" \%c"}.
+    To read or write a character type, we need to use the \texttt{\%c} conversion specification. To skip white spaces before reading a variable in the \texttt{scanf} function we would need to write it like that: \texttt{" \%c"}.
 
     \bigskip
 
-    We could also use the \texttt{putchar} function in order to write a single character.
-    As well as to \texttt{getchar} to read one character. They are generally faster than
-    \texttt{scanf} or \texttt{printf} function, because they are designed to only read
-    one variable type and thus are smaller. If first there is \texttt{scanf} it will
-    leave peaked (not assigned) variables and than calling \texttt{getchar} will read them.
+    We could also use the \texttt{putchar} function in order to write a single character. As well as \texttt{getchar} to read one character. They are generally faster than \texttt{scanf} or \texttt{printf} function, because they are designed to only read one variable type and thus are smaller. If there is a \texttt{scanf} it will leave peaked (not assigned) variables and than calling the \texttt{getchar} will read them.
 
     \section{Type Conversion}
-    If we mix different types in an arithmetic expression, the compiler will convert
-    them to the same type and then calculate on them. These conversions are called
-    \textbf{implicit expressions}, because they are handled automatically. There are
-    also \textbf{explicit expressions} which we could work with using the cast operator.
+    If we mix different types in an arithmetic expression, the compiler will convert them to the same type and then calculate them. These conversions are called \textbf{implicit expressions}, because they are handled automatically. There are also \textbf{explicit expressions} which we could work with using the cast operator.
 
     \subsection*{Casting}
-    We could state that variable must convert to the stated type. It has the following
-    form: \texttt{( type-name ) expression}. We use this to avoid overflowing, when
-    one variable is converted to the smaller type than it can handle.
+    We could state that variable must convert to the desired type. It has the following form: \texttt{( type-name ) expression}. We use this to avoid overflowing, when one variable is converted to the smaller type than it can handle.
 
     \section{Type Definitions}
-    Example: \texttt{typedef int Bool;} would make a \texttt{Bool} type which has
-    the same characteristics as the \texttt{int} type.
+    Example: \texttt{typedef int Bool;} would make a \texttt{Bool} type which has the same characteristics as the \texttt{int} type.
 
     \section{The \texttt{sizeof} Operator}
-    \texttt{sizeof ( type-name )} represents the number of bytes required to store
-    a value belonging to type-name. Has type \texttt{size\_t} which is unsigned integer
-    type.
+    \texttt{sizeof ( type-name )} represents the number of bytes required to store a value belonging to type-name. Has type \texttt{size\_t} which is unsigned integer type.
 
-    % PAGE 18
+
+
     \chapter{Arrays}
 
     \section{One-Dimensional Array}
-    Is a data structure containing number of elements of the same type. Elements
-    are arranged in a single row one after another, beginning with a zero element
-    and ending with a n-1 element because of that. \texttt{int a[10];} declares
-    one-dimensional array with 10 \texttt{int} elements. We use an array 
-    textbf{subscripting} or \textbf{indexing} in order to access a particular
-    element of the array, e.g. \texttt{a[0] = 10;}.
+    A data structure containing number of elements of the same type. Elements are arranged in a single row one after another, beginning with a zero element and ending with a n-1 element because of that. \texttt{int a[10];} declares one-dimensional array with 10 \texttt{int} elements. We use an array  \textbf{subscripting} or \textbf{indexing} in order to access a particular element of the array, e.g. \texttt{a[0] = 10;}.
 
     \subsection*{Array Initialization}
-    \texttt{int a[3] = { 1, 2, 3 }} If we initialize less than total number of elements, the rest will be 
-    zeroed. Thanks to that we could initialize all elements to zero: \texttt{int a [3] = { 0 }}. We could
-    also omitt the length of the array if the initializer is present.
+    \texttt{int a[3] = \{1, 2, 3\};} \\
+    If we initialize less than total number of elements, the rest will be zeroed. Thanks to that we could initialize all elements to zero: \texttt{int a[3] = \{0\}}. We could also omitt the length of the array if the initializer is present.
 
     \section{Multidimensional Arrays}
     We could create arrays with any number of dimensions:
@@ -617,14 +454,13 @@
     int m[2][2] = {{1, 2}
                    {3, 4}};
     \end{lstlisting}
-    Which will have two rows and colums. They are stored in a row-major order (one row after another
-    in a continuous block of memory). We could also declare them to be constant with a keyword
-    \texttt{const} to not permitt any modification of them.
+    Which will have two rows and colums. They are stored in the row-major order (one row after another in a continuous block of memory). We could also declare them to be constant with a keyword \texttt{const} to not permit any modification of them.
 
     \section{Variable-Length Arrays}
-    C99 feature, which can be used to supply not constant number to the declaration. For example we could first ask to specify a length and then declare array with that length.
+    C99 feature, which could be used to supply a non-constant number to the declaration. For example we could first ask to specify a length and then declare array with that length, by writing in the place of the array's lenght, that variable.
 
-    % PAGE 20
+
+
     \chapter{Functions}
 
     \section{Defining and Calling Functions}
@@ -634,11 +470,7 @@
         return (a + b) / 2;
     }
     \end{lstlisting}
-    Where \texttt{double} is the \textbf{return type} of the function, \texttt{a} and \texttt{b}
-    are \textbf{parameters} supplied from the calling function to be used in this function. The
-    \texttt{return} statement is in loop \textbf{body} which will be executed. To call this
-    function we need to enter a function name followed by the list of \textbf{arguments}:
-    \texttt{average(x, y);}.
+    \texttt{double} is the \textbf{return type} of the function, \texttt{a} and \texttt{b} are \textbf{parameters} supplied from the call of the function to be used in this function. The \texttt{return} statement is in the loop \textbf{body} which will be executed. To call this function we need to enter a function name followed by the list of \textbf{arguments}: \texttt{average(x, y);}.
 
     \subsection{Function Definitions}
     General function definition:
@@ -649,16 +481,13 @@
         statements
     }
     \end{lstlisting}
-    Functions cannot return arrays. If \texttt{return-type} is \texttt{void} function doesn't returns a value.
-    If there is not return value, type is \texttt{int} in C99, while in C99 it is illegal. If function has
-    zero parameters it should contain the keyword \texttt{void}. Void function's body can be empty.
+    Functions cannot return arrays. If \texttt{return-type} is \texttt{void} function doesn't return a value. If there is not a return value, type is \texttt{int} in C89, while in C99 it is illegal. If function has zero parameters it should contain the keyword \texttt{void}. Void function's body can be empty.
 
     \subsection*{Function Calls}
-    Consists of a function name and parameters enclosed in parentheses (if there are not any parameters, we
-    we need to write parentheses without anything inside).
+    Consists of a function name and parameters enclosed in the parentheses (if there are not any parameters, we need to write parentheses without anything inside).
 
     \section{Function Declarations}
-    Is a first line of the function and is used for providing information about function which could be written as a whole below the \texttt{main} function. It must be consistent with the function's definition. They are known as \textbf{function prototypes}. 
+    A first line of the function and is used for providing information about function which could be written as a whole below the \texttt{main} function. It must be consistent with the function's definition. They are known as \textbf{function prototypes}. 
 
     \section{Arguments}
     Parameters are in function definitions and arguments are in function calls. Arguments are passed by value which means that they won't be affected after function execution. 
@@ -677,95 +506,78 @@
 
     \section{The \texttt{return} Statement}
     \texttt{return expression ;} \\
-    If there is for example a \texttt{double} variable in the \texttt{return} statement, it will be
-    converted to the function's return type. For \texttt{void} functions \texttt{return} statement
-    is not necessary.
+    If there is for example a \texttt{double} variable in the \texttt{return} statement, it will be converted to the function's return type. For \texttt{void} functions \texttt{return} statement is not necessary.
 
     \section{Program Termination}
     The \texttt{main} function should return 0 if terminated successfully.
 
     \subsection*{The \texttt{exit} Function}
-    \texttt{exit\(0\) or exit\(EXIT_SUCCESS\)} - normal termination, \texttt{exit\(1\) or exit\(EXIT_FAILURE\)}
-    indicates abnormal termination. This function and macros are declared in \texttt{stdlib.h} header.
+    \texttt{exit(0)} or \texttt{exit(EXIT\_SUCCESS)} - normal termination, \texttt{exit(1)} or \texttt{exit(EXIT\_FAILURE)} indicates abnormal termination. This function and macros are declared in \texttt{stdlib.h} header.
 
     \section{Recursion}
     A function is recusive if it calls itself.
 
+
+
     \chapter{Program Organization}
 
     \section{Local Variables}
-    Variable declared in the body of a function is said to be local to the function, which means that
-    it cannot be seen by other functions and used by them. It has an Automatic storage duration which
-    means that it will be automatically allocated and deallocated at the function's return. It also
-    has a block scope which means that it can only be referenced inside this function.
+    Variable declared in the body of a function is said to be local to the function, which means that it cannot be seen by other functions and used by them. It has an \textbf{Automatic storage duration} which means that it will be automatically allocated and deallocated at the function's return. It also has a \textbf{block scope} which means that it can only be referenced inside this function.
 
     \subsection*{Static Local Variables}
-    Putting the word \texttt{static} causes it to have static storage duration which means that it
-    retains its value throughout the whole program execution. But it is still hidden from other
-    functions.
+    Putting the word \texttt{static} causes it to have static storage duration which means that it retains its value throughout the whole program execution. But it is still hidden from other functions.
 
     \section{External Variables}
-    Are declared outside the body of any function. Have the static storage duration and the file
-    scope. There are many dangers of using it e.g:
+    Are declared outside the body of any function. Have the static storage duration and the file scope. There are many dangers of using it e.g:
     \begin{itemize}
         \item If we would change its type we would need to check every function using it.
-        \item If it will have assigned an incorrect value there will be a problem to identify a guilty
-        function.
+        \item If it will have assigned an incorrect value there will be a problem to identify the guilty function.
         \item Functions using it are hard to reuse in other programs.
     \end{itemize}
     
     \section{Blocks}
-    We could declare a variable in a e.g. an \texttt{if} statement, then this variable will have
-    the block scope and will not be able to be referenced outside this scope.
+    We could declare a variable in e.g. an \texttt{if} statement, then this variable will have the block scope and will not be able to be referenced outside this scope.
     
     \section{Scope}
-    In a C program, the same identifier may have several different meanings. When a declaration inside
-    a block names an identifier that's already visible, the new declaration temporarily "hides" the old
-    one, and the identifier takes on a new meaning. At the end of the block, the identifier regains its
-    old meaning. If you go deeper, the most relevant variable will be used. There are file and block
-    scopes.
+    In a C program, the same identifier may have several different meanings. When a declaration inside a block names an identifier that's already visible, the new declaration temporarily "hides" the old one, and the identifier takes on a new meaning. At the end of the block, the identifier regains its old meaning. If you go deeper, the most relevant variable will be used. There are file and block scopes.
     
     \section{Organizing a C Program}
     Rules to organize a program:
     \begin{itemize}
         \item A preprocessing directive does not take effect until the line on which it appears.
-        \item A type name cannot be used until it is been defined.
+        \item A type name cannot be used until it has been defined.
         \item A variable cannot be used until it is declared.
     \end{itemize}
+
+
 
     \chapter{Pointers}
 
     \section{Pointer Variables}
-    Every byte has a unique memory address. If a variable consists of more than one byte, then its
-    address is the first byte occupied by it. Pointer variables "point" (store) to this address in memory.
+    Every byte has a unique memory address. If a variable consists of more than one byte, then its address is the first byte occupied by it. Pointer variables "point" (store) to this address in memory.
 
     \subsection*{Declaring Pointer Variables}
-    We declare it by adding an asterisk by the name: \texttt{int *p;} which points only to the
-    \texttt{int} variables. Pointers can point to any type or a block in memory.
+    We declare it by adding an asterisk by the name: \texttt{int *p;} which points only to the \texttt{int} variables. Pointers can point to any type or a block in memory.
 
     \section{The Address and Indirection Operators}
-    If \texttt{x} is a variable, then its address is \texttt{\&x}. To gain access to the object
-    (value) that a pointer points to, we use the \texttt{} (indirection) operator.
+    If \texttt{x} is a variable, then its address is \texttt{\&x}. To gain access to the object (value) that a pointer points to, we use the \texttt{*} (indirection) operator.
 
     \subsection*{The Address Operator}
     We could initialize pointer in declaration to point to some value e.g. \texttt{int i, p = \&i;}.
 
     \subsection*{The Indirection Operator}
-    We could access the value pointed to e.g. \texttt{printf("\%d\textbackslash n", p);} will
-    display the value of \texttt{i} not its address. By changing the value of \texttt{p} we will
-    change the value \texttt{i}.
+    We could access the value pointed to e.g. \texttt{printf("\%d\textbackslash n", *p);} will display the value of \texttt{i} not its address. By changing the value of \texttt{p} we will change the value \texttt{i}.
 
     \section{Pointer Assignment}
-    \texttt{int p = \&i;} - copies the address of i into p. \texttt{q = p} copies the contents of p
-    (the address of i) into q, so now q points to i. We could change i by chaging q and p.
+    \texttt{int p = \&i;} - copies the address of i into p. \texttt{q = p} copies the contents of p (the address of i) into q, so now q points to i. We could change i by chaging q and p.
 
     \section{Pointers as Arguments}
-    Pointers can be used as function's arguments (as aliases to variables in calling function)
-    and be used to modify values inside the function and store them outside. We could declare
-    p to be constant \texttt{constp} which means that it cannot be changed.
+    Pointers can be used as function's arguments (as aliases to variables in calling function) and be used to modify values inside the function and store them outside. We could declare p to be constant \texttt{const p;} which means that it cannot be changed.
 
     \section{Pointers as Return Values}
     Pointers (as aliases to other variables or external variables or static variables) could also return from functions. 
+
+
 
     \chapter{Pointers and Arrays}
 
@@ -780,20 +592,20 @@
     \subsection*{Adding an Integer to a Pointer}
     \begin{lstlisting}
     int a[10], p, q, i;
-    p = &a[2];
-    q = p + 3;
-    p += 6;
+    p = &a[2];      /* p points to the 2nd place */
+    q = p + 3;      /* q points to 5th (p + 3) */
+    p += 6;         /* p points to 8th (2 + 6) */
     \end{lstlisting}
-    p points to 2, q points to 5 (p + 3), p points to 8 (2 + 6). Is equivalent to \texttt{a[i + j]}.
+    Is equivalent to \texttt{a[i + j];}.
 
     \subsection*{Subtracting an Integer to a Pointer}
     \begin{lstlisting}
     int a[10], p, *q, i;
-    p = &a[8];
-    q = p - 3;
-    p -= 6;
+    p = &a[8];      /* p points to 8th place */
+    q = p - 3;      /* q points to 5th (p - 3) */
+    p -= 6;         /* p points to the 2nd (8 - 6) */
     \end{lstlisting}
-    p points to 8, q points to 5 (p - 3), p points to 2 (8 - 6). Is equivalent to \texttt{a[i - j]}.
+    Is equivalent to \texttt{a[i - j]}.
 
     \subsection*{Subtracting One Pointer from Another}
     The result is distance between the pointers.
@@ -809,8 +621,7 @@
     We could iterate through the whole array by incrementing the pointer itself.
 
     \section{Using an Array Name as a Pointer}
-    Array subscripting can be viewed as a form of pointer arithmetic. We cannot directly change where one element
-    points to, but we could create a new pointer to this array and make this element point elsewhere.
+    Array subscripting can be viewed as a form of pointer arithmetic. We cannot directly change where one element points to, but we could create a new pointer to this array and make this element point elsewhere.
     \begin{lstlisting}
     int a[10];
     a = 7;        /* stores 7 in a[0] is equivalent to &a[0] */
@@ -829,9 +640,11 @@
     Arrays are stored in row-major order, which means that no matter how many dimensions they have, they all are
     stored in one big line, which could be operated through pointer arithmetic. 
 
-    \section{Pointers and Variable-Lenght Arrays(C99)}
+    \section{Pointers and Variable-Lenght Arrays (C99)}
     Pointers can point to VLAs (any dimensions). With multi-dimensional arrays pointer need to have the type of
     the last dimension \texttt{int a[m][n], (*p)[n];}.
+
+
 
     \chapter{Strings}
 
