@@ -649,32 +649,27 @@
     \chapter{Strings}
 
     \section{String Literals}
-    Is a series of characters enclosed within double quotes e.g. \texttt{"Hello, World!"}.
+    A series of characters enclosed within double quotes e.g. \texttt{"Hello, World!"}.
 
     \subsection*{How Strings Literals Are Stored}
-    C treats string literals as character arrays. C compiler sets n + 1 characters for literal
-    and adds a \textbf{null character} (\texttt{\textbackslash 0} escape sequence) at the end which is used
-    to indicate end of this literal. So compiler treats it like a \texttt{char} type.
+    C treats string literals as character arrays. C compiler sets n + 1 characters for literal and adds a \textbf{null character} (\texttt{\textbackslash 0} escape sequence) at the end which is used to indicate end of this literal. So compiler treats it like a \texttt{char} type.
 
     \section{String Variables}
     We need to declare a string one character longer to leave space for the null character at the
-    end. To initialize a string variable: \texttt{char date[8] = "June 14";} where \texttt{"June 14"}
-    is not a string literal, but an initialization of string \texttt{date}. If initializer is shorter
-    than number of elements in the array, the leftover elements will be null.
+    end. Initialize a string variable: \\
+    \texttt{char date[8] = "June 14";} \\
+    Where \texttt{"June 14"} is not a string literal, but an initialization of string \texttt{date}. If initializer is shorter than number of elements in the array, the leftover elements will be null.
+    \bigskip
 
-    f there are no room for string, it will be cut and no null character will be assigned (meaning
-    that it will not be usable as a string). We could also omit setting the initializer, then the
-    compiler will calculate lenght of the array for us(adding the null character at the end), but
-    this length will be fixed and cannot be changed.
+    If there is no room for string, it will be cut and no null character will be assigned (meaning that it will not be usable as a string). We could also omit setting the initializer, then the compiler will calculate length of the array for us (adding the null character at the end), but this length will be fixed and cannot be changed.
 
-    \section{Character Arrays versus Character Pointers}
+    \subsection*{Character Arrays versus Character Pointers}
     \begin{lstlisting}
     char date1[] = "June 14";
     char date2 = "June 14";
     \end{lstlisting}
-    \texttt{date1} is an array, while \texttt{date2} is a pointer. Array elements can be modified,
-    but string literal pointed to by \texttt{date2} cannot. \texttt{date1} is an array name, while
-    \texttt{date2} is a pointer which could point to other strings during program execution.
+
+    \texttt{date1} is an array, while \texttt{date2} is a pointer. Array elements can be modified, but string literal pointed to by \texttt{date2} cannot. \texttt{date1} is an array name, while \texttt{date2} is a pointer which could point to other strings during program execution.
 
     \section{Reading and Writing Strings}
     \subsection*{Writing Strings Using \texttt{printf} and \texttt{puts}}
@@ -682,38 +677,61 @@
     printf("%s\n", str);
     puts(str);
     \end{lstlisting}
-    \texttt{printf} using the \texttt{\%s} conversion specification reads characters one by one until
-    it finds the null character (if not found will continue to read out of bounds memory locations).
-    \texttt{puts} after reading a string always advances to the next line (by printing a new-line
-    character).
 
-    \section{Reading Strings Using \texttt{scanf} and \texttt{gets}}
+    \texttt{printf} using the \texttt{\%s} conversion specification reads characters one by one until it finds the null character (if not found will continue to read out of bounds memory locations). \texttt{puts} after reading a string always advances to the next line (by printing a new-line character).
+
+    \subsection*{Reading Strings Using \texttt{scanf} and \texttt{gets}}
     \begin{lstlisting}
     scanf("%s", str);
     gets(str);
     \end{lstlisting}
-    \texttt{str} in \texttt{scanf} is treated like a pointer so there is no need for the address
-    operator (\texttt{\&}). When it is called it discards white-space characters and writes into
-    \texttt{str} every character until it encounters a white-space, will always store a null
-    character at the end. A new-line or space or tab character in the middle of input will cause 
-    \texttt{scanf} to stop reading. \texttt{gets} reads the whole line of input and stores a
-    null character at the end, it does not skip white-spaces and reads until it finds a null
-    character. There is a better and safer alternative of \texttt{gets} - \texttt{fgets} which
-    has a length parameter and cannot go over this lenght.
+
+    \texttt{str} in \texttt{scanf} is treated like a pointer so there is no need for the address operator (\texttt{\&}). When it is called it discards white-space characters and writes into \texttt{str} every character until it encounters a white-space, will always store a null character at the end. A new-line, space or a tab character in the middle of input will cause  \texttt{scanf} to stop reading. \texttt{gets} reads the whole line of input and stores a null character at the end, it does not skip white-spaces and reads until it finds a null character. There is a better and safer alternative of \texttt{gets} - \texttt{fgets} which has a length parameter and cannot go over this length.
 
     \section{Accessing the Characters in a String}
-    We could use the array subscripting or pointer arithmetic to process strings. Pointers simplify this. There is no difference
-    between string parameter being declared as an array or as a pointer.
+    We could use the array subscripting or pointer arithmetic to process strings. Pointers simplify this. There is no difference between string parameter being declared as an array or as a pointer.
 
     \section{Using the C String Library}
-    Header \texttt{\#include <string.h>} will include many functions that will be helpful for processing strings.
+    Header \texttt{string.h} includes many functions that are helpful for processing strings.
 
     \subsection*{Short Explanation of Some Functions}
     \begin{itemize}
-        \item \texttt{char *strcpy(char s1, chars2);} - copies the string s2 (until first null character) into string s1 and
-        returns s1. Function \texttt{strncpy} has third argument which is size of the string, is safer but slower.
-        \item \texttt{size\_t strlen(const char *s);} - returns the length of the string (number of characters is up to,
+    \item \texttt{char *strcpy(char s1, char s2)} - copies the string s2 (until first null character) into string s1 and
+        returns s1. Function \texttt{strncpy} has a third argument which is the size of the string, is safer but slower.
+    \item \texttt{size\_t strlen(const char *s)} - returns the length of the string (number of characters is up to,
         but not including, the first null character).
+    \item \texttt{char *strcat(char *s1, const char *s2)} - appends the contents of the string s2 to the end of the string s1; it returns s1 (a pointer to the resulting string). There is also a \texttt{strncat} function.
+    \item \texttt{int strcmp(const char *s1, const char *s2)} - compares the strings s1 and s2, returning a value less than, equal to, or greater than 0, depending on whether s1 is less than, equal to, or greater than s2.
     \end{itemize}
+
+    \section{String Idioms}
+
+    \subsubsection*{Searching for the End of a String:}
+    \begin{lstlisting}
+    while (*s++)
+        ;
+    \end{lstlisting}
+
+    \subsubsection*{Copying a String:}
+    \begin{lstlisting}
+    while (*p++ = *s2++)
+        ;
+    \end{lstlisting}
+
+    \section{Arrays of Strings}
+
+    To fight the inefficiency in storing arrays of strings we need to use the \texttt{ragged array} - a two-dimensional array whose rows can have different lengths. This can be achived by creating the array of pointers to strings, where every element is a pointer to one string which could be of any size. Then these string can be accessed simply by the array's subscript.
+
+    \subsection*{Command-Line Arguments}
+
+    To obtain access to command-line arguments (called program parameters), we must define \texttt{main} as a function with two parameters:
+    \begin{lstlisting}
+    int main(int argc, char *argv[])
+    {
+        ...
+    }
+    \end{lstlisting}
+
+    \texttt{argc} ("argument count") is the number of command-line arguments (including the name of the program itself). \texttt{argv} ("argument vector") is an array of pointers to the command-line arguments, which are stored in string form. \texttt{argv} has one additional element \texttt{argv[argc]} which is always a null pointer.
 
 \end{document}
