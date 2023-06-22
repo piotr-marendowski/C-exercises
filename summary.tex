@@ -47,7 +47,7 @@
         \item\textbf{Linking} - Linker combines object code and code needed for execution of the program.
     \end{enumerate}
 
-    \section{The Genereral Form of a Simple Program} Simple C programs have this form:
+    \section{The General Form of a Simple Program} Simple C programs have this form:
 
     \bigskip
     \textit{directives}
@@ -733,5 +733,85 @@
     \end{lstlisting}
 
     \texttt{argc} ("argument count") is the number of command-line arguments (including the name of the program itself). \texttt{argv} ("argument vector") is an array of pointers to the command-line arguments, which are stored in string form. \texttt{argv} has one additional element \texttt{argv[argc]} which is always a null pointer.
+
+    
+
+    \chapter{The Preprocessor}
+
+    \texttt{\#define} and \texttt{\#include} (and any that begin with a \texttt{\#} character) directives are handled by the preprocessor, a piece of software that edits C programs just prior to compilation.
+
+    \section{How the Preprocessor Works}
+    
+    The \texttt{\#define} directive defines a macro - a name that represents something else, e.g. \texttt{\#define WIDTH 20}. \\
+    The \texttt{\#include} directive tells the preprocessor to open a particular file and "include" its contents as part of the file being compiled.
+
+    \section{Preprocessing Directives}
+    
+    Most preprocessing directives fall into one of three categories:
+    \begin{itemize}
+        \item \textbf{Macro definition} - The \texttt{\#define} directive defines a macro; the \texttt{\#undef} directive removes a macro definition.
+        \item \textbf{File inclusion} - The \texttt{\#include} directive causes the contents of a specified file to be included in a program.
+        \item \textbf{Conditional compilation} - The \texttt{\#if, \#ifdef, \#ifndef, \#elif, \#else} and \texttt{\#endif} directives allow blocks of text to be either included in or exludede from a program, depending on conditions that can be tested by the preprocessor.
+    \end{itemize}
+
+    \bigskip
+
+    Rules that apply to all directives:
+    \begin{itemize}
+        \item Directives always begin with the \texttt{\#} symbol.
+        \item Any number of spaces and horizotal tab characters may separate the tokens in a directive.
+        \item Directive always end at the first new-line character, unless explicitly continued (continue by adding a \textbackslash \phantom{ } character at the end of the line).
+        \item Directives can appear anywhere in a program.
+        \item Comments may appear on the same line as a directive.
+    \end{itemize}
+
+    \section{Macro Definitions}
+
+    \subsection*{Simple Macros}
+
+    Have the form: \texttt{\#define identifier replacement-list}. \texttt{replacement-list} is any sequence of preprocessing tokens.
+
+    \subsection*{Parameterized Macros}
+
+    Have the form: \texttt{\#define identifier( x1 , x2 , ... , xn ) replacement-list}. Where \texttt{x1, x2, ..., xn} are identifiers (the macro's parameters). The parameters may appear as many times as desired in the replacement-list.
+    
+    \bigskip
+
+    For example. we've defined the following macro: \\
+    \texttt{\#define MAX(x,y) ((x)>(y)?(x):(y))} \\
+    And now we invoke it: \\
+    \texttt{i = MAX(a, b);} \\
+    What we get is: \\
+    \texttt{i = ((a)>(b)?(a):(b))} \\
+    Which works as a simple function.
+
+    \subsection*{The \# Operator}
+
+    The \# operator converts a macro argument into a string literal ("stringization"). We basically use it to print the inputted string into the outputted one.
+
+    \bigskip
+
+    \texttt{\#define PRINT\_INT(n) printf(\#n " = \%d\textbackslash n", n)} \\
+    Invoking it: \\
+    \texttt{PRINT\_INT(i);} \\
+    Will create: \\
+    \texttt{printf("i = \%d\textbackslash n", i);}
+
+    \subsection*{The \#\# Operator}
+
+    Can "paste" two tokens together to form a single token.
+
+    \bigskip
+
+    \texttt{\#define MK\_ID(n) i\#\#n} \\
+    Invoking it: \\
+    \texttt{MK\_ID(1)}\\
+    The preprocessor will join i and 1 to make a single token (i1): \\
+    \texttt{int MK\_ID(1);} \\
+    After preprocessing, this declaration will become: \\
+    \texttt{int i1;} \\
+    
+    \subsection*{General Properties of Macros}
+
 
 \end{document}
