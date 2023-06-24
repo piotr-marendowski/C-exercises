@@ -751,7 +751,7 @@
     \begin{itemize}
         \item \textbf{Macro definition} - The \texttt{\#define} directive defines a macro; the \texttt{\#undef} directive removes a macro definition.
         \item \textbf{File inclusion} - The \texttt{\#include} directive causes the contents of a specified file to be included in a program.
-        \item \textbf{Conditional compilation} - The \texttt{\#if, \#ifdef, \#ifndef, \#elif, \#else} and \texttt{\#endif} directives allow blocks of text to be either included in or exludede from a program, depending on conditions that can be tested by the preprocessor.
+        \item \textbf{Conditional compilation} - The \texttt{\#if, \#ifdef, \#ifndef, \#elif, \#else} and \texttt{\#endif} directives allow blocks of text to be either included in or exclude from a program, depending on conditions that can be tested by the preprocessor.
     \end{itemize}
 
     \bigskip
@@ -813,5 +813,103 @@
     
     \subsection*{General Properties of Macros}
 
+    Are the following:
+    \begin{itemize}
+        \item A macro's replacement list may contain invocations of other macros.
+        \item The preprocessor replaces only entire tokens, not portions of tokens.
+        \item A macro definition normally remains in effect until the end of the file in which it appears.
+        \item A macro may not be defined twice unless the new definition is identical to the old one.
+        \item Macros may be "undefined" by the \#undef directive.
+    \end{itemize}
+
+    \section{Conditional Compilation}
+
+    The inclusion or exclusion of a section of program text depending on the outcome of a test performed by the preprocessor.
+
+    \subsection*{The \texttt{\#if} and \texttt{\#endif} Directives}
+
+    For example:
+    \begin{lstlisting}
+    #define DEBUG 1
+    ...
+    #if DEBUG
+    printf("Value of i: %d\n", i);
+    printf("Value of i: %d\n", j);
+    #endif
+    \end{lstlisting}
+
+    Will only leave out the \texttt{printf} calls when the DEBUG is 1. 
+
+    \subsection*{The \texttt{defined} Operator}
+
+    Produces the value 1 if the identifier is a currently defined macro; it produces 0 otherwise. E.g.
+    \begin{lstlisting}
+    #define DEBUG 1
+    ...
+    #if defined(DEBUG)      // or #if defined DEBUG
+    ...
+    #endif
+    \end{lstlisting}
+     
+    \subsection*{The \texttt{\#ifdef} and \texttt{\#ifndef} Directives} 
+
+    The \texttt{\#ifdef} directive tests whether an identifier is currently defined as a macro. E.g.
+    \begin{lstlisting}
+    #define DEBUG 1
+    ...
+    #ifdef DEBUG
+    ...
+    #endif
+    \end{lstlisting}
+
+    \bigskip
+
+    The \texttt{\#ifndef} directive tests wheter an identifier is not defined as a macro.
+
+    \subsection*{The \texttt{\#elif} and \texttt{\#else} Directives}
+
+    For example:
+
+    \begin{lstlisting}
+    #if expr1
+    ...
+    #elif expr2
+    ...
+    #else
+    ...
+    #endif
+    \end{lstlisting}
+    
+    The \texttt{\#ifdef} and \texttt{\#ifndef} directives could also be used.
+
+    \subsection*{Uses of Conditional Compilation}
+    \begin{itemize}
+        \item Writing programs that are portable to several machines or operating systems.
+        \item Writing programs that can be compiled with different compilers.
+        \item Providing a default definition for a macro.
+        \item Temporarily disabling code that contains comments.
+    \end{itemize}
+
+    \section{Miscellaneous Directives}
+
+    \subsection*{The \texttt{\#error} Directive}
+
+    If the preprocessor encounters an \texttt{\#error} directive, it prints an error message. Often used with conditional compilation. The message is any sequence of tokens, not a string literal. E.g.
+
+    \begin{lstlisting}
+    #if INT_MAX < 100000
+    #error int type is too small
+    #endif
+    \end{lstlisting}
+    Will produce: \texttt{Error directive: int type too small}
+    
+    \subsection*{The \texttt{\#line} Directive}
+    Is used to alter the way program lines are numbered. Has two forms: \texttt{\#line n} and \texttt{\#line n "file"}. Used rarely.
+
+    \subsection*{The \texttt{\#pragma} Directive}
+    Provides a way to request special behavior from the compiler. Has the form: \texttt{\#pragma tokens}.
+
+    \subsection*{The \texttt{\_Pragma} Operator}
+    Has the form: \texttt{\_Pragma ( string literal )}
 
 \end{document}
