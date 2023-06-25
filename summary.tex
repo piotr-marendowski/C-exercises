@@ -912,4 +912,53 @@
     \subsection*{The \texttt{\_Pragma} Operator}
     Has the form: \texttt{\_Pragma ( string literal )}
 
+
+
+    \chapter{Writing Large Programs}
+
+    \section{Source FIles}
+    A C program can consists of many source files (parts of it with a .c extension). One of which must contain a \texttt{main} function.
+
+    \section{Header Files}
+    The \texttt{\#include} directive tells the preprocessor to open a specified file and insert its contents into the current file. The have the extension .h. In these header files we can include type definitions, function prototypes, and variable declarations so that other source files can see and use these.
+
+    \subsection*{The \texttt{\#include} Directive}
+    Has two forms, first is used for header files that belong to C's own library: \\
+    \texttt{\#include <filename>} \\
+    The second form is used for all other header files, including any that we write: \\
+    \texttt{\#include "filename"}
+
+    \subsection*{Sharing Variable Declarations}
+    To declare i without defining it, we must put the keyword \texttt{extern} at the beginning of its declaration: \\
+    \texttt{extern int a[];} \\
+    We first put a definition of i in one file: \\
+    \texttt{int i;} \\
+    If i needs to be initialized, the initializer would go here. When this file is compiled, the compiler will allocate storage for i. The other files will contain declarations of i: \\
+    \texttt{extern int i;} \\
+    Because of the word \texttt{extern}, however the compiler does not allocate additional storage for i each time one of the files is compiled.
+
+    \newpage
+    \subsection*{Protecting Header Files}
+
+    For example, we define a \texttt{boolean.h}:
+    \begin{lstlisting}
+    #ifndef BOOLEAN_H
+    #define BOOLEAN_H
+
+    #define TRUE 1
+    #define FALSE 0
+    typedef int Bool;
+
+    #endif
+    \end{lstlisting}
+
+    \section{Building a Multiple-File Program}
+    
+    \subsection*{Makefiles}
+    A file containing the information necessary to build a program. Also describes dependencies among the files. Are handy for compiling and linking multiple-file programs and partial compilation. For description of the \texttt{Makefile}, confront pages 367 - 368.
+
+    \subsection*{Defining Macros Outside a Program}
+    Most compilers (including GCC) support the -D option, which allows the value of a macro to be specified on the command line: \\
+    \texttt{gcc -D DEBUG=1 foo.c}.
+
 \end{document}
