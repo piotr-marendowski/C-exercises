@@ -961,4 +961,89 @@
     Most compilers (including GCC) support the -D option, which allows the value of a macro to be specified on the command line: \\
     \texttt{gcc -D DEBUG=1 foo.c}.
 
+
+
+    \chapter{Structures, Unions, and Enumerations}
+
+    \section{Structure Variables}
+    The members of the structure aren't required to have the same type. To select a memeber we specify its name, not its position.
+    
+    \subsection*{Declaring Structure Variables}
+
+    \begin{lstlisting}
+    struct {
+        int number;
+        char name[NAME_LEN+1];
+        int on_hand;
+    } part1, part2;
+    \end{lstlisting}
+
+    There are two parts - two blocks of memory with all these variables. The members of a structure are stored in memory in order in which they are declared. Each structure represents a new scope; any names declared in that scope won't conflict with other names in a program. 
+
+    \subsection*{Initializing Structure Variables}
+
+    \begin{lstlisting}
+    struct {
+        int number;
+        char name[NAME_LEN+1];
+        int on_hand;
+    } part1 = {528, "Disk Drive", 10},
+      part2 = {914, "Printer Cable", 5};
+    \end{lstlisting}
+
+    The values in the initializer must appear in the same order as the members of the structure.
+
+    \subsection*{Operations on Structures}
+
+    \texttt{printf("Part number: \%d\textbackslash n", part1.number);} \\
+    \texttt{part1.number = 258;} \\
+    \texttt{scanf("\%d", \&part1.on\_hand);} \\
+    \texttt{par2 = part1; \textbackslash \textbackslash copies every element from part1 to part2} \\
+    
+    \section{Structure Types}
+
+    \subsection*{Declaring a Structure Tag}
+    Is a name used to identify a particular kind of structure.
+
+    \begin{lstlisting}
+    struct part {
+        int number;
+        char name[NAME_LEN+1];
+        int on_hand;
+    };
+    \end{lstlisting}
+
+    Then we can use it to declare variables: \\
+    \texttt{struct part part1, part2;}
+    
+    \bigskip
+
+    But we could also combine them in declaration:
+    \begin{lstlisting}
+    struct part {
+        int number;
+        char name[NAME_LEN+1];
+        int on_hand;
+    } part1, part2;
+    \end{lstlisting}
+
+    Then they are compatible: \\
+    \texttt{struct part part1 = \{528, "Disk Drive", 10\};} \\
+    \texttt{par2 = part1;}
+
+    \subsection*{Defining a Structure Type}
+
+    \begin{lstlisting}
+    typedef struct {
+        int number;
+        char name[NAME_LEN+1];
+        int on_hand;
+    } Part;
+    \end{lstlisting}
+
+    \texttt{Part part1, part2; \textbackslash \textbackslash not struct Part, because of typedef}
+
+    \section{Nested Arrays and Structures}
+
+
 \end{document}
