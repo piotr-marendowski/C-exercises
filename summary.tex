@@ -1045,5 +1045,19 @@
 
     \section{Nested Arrays and Structures}
 
+    \subsection*{Nested Structures}
+    In one structure we can declare an array, and then include this structure as a part of a larger structure. Then we would go in the reverse order (from the largest) to access an array member.
+
+    \subsection*{Arrays of Structures}
+    \texttt{struct part inventory[100];} \\
+    Is capable of storing information about 100 parts. To access it: \\
+    \texttt{print\_part(inventory[i]);} \\
+    To assign 883 to the number member: \\
+    \texttt{inventory[i].number = 883;} \\
+    To access a singe character in a part name: \\
+    \texttt{inventory[i].name[0] = '\textbackslash 0';} \\
+
+    \section{Unions}
+
 
 \end{document}
