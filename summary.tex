@@ -1088,4 +1088,40 @@
 
     \chapter{Advanced Uses of Pointers}
 
+    \section{Dynamic Storage Allocation}
+    Dynamic storage allocation - the ability to allocate storage during program execution. We use it to design various data structures.
+
+    \subsection*{Memory Allocation Functions}
+    From \texttt{<stdlib.h>} header:
+    \begin{itemize}
+        \item \texttt{malloc} - Allocates block of memory but doesn't initialize it.
+        \item \texttt{calloc} - Allocates block of memory and clears it.
+        \item \texttt{realloc} - Resizes a previously allocated block of memory.
+    \end{itemize}
+
+    \subsection*{Null Pointers}
+    Function returns a null pointer when cannot satify a request for memory allocation. E.g.
+    \begin{lstlisting}
+    if ((p = malloc(10000)) == NULL) {
+        /* allocation failed; take appropriate action */
+    }
+    \end{lstlisting}
+
+    \section{Dynamically Allocated Strings}
+
+    \subsection*{Using \texttt{malloc} to Allocate Memory for a String}
+    Which has the following prototype: \\
+    \texttt{void *malloc(size\_t size);} \\
+    Allocates a block of \texttt{size} bytes and returns a pointer to it.
+
+    \bigskip
+
+    \begin{lstlisting}
+    p = malloc(n + 1);    // p is an empty string (one for the null char)
+    strcpy(p, "abc");     // initialize it
+    \end{lstlisting}
+
+    \section{Dynamically Allocated Arrays}
+
+
 \end{document}
