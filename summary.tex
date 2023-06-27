@@ -1058,6 +1058,34 @@
     \texttt{inventory[i].name[0] = '\textbackslash 0';} \\
 
     \section{Unions}
+    The compiler allocates only enough space for the largest of the members, which overlay each other within this space. As a result, assigning a new value to one member alters the values of the other members as well.
 
+    \begin{lstlisting}
+    union {
+        int i;
+        double d;
+    } u;
+
+    \\ occupy most of the union (because int is less than double)
+    u.i = 82;
+    \\ alter i and now union stores only d
+    u.d = 74.8;
+    \end{lstlisting}
+
+    \section{Enumerations} 
+    An enumerated type is a type whose values are listed ("enumerated") by the programmer, who must create a name (an enumeration constant) for each of values.
+    
+    \subsection*{Enumeration Tags and Type Names}
+
+    \texttt{enum suit \{CLUBS, DIAMONDS, HEARTS, SPADES\};} \\
+    \texttt{enum suit s1, s2;}
+
+    \subsection*{Enumerations as Integers}
+    By the default enumeration variables are assigned to numbers 0, 1, 2, ... We could declare them in the other order: \\
+    \texttt{enum suit \{CLUBS = 1, DIAMONDS = 2, HEARTS = 3, SPADES = \};} \\
+
+
+
+    \chapter{Advanced Uses of Pointers}
 
 \end{document}
