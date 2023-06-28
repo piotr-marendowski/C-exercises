@@ -966,7 +966,7 @@
     \chapter{Structures, Unions, and Enumerations}
 
     \section{Structure Variables}
-    The members of the structure aren't required to have the same type. To select a memeber we specify its name, not its position.
+    The members of the structure aren't required to have the same type. To select a member we specify its name, not its position.
     
     \subsection*{Declaring Structure Variables}
 
@@ -1122,6 +1122,88 @@
     \end{lstlisting}
 
     \section{Dynamically Allocated Arrays}
+
+    \subsection*{Using \texttt{malloc} to Allocate Storage for an Array}
+
+    \begin{lstlisting}
+    int *a;
+    a = malloc(n * sizeof(int));
+    \end{lstlisting}
+
+    \subsection*{The \texttt{calloc} Function}
+    \texttt{calloc} allocates space for an array with \texttt{nmemb} elements, each of which is \texttt{size} bytes long. Initializes all elements to 0.
+    \begin{lstlisting}
+    void *calloc(size_t nmemb, size_t size);
+
+    a = calloc(n, sizeof(int));
+    \end{lstlisting}
+
+    \subsection*{The \texttt{realloc} Function}
+    \texttt{realloc} resizes to a new \texttt{size} a block pointed to by the \texttt{ptr} pointer.
+    \begin{lstlisting}
+    void *realloc(void *ptr, size_t size);
+
+    a = calloc(n, sizeof(int));
+    \end{lstlisting}
+
+    \section{Deallocating Storage}
+    In order to collect garbage and prevent memory leaks, we need to use the \texttt{free} function.
+
+    \subsection*{The \texttt{free} Function}
+
+    \begin{lstlisting}
+    void free(void *ptr);
+
+    p = malloc(...);
+    q = malloc(...);
+    free(p);          // p won't be used anymore
+    p = q;
+    \end{lstlisting}
+    Calling \texttt{free} releases the block of memory that p points to.
+
+    \section{Linked Lists}
+    Are the collection of memory allocated nodes, that point one to another, and end with the one containing the null pointer. Can grow and shrink if needed, but cannot be random accessed, meaning that we would need to go over every one and access them that way. For creating, editing, processing etc. on linked lists, read the \textbf{Linked Lists} section on pages 424 - 438.
+
+    \subsection*{The \texttt{->} Operator}
+    Right arrow selection is useful for accessing a member of a structure using a pointer. We can write: \\
+    texttt{new\_node->value = 10;} \\
+    instead of: \\
+    \texttt{(*new\_node).value = 10;}
+
+    \newpage
+
+    \section{Pointers to Functions}
+    Functions occupy memory locations.
+
+    \begin{lstlisting}
+    double integrate(double (*f)(double), double a, double b);
+    \* we could also declare f as though it were a function *\
+    double integrate(double f(double), double a, double b);
+
+    result = integrate(sin, 0.0, PI / 2);
+    \end{lstlisting}
+    \texttt{sin} is without parentheses, because then compiler produces a pointer to the function instead of generating code for a function call.
+
+    \section{Restricted Pointers (C99)}
+
+    \texttt{int restrict p;}
+    The keyword \texttt{restrict} means that p cannot be accessed in any way other than through p.
+
+    \section{Flexible Array Members (C99)}
+
+    When the last member of a structure is an array, its length may be ommited:
+
+    \begin{lstlisting}
+    struct vstring {
+        int len;
+        char chars[];   /* flexible array member - C99 only */
+    }
+
+    struct vstring *str = malloc(sizeof(struct vstring) + n);
+    str->len = n;
+    \end{lstlisting}
+
+    The length of the \texttt{chars} array isn't determined until memory is allocated for a \texttt{vstring} structure. The \texttt{sizeof} operator ignores the \texttt{chars} member when computing the size of the structure. It takes up no space within a structure.
 
 
 \end{document}
