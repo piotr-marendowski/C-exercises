@@ -1206,4 +1206,75 @@
     The length of the \texttt{chars} array isn't determined until memory is allocated for a \texttt{vstring} structure. The \texttt{sizeof} operator ignores the \texttt{chars} member when computing the size of the structure. It takes up no space within a structure.
 
 
+
+    \chapter{Declarations}
+
+    \section{Declaration Syntax}
+
+    Declaration has the following appearance: \\
+    \texttt{declaration-specifiers declarators ;}
+
+    \bigskip
+
+    Declaration specifiers describe the properties of the variables or functions being delcared. Declarators give ther names and may provide additional information about their properties. Declaration specifiers fall into three categories:
+    \begin{itemize}
+        \item \textbf{Storage class} - \texttt{auto, static, extern, register}.
+        \item \textbf{Type qualifiers} - \texttt{const, voatile, restrict}.
+        \item \textbf{Type specifiers} - \texttt{void, char, short, int, long, float, double, signed, unsigned}.
+    \end{itemize}
+
+    \bigskip
+
+    \texttt{static float x, y, *p;}
+
+    \bigskip
+    \texttt{static} - storage class \\
+    \texttt{float} - type specifier \\
+    \texttt{x, y, *p} - declarators \\
+
+    \texttt{extern const unsigned long int a[10] = "foobar";}
+
+    \bigskip
+    \texttt{extern} - storage class \\
+    \texttt{const} - type qualifier \\
+    \texttt{unsigned long int} - type specifiers \\
+    \texttt{a[10]} - declarator \\
+    \texttt{"foobar"} - initializer \\
+
+    \section{Storage Classes}
+
+    \subsection*{Properties of Variables:}
+
+    \begin{itemize}
+        \item \textbf{Storage duration} - Determines when memory is set aside for the variable and when that memory is released. Can be automatic (automatically allocated and deallocated) and static (stays until program termination).
+        \item \textbf{Scope} - The portion of the program text in which the variable can be referenced. Can have block scope (the variable is visible from its point of declaration to the end of the enclosing block) or file scope (whole file).
+        \item \textbf{Linkage} - Determines the extent to which it can be shared by different parts of a program. External linkeage means that it can be shared by several files in a program. But internal means only one. No linkeage means that a variable belongs to a single function and can't be shared at all.
+    \end{itemize}
+
+    \begin{lstlisting}
+    int i;
+
+    void f(void)
+    {
+        int j;
+    }
+    \end{lstlisting}
+    
+    \texttt{i} has the static storage duration, file scope and external linkeage. \texttt{j} has an automatic storage duration, block scope and no linkeage.
+
+    \subsection*{The \texttt{auto} Storage Class}
+    The default for variables declared inside a block.
+
+    \subsection*{The \texttt{static} Storage Class}
+    Can be used everywhere. When used outside a block, a variable has internal linkeage. When used inside a block, changes variable's storage duration from automatic to static.
+
+    \subsection*{The \texttt{extern} Storage Class}
+    Enables several source files to share the same variable. Always has a static storage duration. The scope of the variable depends on the declaration's placement.
+
+    \subsection*{The \texttt{register} Storage Class}
+    Asks the compiler to store the variable in a register instead of keeping it in main memory like other variables. Legal only in block. Everything as an \texttt{auto} variable.
+
+    \subsection*{The Storage Class of a Function}
+    \texttt{extern} - the function has external linkeage. \texttt{static} - the function has internal linkeage. If not specified function has external linkeage.
+
 \end{document}
