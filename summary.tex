@@ -1277,4 +1277,60 @@
     \subsection*{The Storage Class of a Function}
     \texttt{extern} - the function has external linkeage. \texttt{static} - the function has internal linkeage. If not specified function has external linkeage.
 
+    \section{Type Qualifiers}
+    There are three type qualifiers: \texttt{const}, \texttt{volatile}, and \texttt{restrict} (C99). Const variables are only read-only. 
+
+    \section{Declarators}
+    \texttt{int i; \\
+    int *ap[10]; \\
+    float *fp(float); \\
+    void (*pf)(int);}
+
+    \subsection*{Deciphering Complex Declarations}
+    \begin{itemize}
+        \item Always read declarators from the inside out.
+        \item When there's a choice, always favor \texttt{[]} and \texttt{()} over \texttt{*}.
+    \end{itemize}
+
+    \texttt{int *ap[10];} - array of pointers \\
+    \texttt{float *fp(float);} - function that returs a pointer \\
+    \texttt{void (*pf)(int);} - pointer to function with \texttt{int} argument returning \texttt{void} \\
+    \texttt{int *(*x[10])(void);} - array of pointers to functions with no arguments returning pointer to \texttt{int}
+
+    \section{Initializers}
+    To initialize a variable, we write the \texttt{=} symbol after its declarator, then follow that with an initializer. E.g. \texttt{int i = 5 / 2;}.
+
+    Some additional rulse that govern initializers:
+    \begin{itemize}
+        \item An initializer for a variable with static storage duration must be constant. E.g. \texttt{static int i = LAST - FIRST + 1;}.
+        \item If a variable has automatic storage duration, its initializer need not be constant.
+        \item A brace-enclosed initializer for an array, structure, or union must contain only constant expressions, never variables or function calls.
+        \item The initializer for an automatic structure or union can be another structure or union.
+    \end{itemize}
+
+    \section{Inline Functions (C99)}
+    By using the keyword \texttt{inline} we can improve performance of the program when calling a function many times.
+
+    
+
+    \chapter{Program Design}
+
+    \section{Modules}
+    Module - collection of services (functions), some of which are available to other parts of the program (the clients). Each module has an interface (header file) that describes the available services. The details of the module -- including the source code for the services themselves -- are stored in the module's implementation (source files).
+
+    \subsection*{Types of Modules}
+    \begin{itemize}
+        \item \textbf{Data pool} - collection of related variables and/or constants.
+        \item \textbf{Library} - collection of related functions.
+        \item \textbf{Abstract object} - collection of functions that operate on a hidden data structure.
+        \item \textbf{Abstract data type (ADT)} - a type whose representation is hidden.
+    \end{itemize}
+
+    \section{Information Hiding}
+    Deliberately concealing information from the clients of a module. Is good for security and flexibility.
+
+    \section{Abstract Data Types}
+    We can create multiple abstract data types, and use information hiding to use them in clients. We can use incomplete types to hide objects inside our abstract data type. Incomplete types cannot be declared, but we can declare pointer to it.
+
+
 \end{document}
