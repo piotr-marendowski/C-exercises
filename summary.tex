@@ -1248,7 +1248,7 @@
     \begin{itemize}
         \item \textbf{Storage duration} - Determines when memory is set aside for the variable and when that memory is released. Can be automatic (automatically allocated and deallocated) and static (stays until program termination).
         \item \textbf{Scope} - The portion of the program text in which the variable can be referenced. Can have block scope (the variable is visible from its point of declaration to the end of the enclosing block) or file scope (whole file).
-        \item \textbf{Linkage} - Determines the extent to which it can be shared by different parts of a program. External linkeage means that it can be shared by several files in a program. But internal means only one. No linkeage means that a variable belongs to a single function and can't be shared at all.
+        \item \textbf{Linkage} - Determines the extent to which it can be shared by different parts of a program. External linkage means that it can be shared by several files in a program. But internal means only one. No linkage means that a variable belongs to a single function and can't be shared at all.
     \end{itemize}
 
     \begin{lstlisting}
@@ -1260,13 +1260,13 @@
     }
     \end{lstlisting}
     
-    \texttt{i} has the static storage duration, file scope and external linkeage. \texttt{j} has an automatic storage duration, block scope and no linkeage.
+    \texttt{i} has the static storage duration, file scope and external linkage. \texttt{j} has an automatic storage duration, block scope and no linkage.
 
     \subsection*{The \texttt{auto} Storage Class}
     The default for variables declared inside a block.
 
     \subsection*{The \texttt{static} Storage Class}
-    Can be used everywhere. When used outside a block, a variable has internal linkeage. When used inside a block, changes variable's storage duration from automatic to static.
+    Can be used everywhere. When used outside a block, a variable has internal linkage. When used inside a block, changes variable's storage duration from automatic to static.
 
     \subsection*{The \texttt{extern} Storage Class}
     Enables several source files to share the same variable. Always has a static storage duration. The scope of the variable depends on the declaration's placement.
@@ -1275,7 +1275,7 @@
     Asks the compiler to store the variable in a register instead of keeping it in main memory like other variables. Legal only in block. Everything as an \texttt{auto} variable.
 
     \subsection*{The Storage Class of a Function}
-    \texttt{extern} - the function has external linkeage. \texttt{static} - the function has internal linkeage. If not specified function has external linkeage.
+    \texttt{extern} - the function has external linkage. \texttt{static} - the function has internal linkage. If not specified function has external linkage.
 
     \section{Type Qualifiers}
     There are three type qualifiers: \texttt{const}, \texttt{volatile}, and \texttt{restrict} (C99). Const variables are only read-only. 
@@ -1332,5 +1332,89 @@
     \section{Abstract Data Types}
     We can create multiple abstract data types, and use information hiding to use them in clients. We can use incomplete types to hide objects inside our abstract data type. Incomplete types cannot be declared, but we can declare pointer to it.
 
+
+
+    \chapter{Low-Level Programming}
+    
+    \section{Bitwise Operators}
+    
+    \subsection*{Bitwise Shift Operators}
+    Can transform the binary representation of an integer by shifting its bits to the left or right. \\
+    \texttt{<<} left shift \\
+    \texttt{>>} right shift
+
+    \texttt{i << j} is the result when the bits in \texttt{i} are shifted by \texttt{j} places.
+
+    \subsection*{Bitwise Complement, And, Exclusive Or, and Inclusive Or}
+    \texttt{\~} bitwise complement (unary) \\
+    \texttt{\&} bitwise and (binary) \\
+    \texttt{\^} bitwise exclusive or (binary) \\
+    \texttt{|} bitwise inclusive or (binary) \\
+
+    \subsection*{Using the Bitwise Operators to Access Bits}
+    \begin{itemize}
+        \item Setting a bit
+        \item Clearing a bit
+        \item Testing a bit
+    \end{itemize}
+
+    \subsection*{Using the Bitwise Operators to Access Bit-Fields}
+    Bit-field - a group of several consecutive bits. Operations:
+    \begin{itemize}
+        \item Modifying a bit-field
+        \item Retrieving a bit-field
+    \end{itemize}
+
+    \section{Other Low-Level Techniques}
+    
+    \subsection*{The \texttt{volatile} Type Qualifier}
+    The \texttt{volatile} type qualifier allows us to inform the compiler if any of the data in a program is volatile, meaning that it can change its address as a proram is running. This is used mostly for declarations of a pointer variables taht will point to a volatile memory location e.g. most recent character typed at the user's keyboard.
+
+
+
+    \chapter{The Standard Library}
+
+    \section{Using the Library}
+
+    \subsection*{Restrictions on Names Used in the Library}
+    \begin{itemize}
+        \item Identifiers that begin with an underscore followed by an upper-case letter or a second underscore are reseved for use within the library.
+        \item Identifiers that begin with an underscore are reserved for use as identifiers and tags with file scope.
+        \item Every identifier with external linkage in the standard library is reserved for use as an identifier with external linkage.
+    \end{itemize}
+
+    \section{C89 Library Overview}
+    \texttt{assert.h} - Diagnostics \\
+    \texttt{ctype.h} - Character Handling \\
+    \texttt{errno.h} - Errors \\
+    \texttt{float.h} - characteristics of Floating Types \\
+    \texttt{limits.h} - Sizes of Integer Types \\
+    \texttt{locale.h} - Localization \\
+    \texttt{math.h} - Mathematics \\
+    \texttt{setjmp.h} - Nonlocal Jumps \\
+    \texttt{signal.h} - Signal Handlin \\
+    \texttt{stdarg.h} - Variable Arguments \\
+    \texttt{stddef.h} - Common Definitions \\
+    \texttt{stdio.h} - Input/Output \\
+    \texttt{stdlib.h} - General Utilities \\
+    \texttt{string.h} - String Handling \\
+    \texttt{time.h} - Date and Time \\
+
+    \section{C99 Library Changes}
+    \begin{itemize}
+        \item Additional headers
+        \item Additional Macros and functions
+        \item Enhanced versions of existing functions
+    \end{itemize}
+
+    \texttt{complex.h} - Complex Arithmetic \\
+    \texttt{fenv.h} - Floating-Point Environment \\
+    \texttt{inttypes.h} - Format Conversion of Integer Types \\
+    \texttt{iso646.h} - Alternative Spelling \\
+    \texttt{stdbool.h} - Boolean Type and Values \\
+    \texttt{stdint.h} - Integer Types \\
+    \texttt{tgmath.h} - Type-Generic Math \\
+    \texttt{wchar.h} - Extended Multibyte and Wide-Character Utilities \\
+    \texttt{wctype.h} - Wide-Character Classification and Mapping Utilities \\
 
 \end{document}
