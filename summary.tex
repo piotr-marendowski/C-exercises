@@ -23,7 +23,7 @@
 \newcommand\tab[1][20px]{\hspace*{#1}}      % tabs 20px
 \setlength{\parindent}{0pt}                 % no tabs at start of the paragraphs
 
-\title{My notes from K.N. King's "C Programming A Modern Approach" 2nd version}
+\title{The summary of K.N. King's "C Programming A Modern Approach" 2nd version}
 \author{Piotr Marendowski}
 \date{March 2023}
 
@@ -31,7 +31,7 @@
     \maketitle
 
     \chapter{Note}
-    In this material I will go over everything from book, trying to summarize every note-worthy subject. I will do it, while learning Latex, so good luck to me.
+    The summary of K.N. King's "C Programming A Modern Approach" 2nd version
 
     \tableofcontents
 
@@ -1416,5 +1416,161 @@
     \texttt{tgmath.h} - Type-Generic Math \\
     \texttt{wchar.h} - Extended Multibyte and Wide-Character Utilities \\
     \texttt{wctype.h} - Wide-Character Classification and Mapping Utilities \\
+
+    
+
+
+    \chapter{Input/Output}
+    
+    \section{Streams}
+    \textbf{Stream} means any source of input or any destination for output.
+
+    \subsection*{File Pointers}
+    Accessing a stream in a C program is done through a file pointer e.g. \\
+    \texttt{FILE *fp1, *fp2;}
+
+    \subsection*{Standard Streams and Redirection}
+    They can't be declared, opened or closed. 
+    \begin{itemize}
+        \item \texttt{stdin} - Standard Input
+        \item \texttt{stdout} - Standard Output
+        \item \texttt{stderr} - Standard Error
+    \end{itemize}
+    
+    We could redirect an output or input from these to other streams.
+
+    \subsection*{Text Files versus Binary Files}
+    The bytes in a text file represent characters, making it possible for a human to examine the file or edit it. In a binary file, bytes don't necessarily represent characters; groups of bytes might represent other types of data.
+
+    \bigskip
+
+    Text files are divided into lines, and may contain a special "end-of-file" marker. Binary files aren't divided into lines. In a binary file, there are no end-of-lile or end-of-file markers.
+
+    \section{File Operations}
+
+    \subsection*{Opening a File}
+    \texttt{FILE *fopen(const char * restrict filename, const char * restrict mode);}
+
+    \bigskip
+
+    The second argument is a "mode string" that specifies what operations we intend to perform on the file. The word \texttt{restrict} (a C99 keyword), indicates that \texttt{filename} and \texttt{mode} should point to strings that don't share memory locations.
+
+    \smallskip
+    
+    \texttt{fp = fopen("in.dat", "r");   /* opens in.dat for reading */}
+
+    \smallskip
+
+    When it can't open a file, it returns a null pointer.
+
+    \newpage
+
+    \bigskip
+
+    \begin{table}
+        \centering
+        % align the left column to the left
+        \begin{tabular}{|c|>{\raggedright\arraybackslash}p{8cm}|}
+        \hline
+        String & Meaning \\
+        \hline
+        "r" & Open for reading \\
+        \hline
+        "w" & Open for writing (file need not exist) \\
+        \hline
+        "a" & Open for appending (file need not exist) \\
+        \hline
+        "r+" & Open for reading and writing, starting at beginning \\
+        \hline
+        "w+" & Open for reading and writing (truncate if file exists) \\
+        \hline
+        "a+" & Open for reading and writing (append if file exists) \\
+        \hline
+        \end{tabular}
+        \caption{Text Modes}
+        \label{tab:example}
+    \end{table}
+
+    \begin{table}
+        \centering
+        % align the left column to the left
+        \begin{tabular}{|c|>{\raggedright\arraybackslash}p{8cm}|}
+        \hline
+        String & Meaning \\
+        \hline
+        "rb" & Open for reading \\
+        \hline
+        "wb" & Open for writing (file need not exist) \\
+        \hline
+        "ab" & Open for appending (file need not exist) \\
+        \hline
+        "rb+" & Open for reading and writing, starting at beginning \\
+        \hline
+        "wb+" & Open for reading and writing (truncate if file exists) \\
+        \hline
+        "ab+" & Open for reading and writing (append if file exists) \\
+        \hline
+        \end{tabular}
+        \caption{Binary Modes}
+        \label{tab:example}
+    \end{table}
+
+    \subsection*{Closing a file}
+
+    \texttt{int fclose(FILE *stream);}
+
+    \bigskip
+
+    Closes a file, the argument must be a \texttt{FILE *} pointer to it. Returns zero if the file was closed successfully; otherwise, it returns error code EOF.
+
+    \subsection*{Attaching a File to an Open Stream}
+
+    \texttt{FILE *freopen(const char * restrict filename, const char * restrict mode, FILE * restrict stream);}
+
+    \bigskip
+
+    Mostly is used to associate a file with one of the standard streams.
+
+    \subsection*{Temporary Files}
+
+    \texttt{FILE *tmpfile(void);} \\
+    \texttt{char *tmpnam(char *s);} \\
+
+    \bigskip
+
+    \texttt{tmpfile} creates a temporary file that only exists as long as the program is running. \texttt{tmpnam} is used to create a temporary file name.
+
+    \subsection*{File Buffering}
+
+    \begin{lstlisting}
+    int fflush(FILE *stream);
+    void setbuf(FILE * restrict stream, char * restrict buf);
+    int setvbuf(FILE * restrict stream, char * restrict buf, int mode, size_t size);
+    \end{lstlisting}
+
+    \texttt{fflush(fp);} flushes buffer for fp. \\
+    \texttt{fflush(NULL);} flushes all buffers.
+
+    \texttt{setvbuf} allows us to change the way a stream is buffered and to control the size and location of the buffer.
+
+    \subsection*{Miscellaneous File Operations}
+
+    \begin{lstlisting}
+    int remove(const char *filename);
+    int rename(const char *old, const char *new);
+    \end{lstlisting}
+
+    They work with file names instead of file pointers.
+
+    \smallskip
+
+    \texttt{remove("foo"); /* deletes the file named "foo" */} \\
+    \texttt{rename("foo", "bar"); /* renames "foo" to "bar" */}
+
+    \smallskip
+
+    Be sure that the files has been closed. \\
+
+    \section{Formatted I/O}
 
 \end{document}
